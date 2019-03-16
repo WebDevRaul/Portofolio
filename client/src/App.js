@@ -7,10 +7,14 @@ import Home from './components/home/Home';
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
 
+// Redux
+import store from './store';
+import { Provider } from 'react-redux';
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Provider store={store}>
         <Router>
           <Switch>
             <Route exact path='/' component={Landing} />
@@ -23,7 +27,7 @@ class App extends Component {
             </Router>
           </Switch>
         </Router>
-      </div>
+      </Provider>
     );
   }
 }
