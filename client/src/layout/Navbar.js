@@ -9,6 +9,9 @@ import { connect } from 'react-redux';
 // Components
 import Logo from './Logo';
 
+// Css
+import '../css/navbar.css'
+
 class Navbar extends Component {
   constructor() {
     super();
@@ -27,11 +30,12 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-lg navbar-light">
         <Logo />
         <button
-          className="navbar-toggler" 
+          className="new-icon navbar-toggler" 
           type="button"
           onClick={this.onClick}  
         >
-          <span className="navbar-toggler-icon"></span>
+          <i></i>
+          <i></i>
         </button>
         <div className={classnames('collapse navbar-collapse', { 'show' : show })}>
           <ul className='navbar-nav ml-auto mr-5'>
@@ -39,7 +43,7 @@ class Navbar extends Component {
             <NavLink 
               to='/home' 
               className='nav-link'
-              activeClassName="active"
+              activeClassName='active'
               onClick={this.onClick}
               >
               <span>Home</span>

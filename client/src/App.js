@@ -13,6 +13,9 @@ import Footer from './layout/Footer';
 import store from './store';
 import { Provider } from 'react-redux';
 
+// Css
+import './css/app.css';
+
 class App extends Component {
   render() {
     return (
@@ -21,12 +24,14 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={Landing} />
             <Router>
-              <div className='container-fluid'>
-                <Navbar />
-                <Route exact path='/home' component={Home} />
-                <Route exact path='/about' component={About} />
-                <Route exact path='/projects' component={Projects} />
-                <Footer />
+              <div className='app'>
+                <div className='container-fluid'>
+                  <Navbar />
+                  <Route exact path='/home' component={Home} />
+                  <Route exact path='/about' component={About} />
+                  <Route exact path='/projects' component={Projects} />
+                  <Footer />
+                </div>
               </div>
             </Router>
           </Switch>
