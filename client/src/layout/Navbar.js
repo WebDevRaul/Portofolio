@@ -20,7 +20,9 @@ class Navbar extends Component {
     }
   }
 
-  onClick = () => { this.setState({ show: !this.state.show }); };
+  onClick = () => { 
+    const timer = setTimeout(() => {this.setState({ show: !this.state.show })}, 2000);
+   };
 
   render() {
 
