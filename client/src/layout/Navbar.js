@@ -17,28 +17,50 @@ class Navbar extends Component {
     super();
     this.state = {
       show: false,
+      first: false,
+      second: false,
+      third: false,
+      displayFirst: false,
+      displaySecond: false,
+      displayThird: false,
     }
   }
 
-  onClick = () => { 
-    const timer = setTimeout(() => {this.setState({ show: !this.state.show })}, 2000);
+  onClick = () => {
+    // const timer = setTimeout(() => {this.setState({ show: !this.state.show })}, 2000);
+    this.setState({ first: !this.state.first });
+
+    // Make btn lines to move and disapear
+    const func = (data, seconds) => {
+      const timer = setTimeout(() => { this.setState({ [data]: !this.state[data] }) }, seconds);
+    };
+    func('second', 300);
+    func('third', 600);
+    func('displayFirst', 699);
+    func('displaySecond',1000);
+    func('displayThird', 1300);
+
    };
 
   render() {
-
-    const { show } = this.state;
+    
+    const { show, first, second, third, displayFirst, displaySecond, displayThird } = this.state;
 
     return (
       <nav className="navbar navbar-expand-lg navbar-light">
         <Logo />
         <button
-          className="new-icon navbar-toggler" 
+          className="new-icon navbar-toggler"
           type="button"
           onClick={this.onClick}  
         >
-          <i></i>
-          <i></i>
-          <i></i>
+          <i className={classnames("", { 'animation': first, 'display': displayFirst })} ></i>
+          <i className={classnames("", { 'animation': second, 'display': displaySecond })}></i>
+          <i className={classnames("", { 'animation': third, 'display': displayThird })}></i>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
         <div className={classnames('collapse navbar-collapse', { 'show' : show })}>
           <ul className='navbar-nav ml-auto mr-5'>
