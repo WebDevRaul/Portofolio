@@ -49,19 +49,22 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light">
         <Logo />
-        <button
-          className="new-icon navbar-toggler"
-          type="button"
-          onClick={this.onClick}  
-        >
-          <i className={classnames("", { 'animation': first, 'display': displayFirst })} ></i>
-          <i className={classnames("", { 'animation': second, 'display': displaySecond })}></i>
-          <i className={classnames("", { 'animation': third, 'display': displayThird })}></i>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div className=''>
+          <button
+            className="new-icon navbar-toggler"
+            type="button"
+            onClick={this.onClick}  
+          >
+            <i className={classnames("", { 'animation': first, 'display': displayFirst })} ></i>
+            <i className={classnames("", { 'animation': second, 'display': displaySecond })}></i>
+            <i className={classnames("", { 'animation': third, 'display': displayThird })}></i>
+          </button>
+          <div className='div-square'>
+            <div className='m-0 line'></div>
+            <div className='m-0 line'></div>
+            <div className='m-0 line'></div>
+          </div>
+        </div>
         <div className={classnames('collapse navbar-collapse', { 'show' : show })}>
           <ul className='navbar-nav ml-auto mr-5'>
             <li className="nav-item mr-3 mt-3">
