@@ -17,52 +17,42 @@ class Navbar extends Component {
     super();
     this.state = {
       show: false,
+      move: false,
       first: false,
       second: false,
       third: false,
-      displayFirst: false,
-      displaySecond: false,
-      displayThird: false,
     }
   }
 
   onClick = () => {
     // const timer = setTimeout(() => {this.setState({ show: !this.state.show })}, 2000);
-    this.setState({ first: !this.state.first });
+    this.setState({ move: !this.state.move });
 
-    // Make btn lines to move and disapear
+    // // Make btn lines to move and disapear
     const func = (data, seconds) => {
       const timer = setTimeout(() => { this.setState({ [data]: !this.state[data] }) }, seconds);
     };
-    func('second', 300);
-    func('third', 600);
-    func('displayFirst', 699);
-    func('displaySecond',1000);
-    func('displayThird', 1300);
+    func('first', 500)
+    func('second', 700);
+    func('third', 1000);
 
    };
 
   render() {
     
-    const { show, first, second, third, displayFirst, displaySecond, displayThird } = this.state;
+    const { show, move, first, second, third } = this.state;
 
     return (
       <nav className="navbar navbar-expand-lg navbar-light">
         <Logo />
-        <div className=''>
-          <button
-            className="new-icon navbar-toggler"
-            type="button"
-            onClick={this.onClick}  
-          >
-            <i className={classnames("", { 'animation': first, 'display': displayFirst })} ></i>
-            <i className={classnames("", { 'animation': second, 'display': displaySecond })}></i>
-            <i className={classnames("", { 'animation': third, 'display': displayThird })}></i>
-          </button>
-          <div className='div-square'>
-            <div className='m-0 line'></div>
-            <div className='m-0 line'></div>
-            <div className='m-0 line'></div>
+        <div 
+          className='btn-div btn'
+          onClick={this.onClick}
+        >
+          <div className='i-div'>
+            <i className={classnames("", { 'animation': move, 'display' : first })} ></i>
+            <i className={classnames("mt-2", { 'animation-two': move, 'display' : second })}></i>
+            <i className={classnames("mt-3", { 'animation-tree': move, 'display' : third })}></i>
           </div>
         </div>
         <div className={classnames('collapse navbar-collapse', { 'show' : show })}>
