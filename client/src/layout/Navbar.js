@@ -17,6 +17,7 @@ class Navbar extends Component {
     super();
     this.state = {
       show: false,
+      border: false,
       move: false,
       first: false,
       second: false,
@@ -24,31 +25,38 @@ class Navbar extends Component {
     }
   }
 
-  onClick = () => {
+  onButton = () => {
     // const timer = setTimeout(() => {this.setState({ show: !this.state.show })}, 2000);
-    this.setState({ move: !this.state.move });
+    this.setState({ border: !this.state.border });
 
     // // Make btn lines to move and disapear
     const func = (data, seconds) => {
       const timer = setTimeout(() => { this.setState({ [data]: !this.state[data] }) }, seconds);
     };
-    func('first', 500)
-    func('second', 700);
-    func('third', 1000);
+    func('move', 500)
+    func('first', 800)
+    func('second', 1300);
+    func('third', 1500);
 
    };
 
   render() {
     
-    const { show, move, first, second, third } = this.state;
+    const { show, border, move, first, second, third } = this.state;
 
     return (
       <nav className="navbar navbar-expand-lg navbar-light">
         <Logo />
         <div 
           className='btn-div btn'
-          onClick={this.onClick}
+          onClick={this.onButton}
         >
+          <div className={classnames('border-div ', {'animation-border': border})}>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div> 
           <div className='i-div'>
             <i className={classnames("", { 'animation': move, 'display' : first })} ></i>
             <i className={classnames("mt-2", { 'animation-two': move, 'display' : second })}></i>
