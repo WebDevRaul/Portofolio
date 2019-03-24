@@ -102,25 +102,25 @@
 }
 
 .animation-border :nth-child(1)::before, .animation-border :nth-child(2)::before{
-  animation: borderTB 1s;
+  animation: borderTB 1.5s;
 }
 .animation-border :nth-child(3)::before, .animation-border :nth-child(4)::before{
-  animation: borderRL 1s;
+  animation: borderRL 1.5s;
 }
 
 @keyframes borderTB {
-  20%{
+  0%{
     width: 100%;
   }
-  100%{
+  30%{
     width: 0%;
   }
 }
 @keyframes borderRL {
-  2%{
+  0%{
     width: 86%;
   }
-  100%{
+  30%{
     width: 0%;
   }
 }

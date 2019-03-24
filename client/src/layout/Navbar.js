@@ -51,7 +51,7 @@ class Navbar extends Component {
           className='btn-div btn'
           onClick={this.onButton}
         >
-          <div className={classnames('border-div ', {'animation-border': border})}>
+          <div className={classnames('border-div ', {'animation-border': border, 'display': move})}>
             <p></p>
             <p></p>
             <p></p>
