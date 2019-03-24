@@ -22,6 +22,7 @@ class Navbar extends Component {
       first: false,
       second: false,
       third: false,
+      display: false,
     }
   }
 
@@ -33,16 +34,18 @@ class Navbar extends Component {
     const func = (data, seconds) => {
       const timer = setTimeout(() => { this.setState({ [data]: !this.state[data] }) }, seconds);
     };
-    func('move', 500)
-    func('first', 800)
+    func('move', 500);
+    func('first', 800);
     func('second', 1300);
     func('third', 1500);
+    func('move', 2500)
+    func('display', 2500)
 
    };
 
   render() {
     
-    const { show, border, move, first, second, third } = this.state;
+    const { show, border, move, first, second, third, display } = this.state;
 
     return (
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -51,16 +54,20 @@ class Navbar extends Component {
           className='btn-div btn'
           onClick={this.onButton}
         >
-          <div className={classnames('border-div ', {'animation-border': border, 'display': move})}>
+          <div className={classnames('border-div ', {
+            'animation-border': border, 
+            'hide': move, 
+            'animation-border-back': display
+            })}>
             <p></p>
             <p></p>
             <p></p>
             <p></p>
           </div> 
           <div className='i-div'>
-            <i className={classnames("", { 'animation': move, 'display' : first })} ></i>
-            <i className={classnames("mt-2", { 'animation-two': move, 'display' : second })}></i>
-            <i className={classnames("mt-3", { 'animation-tree': move, 'display' : third })}></i>
+            <i className={classnames("", { 'animation': move, 'hide' : first })} ></i>
+            <i className={classnames("mt-2", { 'animation-two': move, 'hide' : second })}></i>
+            <i className={classnames("mt-3", { 'animation-tree': move, 'hide' : third })}></i>
           </div>
         </div>
         <div className={classnames('collapse navbar-collapse', { 'show' : show })}>
