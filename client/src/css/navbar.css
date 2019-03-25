@@ -1,5 +1,5 @@
 /* Btn style - close - */
-.btn-div, .border-div {
+.btn-div, .border-div, .p-div {
   width: 50px;
   height: 40px;
   position: relative;
@@ -54,6 +54,58 @@
   }
 }
 
+/* Btn style - true - */
+.p-div {
+  position: absolute;
+  /* bottom: 0;
+  left: 0; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  /* overflow: hidden; */
+}
+.p-div p::before{
+  margin: 10px;
+  overflow: hidden;
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: black;
+  display: block;
+  transition: transform 500ms;
+}
+.p-div :nth-child(1)::before {
+  transform: rotate(40deg);
+  /* top: 45%; */
+  width: 50%;
+}
+/* .p-div :nth-child(3)::before {
+  transform: rotate(-135deg);
+  transform-origin: right;
+  width: 30%;
+  top: 100%;
+  right: 0;
+}
+.p-div :nth-child(4)::before {
+  transform: rotate(-45deg);
+  transform-origin: right;
+  width: 30%;
+  top: 100%;
+  right: 0;
+} */
+.animation-close {
+  animation: close 1s;
+}
+@keyframes close {
+  0%{
+    width: 0%;
+  }
+  90%{
+    width: 100%;
+  }
+}
+
 /* Border style - close -*/
 
 .border-div {
@@ -66,7 +118,6 @@
 
 .border-div p::before {
   content: '';
-  display: inline-block;
   position: absolute;
   height: 2px;
   background: black;

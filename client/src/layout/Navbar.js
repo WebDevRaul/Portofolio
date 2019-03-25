@@ -27,7 +27,7 @@ class Navbar extends Component {
   }
 
   onButton = () => {
-    // const timer = setTimeout(() => {this.setState({ show: !this.state.show })}, 2000);
+    // const timer = setTimeout(() => {this.setState({ show: !this.state.show })}, 1000);
     this.setState({ border: !this.state.border });
 
     // // Make btn lines to move and disapear
@@ -54,6 +54,15 @@ class Navbar extends Component {
           className='btn-div btn'
           onClick={this.onButton}
         >
+          <div className={classnames('p-div', {
+            'hide': !display,
+            'animation-close': true 
+            })}>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
           <div className={classnames('border-div ', {
             'animation-border': border, 
             'hide': move, 
