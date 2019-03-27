@@ -9,6 +9,7 @@
   z-index: 1;
 }
 
+
 .i-div i {
   position: absolute;
   top: 30%;
@@ -55,17 +56,17 @@
 }
 
 /* Btn style - true - */
-.p-div {
-  position: absolute;
+/* .p-div {
+  position: relative; */
   /* bottom: 0;
   left: 0; */
-  top: 50%;
+  /* top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 10px;
+  padding: 10px; */
   /* overflow: hidden; */
-}
-.p-div p::before{
+/* } */
+/* .p-div p::before{
   margin: 10px;
   overflow: hidden;
   content: '';
@@ -74,12 +75,12 @@
   background: black;
   display: block;
   transition: transform 500ms;
-}
-.p-div :nth-child(1)::before {
-  transform: rotate(40deg);
+} */
+/* .p-div :nth-child(1)::before {
+  transform: rotate(40deg); */
   /* top: 45%; */
-  width: 50%;
-}
+  /* width: 50%;
+} */
 /* .p-div :nth-child(3)::before {
   transform: rotate(-135deg);
   transform-origin: right;
@@ -94,6 +95,44 @@
   top: 100%;
   right: 0;
 } */
+/* .animation-close {
+  animation: close 1s;
+}
+@keyframes close {
+  0%{
+    width: 0%;
+  }
+  90%{
+    width: 100%;
+  }
+} */
+.p-div {
+  position: absolute;
+  background: green;
+  bottom: 0%;
+  right: 0%;
+  z-index: 2;
+}
+.p-div p::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 60%;
+  background: black;
+  display: block;
+  transition: transform 500ms;
+}
+
+.p-div :nth-child(1)::before {
+  top: 47%;
+  left: 20%;
+  transform: rotate(38deg);
+}
+.p-div :nth-child(2)::before {
+  top: 47%;
+  left: 20%;
+  transform: rotate(-38deg);
+}
 .animation-close {
   animation: close 1s;
 }
@@ -106,13 +145,15 @@
   }
 }
 
+
+
 /* Border style - close -*/
 
 .border-div {
-  position: relative;
+  position: absolute;
   background: red;
-  bottom: 90%;
-  right: 50%;
+  bottom: 0%;
+  right: 0%;
   z-index: -1;
 }
 

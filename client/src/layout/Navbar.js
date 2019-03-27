@@ -60,8 +60,6 @@ class Navbar extends Component {
             })}>
             <p></p>
             <p></p>
-            <p></p>
-            <p></p>
           </div>
           <div className={classnames('border-div ', {
             'animation-border': border, 
