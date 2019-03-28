@@ -5,10 +5,10 @@ import Logo from '../Logo';
 import Border from './Border';
 import OpenBtn from './OpenBtn';
 import CloseBtn from './CloseBtn';
-import DesktopView from './DesktopView';
+import NavbarView from './NavbarView';
 
 // Css
-import '../../css/navbar.css'
+import '../../css/test.css'
 
 class Navbar extends Component {
   constructor() {
@@ -42,21 +42,19 @@ class Navbar extends Component {
    };
 
   render() {
-    
     const { show, border, move, first, second, third, display } = this.state;
-
     return (
       <nav className="navbar navbar-expand-lg navbar-light">
         <Logo />
         <div 
-          className='btn-div btn'
+          className='btn-div'
           onClick={this.onButton}
         >
           <Border border={{ border, move, display }} />
           <OpenBtn  openBtn={{ move, first, second, third }} />
           <CloseBtn closeBtn={{ display }}/>
         </div>
-        <DesktopView show={show} />
+        <NavbarView show={show} />
       </nav>
     )
   }

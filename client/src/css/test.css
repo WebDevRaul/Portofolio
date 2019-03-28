@@ -1,0 +1,107 @@
+.hide {
+  display: none !important;
+}
+
+/* Navbar btn */
+.btn-div {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  background: red;
+}
+
+/* \\//\\//\\//\\//\\//\\//\\//\\//\\ */
+
+/* Border */
+
+/* Border - style - close */
+.border-div {
+  z-index: -1;
+}
+.border-div p::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: black;
+  display: block;
+  transition: transform 500ms;
+}
+
+.border-div :nth-child(1)::before {
+  transform-origin: left;
+  width: 100%;
+  top: 100%;
+  right: 0;
+}
+.border-div :nth-child(2)::before {
+  transform-origin: right;
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+}
+.border-div :nth-child(3)::before {
+  transform-origin: left;
+  width: 86%;
+  bottom: 101%;
+  transform: rotate(90deg);
+}
+
+.border-div :nth-child(4)::before {
+  transform-origin: right;
+  width: 86%;
+  top: 103%;
+  right: 0;
+  transform: rotate(90deg);
+}
+
+.animation-border :nth-child(1)::before, .animation-border :nth-child(2)::before{
+  animation: borderTB 1.5s;
+}
+.animation-border :nth-child(3)::before, .animation-border :nth-child(4)::before{
+  animation: borderRL 1.5s;
+}
+
+@keyframes borderTB {
+  0%{
+    width: 100%;
+  }
+  30%{
+    width: 0%;
+  }
+}
+@keyframes borderRL {
+  0%{
+    width: 86%;
+  }
+  30%{
+    width: 0%;
+  }
+}
+
+/* Border style - true - */
+.animation-border-back :nth-child(1)::before, .animation-border-back :nth-child(2)::before{
+  animation: borderTB-back 1.5s;
+}
+.animation-border-back :nth-child(3)::before, .animation-border-back :nth-child(4)::before{
+  animation: borderRL-back 1.5s;
+}
+@keyframes borderTB-back {
+  0%{
+    width: 0%;
+  }
+  30%{
+    width: 100%;
+  }
+}
+@keyframes borderRL-back {
+  0%{
+    width: 0%;
+  }
+  30%{
+    width: 86%;
+  }
+}
+
+
+/* \\//\\//\\//\\//\\//\\//\\//\\//\\ */
+
