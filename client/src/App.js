@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Components
 import Landing from './components/landing/Landing';
-import Navbar from './layout/Navbar';
+import Navbar from './layout/Navbar/Navbar';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Projects from './components/projects/Projects';
