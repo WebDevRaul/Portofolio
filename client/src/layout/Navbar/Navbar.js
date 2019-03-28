@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { NavLink, withRouter } from 'react-router-dom';
-
-// Redux
-import { connect } from 'react-redux';
 
 // Components
-import Logo from './Logo';
+import Logo from '../Logo';
+import Border from './Border';
+import OpenBtn from './OpenBtn';
+import CloseBtn from './CloseBtn';
+import DesktopView from './DesktopView';
 
 // Css
-import '../css/navbar.css'
+import '../../css/navbar.css'
 
 class Navbar extends Component {
   constructor() {
@@ -32,7 +30,7 @@ class Navbar extends Component {
 
     // // Make btn lines to move and disapear
     const func = (data, seconds) => {
-      const timer = setTimeout(() => { this.setState({ [data]: !this.state[data] }) }, seconds);
+      setTimeout(() => { this.setState({ [data]: !this.state[data] }) }, seconds);
     };
     func('move', 500);
     func('first', 800);
@@ -54,75 +52,14 @@ class Navbar extends Component {
           className='btn-div btn'
           onClick={this.onButton}
         >
-          <div className={classnames('p-div', {
-            'hide': !display,
-            'animation-close': true 
-            })}>
-            <p></p>
-            <p></p>
-          </div>
-          <div className={classnames('border-div ', {
-            'animation-border': border, 
-            'hide': move, 
-            'animation-border-back': display
-            })}>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div> 
-          <div className='i-div'>
-            <i className={classnames("", { 'animation': move, 'hide' : first })} ></i>
-            <i className={classnames("mt-2", { 'animation-two': move, 'hide' : second })}></i>
-            <i className={classnames("mt-3", { 'animation-tree': move, 'hide' : third })}></i>
-          </div>
+          <Border border={{ border, move, display }} />
+          <OpenBtn  openBtn={{ move, first, second, third }} />
+          <CloseBtn closeBtn={{ display }}/>
         </div>
-        <div className={classnames('collapse navbar-collapse', { 'show' : show })}>
-          <ul className='navbar-nav ml-auto mr-5'>
-            <li className="nav-item mr-3 mt-3">
-            <NavLink 
-              to='/home' 
-              className='nav-link'
-              activeClassName='active'
-              onClick={this.onClick}
-              >
-              <span>Home</span>
-            </NavLink>
-            </li>
-            <li className="nav-item mr-3 mt-3">
-            <NavLink 
-              to='/projects' 
-              className='nav-link'
-              activeClassName="active"
-              onClick={this.onClick}
-              >
-              <span>Projects</span>
-            </NavLink>
-            </li>
-            <li className="nav-item mr-3 mt-3">
-            <NavLink 
-              to='/about' 
-              className='nav-link'
-              activeClassName="active"
-              onClick={this.onClick}
-              >
-              <span>About</span>
-            </NavLink>
-            </li>
-          </ul>
-        </div>
+        <DesktopView show={show} />
       </nav>
     )
   }
 };
 
-Navbar.propTypes = {
-
-};
-
-const mapStateToProps = state => ({
-
-});
-
-
-export default connect(mapStateToProps, {})(withRouter(Navbar))
+export default Navbar;
