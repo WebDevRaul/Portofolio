@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 
 // Components
 import Logo from '../Logo';
-import Border from './Border';
-import OpenBtn from './OpenBtn';
-import CloseBtn from './CloseBtn';
-import NavbarView from './NavbarView';
+import DesktopView from './DesktopView';
+import MobileView from './MobileView';
 
 // Css
 import '../../css/test.css'
@@ -50,11 +48,13 @@ class Navbar extends Component {
           className='btn-div'
           onClick={this.onButton}
         >
-          <Border border={{ border, move, display }} />
-          <OpenBtn  openBtn={{ move, first, second, third }} />
-          <CloseBtn closeBtn={{ display }}/>
+        <MobileView 
+          border={{ border, move, display }}
+          openBtn={{ move, first, second, third }}
+          closeBtn={{display}}
+          />
         </div>
-        <NavbarView show={show} />
+        <DesktopView show={show} />
       </nav>
     )
   }

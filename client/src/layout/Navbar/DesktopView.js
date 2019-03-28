@@ -5,7 +5,7 @@ import classnames from 'classnames';
 // Redux
 import { connect } from 'react-redux';
 
-class NavbarView extends Component {
+class DesktopView extends Component {
   render() {
     const { show } = this.props;
     return (
@@ -51,4 +51,4 @@ const mapStateToProps = state => ({
 
 });
 
-export default connect(mapStateToProps, {})(withRouter(NavbarView))
+export default connect(mapStateToProps, {})(withRouter(DesktopView))
