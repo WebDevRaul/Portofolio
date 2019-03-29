@@ -3,12 +3,12 @@ import classnames from 'classnames';
 
 export default class Border extends Component {
   render() {
-    const { border, move, display } = this.props.border;
+    const { openBorder, hideBorder, closeBorder } = this.props.border;
     return (
       <div className={classnames('border-div', {
-        'animation-border': border, 
-        'hide': move, 
-        'animation-border-back': display
+        'animation-border': openBorder, 
+        'hide': hideBorder, 
+        'animation-border-back': closeBorder
         })}>
         <p></p>
         <p></p>

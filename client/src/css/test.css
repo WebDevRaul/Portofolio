@@ -108,7 +108,7 @@
 
 /* OpenBtn */
 
-/* OpenBtn - style - close */
+/* OpenBtn - style - closeToOpen */
 
 .open-div i {
   position: absolute;
@@ -156,6 +156,29 @@
 }
 
 /* OpenBtn - style - openToClose */
+
+.animationBack {
+  animation: moveBack 1s;
+}
+.animationBack-two {
+  animation: moveBack 1s 0.3s;
+}
+.animationBack-tree {
+  animation: moveBack 1s 0.6s;
+}
+
+@keyframes moveBack {
+  0%{
+    right: -130%;
+  }
+  10%{
+    opacity: 0;
+  }
+  100%{
+    right: 10%;
+    opacity: 1;
+  }
+}
 
 
 /* \\//\\//\\//\\//\\//\\//\\//\\//\\ */
