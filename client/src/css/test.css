@@ -157,6 +157,7 @@
 
 /* OpenBtn - style - openToClose */
 
+
 .animationBack {
   animation: moveBack 1s;
 }
@@ -169,13 +170,13 @@
 
 @keyframes moveBack {
   0%{
-    right: -130%;
+    right: -100%;
   }
   10%{
     opacity: 0;
   }
   100%{
-    right: 10%;
+    right: 15%;
     opacity: 1;
   }
 }
