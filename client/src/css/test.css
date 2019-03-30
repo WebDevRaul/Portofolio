@@ -80,11 +80,12 @@
 
 /* Border style - true - */
 .animation-border-back :nth-child(1)::before, .animation-border-back :nth-child(2)::before{
-  animation: borderTB-back 1.5s;
+  animation: borderTB-back 1.5s ;
 }
 .animation-border-back :nth-child(3)::before, .animation-border-back :nth-child(4)::before{
   animation: borderRL-back 1.5s;
 }
+
 @keyframes borderTB-back {
   0%{
     width: 0%;
@@ -130,13 +131,13 @@
 }
 
 .animation {
-  animation: move 1s;
+  animation: move 1s 0.4s;
 }
 .animation-two {
-  animation: move 1s 0.3s;
+  animation: move 1s 0.7s;
 }
 .animation-tree {
-  animation: move 1s 0.6s;
+  animation: move 1s 1s;
 }
 .hide {
   display: none !important;
@@ -162,17 +163,15 @@
   animation: moveBack 1s;
 }
 .animationBack-two {
-  animation: moveBack 1s 0.3s;
+  animation: moveBack 1s;
 }
 .animationBack-tree {
-  animation: moveBack 1s 0.6s;
+  animation: moveBack 1s;
 }
 
 @keyframes moveBack {
   0%{
     right: -100%;
-  }
-  10%{
     opacity: 0;
   }
   100%{
@@ -184,3 +183,59 @@
 
 /* \\//\\//\\//\\//\\//\\//\\//\\//\\ */
 
+/* close Btn - style - closeToOpen */
+.p-div {
+  position: absolute;
+  background: green;
+  bottom: 0%;
+  right: 0%;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+.p-div p::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 60%;
+  background: black;
+  display: block;
+  transition: transform 500ms;
+}
+
+.p-div :nth-child(1)::before {
+  top: 47%;
+  left: 20%;
+  transform: rotate(38deg);
+}
+.p-div :nth-child(2)::before {
+  top: 47%;
+  left: 20%;
+  transform: rotate(-38deg);
+}
+.animation-close {
+  animation: close 1s;
+}
+@keyframes close {
+  0%{
+    width: 100%;
+    height: 100%;
+  }
+  90%{
+    width: 0%;
+    height: 0%;
+  }
+};
+.animation-close-back {
+  animation: closeBack 1s;
+}
+@keyframes closeBack {
+  0%{
+    width: 100%;
+    height: 100%;
+  }
+  90%{
+    width: 0%;
+    height: 0%;
+  }
+};
