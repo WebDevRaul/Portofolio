@@ -8,7 +8,7 @@ import DesktopView from './DesktopView';
 import MobileView from './MobileView';
 
 // Css
-import '../../css/test.css';
+import '../../css/navbar.css';
 
 class Navbar extends Component {
   constructor() {
