@@ -6,6 +6,10 @@ import classnames from 'classnames';
 import { connect } from 'react-redux';
 
 class DesktopView extends Component {
+
+  onClick = () => {
+    this.props.onClick();
+  }
   render() {
     const { show } = this.props;
     return (

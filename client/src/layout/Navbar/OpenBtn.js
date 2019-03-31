@@ -3,13 +3,12 @@ import classnames from 'classnames';
 
 export default class OpenBtn extends Component {
   render() {
-    const { openBorder, first, second, third, firstBack } = this.props.openBtn;
-    console.log('firstBack', firstBack);
+    const { openBorder, hideFirst, hideSecond, hideThird, returnAnimation } = this.props.openBtn;
     return (
       <div className='open-div'>
-        <i className={classnames("", { 'animation': openBorder, 'hide' : first, 'animationBack' : firstBack })} ></i>
-        <i className={classnames("mt-2", { 'animation-two': openBorder, 'hide' : second, 'animationBack-two': firstBack })}></i>
-        <i className={classnames("mt-3", { 'animation-tree': openBorder, 'hide' : third, 'animationBack-tree': firstBack })}></i>
+        <i className={classnames("", { 'animation': openBorder, 'hide' : hideFirst, 'animationBack' : returnAnimation })} ></i>
+        <i className={classnames("mt-2", { 'animation-two': openBorder, 'hide' : hideSecond, 'animationBack-two': returnAnimation })}></i>
+        <i className={classnames("mt-3", { 'animation-tree': openBorder, 'hide' : hideThird, 'animationBack-tree': returnAnimation })}></i>
       </div>
     )
   }
