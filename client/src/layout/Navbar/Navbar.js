@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 // Components
 import Logo from '../Logo';
@@ -26,7 +28,10 @@ class Navbar extends Component {
       closeBtn: false,
       closeBtnBack: false,
     }
-  }
+  };
+  static propTypes = {
+    location: PropTypes.object.isRequired,
+  };
 
   timer = (data, seconds) => {
     setTimeout(() => { this.setState({ [data]: !this.state[data] }) }, seconds);
@@ -40,8 +45,9 @@ class Navbar extends Component {
     this.setState({ open: true, cycle: true, show: !this.state.show });
    };
 
-  componentDidUpdate() {
-    const { open, close, cycle, closeBtn, show, openBorder } = this.state;
+  componentDidUpdate(prevProp, prevState) {
+    const { location } = this.props;
+    const { open, close, cycle, closeBtn, show } = this.state;
     // Open
     if (open && cycle && !close) {
       // open & hide Border
@@ -106,17 +112,15 @@ class Navbar extends Component {
       this.setState({ cycle: false });
       setTimeout(() => this.setState({ close: false, closeBorder: false, closeBtn: false, closeBtnBack: false, cycle: false, hideFirst: false, hideSecond: false, hideThird: false, returnAnimation: false, openBorder: false }), 3000);
     }
-
-    // Reset
-    if (!show && !cycle && !open && !close && openBorder) {
-      this.setState({ openBorder: false })
+    if (prevProp.location !== location && !close) {
+      this.setState({ close: false, closeBorder: false, closeBtn: false, closeBtnBack: false, cycle: false, hideBorder: false, hideFirst: false, hideSecond: false, hideThird: false, open: false, openBorder: false, returnAnimation: false, show: false })
     }
   };
 
+  
 
 
   render() {
-    
     const { show, openBorder, hideBorder, closeBorder, hideFirst, hideSecond, hideThird, closeBtn, closeBtnBack, returnAnimation } = this.state;
     return (
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -137,4 +141,4 @@ class Navbar extends Component {
   }
 };
 
-export default Navbar;
+export default withRouter(Navbar);

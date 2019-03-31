@@ -29,7 +29,7 @@ class DesktopView extends Component {
           <NavLink 
             to='/projects' 
             className='nav-link'
-            activeClassName="active"
+            activeClassName='active'
             onClick={this.onClick}
             >
             <span>Projects</span>
