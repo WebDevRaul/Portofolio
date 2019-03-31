@@ -25,8 +25,8 @@ class Navbar extends Component {
       hideSecond: false,
       hideThird: false,
       returnAnimation: false,
-      closeBtn: false,
-      closeBtnBack: false,
+      openButton: false,
+      closeButton: false,
     }
   };
   static propTypes = {
@@ -47,7 +47,7 @@ class Navbar extends Component {
 
   componentDidUpdate(prevProp, prevState) {
     const { location } = this.props;
-    const { open, close, cycle, closeBtn, show } = this.state;
+    const { open, close, cycle, openButton, show } = this.state;
     // Open
     if (open && cycle && !close) {
       // open & hide Border
@@ -60,7 +60,7 @@ class Navbar extends Component {
       this.timer('hideSecond', 1300);
       this.timer('hideThird', 1500);
         // show close Btn
-      this.timer('closeBtn', 1600);
+      this.timer('openButton', 1600);
       // close Border
       this.timer('hideBorder', 2500);
       this.timer('closeBorder', 2500);
@@ -71,13 +71,13 @@ class Navbar extends Component {
       this.setState({ open: false, close: true });
     };
     // Close
-    if (open && cycle && closeBtn && close) {
+    if (open && cycle && openButton && close) {
       // open & hide Border
       this.setState({ openBorder: true });
       this.timer('hideBorder', 450);
       // close Btn & show Animation & close Border
-      this.timer('closeBtnBack', 450);
-      this.timer('closeBtn', 800);
+      this.timer('closeButton', 450);
+      this.timer('openButton', 800);
       // show animation
       this.timer('returnAnimation', 450);
       this.timer('hideFirst', 800);
@@ -89,16 +89,16 @@ class Navbar extends Component {
       this.timer('openBorder', 2500);
       // Reset
       this.setState({ cycle: false });
-      setTimeout(() => { this.setState({ open: false, returnAnimation: false, closeBtnBack: false, closeBorder: false, close: false}) }, 3000);
+      setTimeout(() => { this.setState({ open: false, returnAnimation: false, closeButton: false, closeBorder: false, close: false}) }, 3000);
     }
     // Reset if select a Link
-    if (!show && !open && cycle && closeBtn && close) {
+    if (!show && !open && cycle && openButton && close) {
       // // open & hide Border
       this.setState({ openBorder: true });
       this.timer('hideBorder', 450);
       // close Btn & show Animation & close Border
-      this.timer('closeBtnBack', 450);
-      this.timer('closeBtn', 800);
+      this.timer('closeButton', 450);
+      this.timer('openButton', 800);
       // show animation
       this.timer('returnAnimation', 450);
       this.timer('hideFirst', 800);
@@ -110,10 +110,10 @@ class Navbar extends Component {
 
       // Reset
       this.setState({ cycle: false });
-      setTimeout(() => this.setState({ close: false, closeBorder: false, closeBtn: false, closeBtnBack: false, cycle: false, hideFirst: false, hideSecond: false, hideThird: false, returnAnimation: false, openBorder: false }), 3000);
+      setTimeout(() => this.setState({ close: false, closeBorder: false, openButton: false, closeButton: false, cycle: false, hideFirst: false, hideSecond: false, hideThird: false, returnAnimation: false, openBorder: false }), 3000);
     }
     if (prevProp.location !== location && !close) {
-      this.setState({ close: false, closeBorder: false, closeBtn: false, closeBtnBack: false, cycle: false, hideBorder: false, hideFirst: false, hideSecond: false, hideThird: false, open: false, openBorder: false, returnAnimation: false, show: false })
+      this.setState({ close: false, closeBorder: false, openButton: false, closeButton: false, cycle: false, hideBorder: false, hideFirst: false, hideSecond: false, hideThird: false, open: false, openBorder: false, returnAnimation: false, show: false })
     }
   };
 
@@ -121,7 +121,7 @@ class Navbar extends Component {
 
 
   render() {
-    const { show, openBorder, hideBorder, closeBorder, hideFirst, hideSecond, hideThird, closeBtn, closeBtnBack, returnAnimation } = this.state;
+    const { show, openBorder, hideBorder, closeBorder, hideFirst, hideSecond, hideThird, openButton, closeButton, returnAnimation } = this.state;
     return (
       <nav className="navbar navbar-expand-lg navbar-light">
         <Logo />
@@ -132,7 +132,7 @@ class Navbar extends Component {
         <MobileView 
           border={{ openBorder, hideBorder, closeBorder }}
           openBtn={{ openBorder, hideFirst, hideSecond, hideThird, returnAnimation }}
-          closeBtn={{ closeBtn, closeBtnBack }}
+          closeBtn={{ openButton, closeButton }}
           />
         </div>
         <DesktopView show={ show } onClick={this.onClick} />
