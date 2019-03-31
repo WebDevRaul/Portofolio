@@ -41,7 +41,7 @@ class Navbar extends Component {
    };
 
   componentDidUpdate() {
-    const { open, close, cycle, closeBtn } = this.state;
+    const { open, close, cycle, closeBtn, show, openBorder } = this.state;
     // Open
     if (open && cycle && !close) {
       // open & hide Border
@@ -64,7 +64,8 @@ class Navbar extends Component {
 
       this.setState({ open: false, close: true });
     };
-    if (open && cycle && closeBtn && close ) {
+    // Close
+    if (open && cycle && closeBtn && close) {
       // open & hide Border
       this.setState({ openBorder: true });
       this.timer('hideBorder', 450);
@@ -82,9 +83,35 @@ class Navbar extends Component {
       this.timer('openBorder', 2500);
       // Reset
       this.setState({ cycle: false });
-      setTimeout(() => { this.setState({ open: false, returnAnimation: false, closeBtnBack: false, closeBorder: false, close: false }) }, 3000);
+      setTimeout(() => { this.setState({ open: false, returnAnimation: false, closeBtnBack: false, closeBorder: false, close: false}) }, 3000);
     }
-  }
+    // Reset if select a Link
+    if (!show && !open && cycle && closeBtn && close) {
+      // // open & hide Border
+      this.setState({ openBorder: true });
+      this.timer('hideBorder', 450);
+      // close Btn & show Animation & close Border
+      this.timer('closeBtnBack', 450);
+      this.timer('closeBtn', 800);
+      // show animation
+      this.timer('returnAnimation', 450);
+      this.timer('hideFirst', 800);
+      this.timer('hideSecond', 1300);
+      this.timer('hideThird', 1500);
+      // close Border
+      this.timer('hideBorder', 2500);
+      this.timer('closeBorder', 2500);
+
+      // Reset
+      this.setState({ cycle: false });
+      setTimeout(() => this.setState({ close: false, closeBorder: false, closeBtn: false, closeBtnBack: false, cycle: false, hideFirst: false, hideSecond: false, hideThird: false, returnAnimation: false, openBorder: false }), 3000);
+    }
+
+    // Reset
+    if (!show && !cycle && !open && !close && openBorder) {
+      this.setState({ openBorder: false })
+    }
+  };
 
 
 
