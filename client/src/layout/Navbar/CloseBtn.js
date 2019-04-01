@@ -3,11 +3,10 @@ import classnames from 'classnames';
 
 export default class CloseBtn extends Component {
   render() {
-    const { openButton, closeButton } = this.props.closeBtn;
-    console.log(openButton)
+    const { openButton, closeButton, hideButton } = this.props.closeBtn;
     return (
       <div className={classnames('p-div', {
-        'hide': !openButton ? !openButton : false,
+        'hide': hideButton,
         'animation-close': openButton,
         'animation-close-back': closeButton,
         })}>

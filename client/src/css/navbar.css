@@ -216,7 +216,7 @@
   left: 20%;
   transform: rotate(-38deg);
 }
-.animation-close {
+/* .animation-close {
   animation: close 1s;
 }
 @keyframes close {
@@ -236,7 +236,7 @@
     width: 100%;
     height: 100%;
   }
-};
+}; */
 .animation-close-back {
   animation: closeBack 1s;
 }
