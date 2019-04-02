@@ -11,9 +11,9 @@ const Square = ({
 }) => {
   return (
     <div className='m-auto'>
-      <div className='circle'>
-        <div className='outer-circle' >
-          <div className='inner-circle' >
+      <div className='square'>
+        <div className='outer-square' >
+          <div className='inner-square' >
             <span className=''>
               <i>{svg}</i>
             </span>
