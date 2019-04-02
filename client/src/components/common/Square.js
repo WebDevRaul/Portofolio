@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 import '../../css/skill.css';
 
 
-const Circle = ({
-  icon,
+const Square = ({
   text,
   svg,
 }) => {
@@ -16,7 +15,7 @@ const Circle = ({
         <div className='outer-circle' >
           <div className='inner-circle' >
             <span className=''>
-              <i className={icon ? icon : null}>{svg ? svg : null}</i>
+              <i>{svg}</i>
             </span>
           </div>
         </div>
@@ -26,8 +25,8 @@ const Circle = ({
   );
 };
 
-Circle.defaultProps = {
+Square.defaultProps = {
   text: 'text'
 };
 
-export default Circle;
+export default Square;
