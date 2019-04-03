@@ -9,6 +9,7 @@ import '../../css/about.css';
 // Img
 import Redux from '../../assets/Redux';
 import MongoDB from '../../assets/MongoDB';
+import NodeJs from '../../assets/NodeJs';
 
 export default function Skills() {
   return (
@@ -23,6 +24,7 @@ export default function Skills() {
             <Circle icon='fas fa-database fa-3x' text='PostgreSQL' />
             <Circle svg={<Redux width='50px' />} text='Redux' />
             <Circle svg={<MongoDB height='3em' width='5.51em' />} text='MongoDB' />
+            <Circle svg={<NodeJs height='3em' width='5.51em' />} text='NodeJs' />
           </div>
         </div>
       </div>
