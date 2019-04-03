@@ -12,10 +12,10 @@ const Circle = ({
 }) => {
   return (
     <div className='m-auto'>
-      <div className='circle'>
-        <div className='outer-circle' >
-          <div className='inner-circle' >
-            <span className=''>
+      <div className='circle d-flex m-auto'>
+        <div className='outer-circle d-flex m-auto' >
+          <div className='inner-circle d-flex m-auto' >
+            <span className='d-flex m-auto'>
               <i className={icon ? icon : null}>{svg ? svg : null}</i>
             </span>
           </div>
