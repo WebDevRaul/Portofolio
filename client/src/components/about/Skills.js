@@ -12,6 +12,7 @@ import MongoDB from '../../assets/MongoDB';
 import NodeJs from '../../assets/NodeJs';
 import PostgreSQL from '../../assets/PostgreSQL';
 import ReactJs from '../../assets/ReactJs';
+import JQuery from '../../assets/JQuery';
 
 export default function Skills() {
   return (
@@ -22,6 +23,7 @@ export default function Skills() {
             <Circle icon='fab fa-html5 fa-3x' text='Html 5' />
             <Circle icon='fab fa-css3-alt fa-3x' text='Css 3' />
             <Circle icon='fab fa-js-square fa-3x' text='JavaScript' />
+            <Circle svg={<JQuery width='50px' height='50px' />} text='JQuery' />
             <Circle svg={<ReactJs width='50px' height='50px' />} text='ReactJs' />
             <Circle svg={<Redux width='50px' />} text='Redux' />
             <Circle svg={<MongoDB height='3em' width='5.51em' />} text='MongoDB' />
