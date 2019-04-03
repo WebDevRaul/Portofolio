@@ -2,7 +2,6 @@ import React from 'react';
 
 // Common
 import Circle from '../common/Circle';
-import Square from '../common/Square';
 
 // Css
 import '../../css/about.css';
@@ -23,7 +22,7 @@ export default function Skills() {
             <Circle icon='fab fa-react fa-3x' text='React' />
             <Circle icon='fas fa-database fa-3x' text='PostgreSQL' />
             <Circle svg={<Redux width='50px' />} text='Redux' />
-            <Square svg={<MongoDB height='3em' width='5.51em' />} text='MongoDB' />
+            <Circle svg={<MongoDB height='3em' width='5.51em' />} text='MongoDB' />
           </div>
         </div>
       </div>

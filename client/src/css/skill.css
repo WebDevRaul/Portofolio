@@ -12,6 +12,7 @@
   height: 90px;	
   border-radius: 50%;	
   background-color: white;
+  padding: 5px;
 }	
 .inner-circle {	
   width: 70px;	
@@ -20,32 +21,3 @@
   margin: 5px;	
   border-radius: 50%;	
 }	
-
-/* Square */
-.square {	
-  width: 130px;	
-  height: 90px;	
-  border: 0.5px solid black;	
-  background-color: white;	
-  display: flex;	
-  margin: auto;
-}	
-.outer-square {	
-  width: 120px;	
-  height: 80px;	
-  background-color: rgb(219, 219, 219);
-  display: flex;	
-  margin: auto;
-}	
-.inner-square {	
-  width: 100px;	
-  height: 65px;	
-  background-color: rgb(255, 194, 80);	
-  margin: 5px;	
-  display: flex;	
-  margin: auto;
-}	
-.inner-square span{	
-  display: flex;
-  margin: auto;	
-}
