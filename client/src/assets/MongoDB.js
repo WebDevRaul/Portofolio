@@ -1,6 +1,6 @@
 import React from "react";
 
-const Redux = ({
+const MongoDB = ({
   width,
   height
 }) => (
@@ -24,4 +24,4 @@ const Redux = ({
   </svg>
 );
 
-export default Redux;
+export default MongoDB;

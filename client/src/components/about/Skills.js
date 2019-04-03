@@ -13,6 +13,7 @@ import NodeJs from '../../assets/NodeJs';
 import PostgreSQL from '../../assets/PostgreSQL';
 import ReactJs from '../../assets/ReactJs';
 import JQuery from '../../assets/JQuery';
+import Html from '../../assets/Html';
 
 export default function Skills() {
   return (
@@ -20,7 +21,7 @@ export default function Skills() {
       <div className='row'>
         <div className='col'>
           <div className='d-flex p-2'>
-            <Circle icon='fab fa-html5 fa-3x' text='Html 5' />
+            <Circle svg={<Html width='45px' height='45px' />} text='Html' />
             <Circle icon='fab fa-css3-alt fa-3x' text='Css 3' />
             <Circle icon='fab fa-js-square fa-3x' text='JavaScript' />
             <Circle svg={<JQuery width='50px' height='50px' />} text='JQuery' />
