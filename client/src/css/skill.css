@@ -5,8 +5,9 @@
   border-radius: 50%;	
   background: linear-gradient(35deg, 
   rgba(61, 99, 114, 0.7) 0%, 
-  rgba(255, 255, 255, 0.7) 50% );	
-}	
+  rgba(255, 255, 255, 0.7) 50% );
+}
+
 .outer-circle {	
   width: 5.625rem;	
   height: 5.625rem;	

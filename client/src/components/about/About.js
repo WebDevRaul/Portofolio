@@ -4,6 +4,10 @@ import React, { Component } from 'react';
 import Title from './Title';
 import AboutMe from './AboutMe';
 import Skills from './Skills';
+import MoreSkills from './MoreSkills';
+
+// Css
+import '../../css/about.css';
 
 export default class About extends Component {
   render() {
@@ -23,6 +27,12 @@ export default class About extends Component {
           <div className='row'>
             <div className='col'>
               <Skills />
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col'>
+              <p>More Skills</p>
+              <MoreSkills />
             </div>
           </div>
         </div>

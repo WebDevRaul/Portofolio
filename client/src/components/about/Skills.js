@@ -3,9 +3,6 @@ import React from 'react';
 // Common
 import Circle from '../common/Circle';
 
-// Css
-import '../../css/about.css';
-
 // Img
 import Redux from '../../assets/Redux';
 import MongoDB from '../../assets/MongoDB';
