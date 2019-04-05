@@ -4,12 +4,48 @@ import React from 'react';
 import Circle from '../common/Circle';
 
 // Img
+import Github from '../../assets/Github';
 
 
 export default function MoreSkills() {
+  const rem = '3rem';
   return (
-    <div>
-      
+    <div className='more-skills text-center'>
+      <div className='row no-gutters'>
+        <div className='col'>
+          <div className='row no-gutters'>
+            <div className='col-md-6'>
+              <div className='row no-gutters'>
+                <div className='col-sm-6'>
+                  <div className='d-flex'>
+                    <Circle svg={<Github width={rem} height={rem} />} text='Github' />
+                    <Circle svg={<Github width={rem} height={rem} />} text='Github' />
+                  </div>
+                </div>
+                <div className='col-sm-6'>
+                  <div className='d-flex'>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='col-md-6'>
+              <div className='row no-gutters'>
+                <div className='col-sm-6'>
+                  <div className='d-flex'>
+                    
+                  </div>
+                </div>
+                <div className='col-sm-6'>
+                  <div className='d-flex'>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

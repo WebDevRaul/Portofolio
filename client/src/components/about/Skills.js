@@ -17,7 +17,7 @@ import Javascript from '../../assets/Javascript';
 export default function Skills() {
   const rem = '3rem';
   return (
-    <div className='skills'>
+    <div className='skills text-center'>
       <div className='row no-gutters'>
         <div className='col'>
           <div className='row no-gutters'>
