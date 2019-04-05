@@ -1,22 +1,22 @@
 /* Circle */
 .circle {	
-  width: 100px;	
-  height: 100px;	
+  width: 6.25rem;	
+  height: 6.25rem;	
   border-radius: 50%;	
   background: linear-gradient(35deg, 
   rgba(61, 99, 114, 0.7) 0%, 
   rgba(255, 255, 255, 0.7) 50% );	
 }	
 .outer-circle {	
-  width: 90px;	
-  height: 90px;	
+  width: 5.625rem;	
+  height: 5.625rem;	
   border-radius: 50%;	
   background-color: white;
   padding: 5px;
 }	
 .inner-circle {	
-  width: 70px;	
-  height: 70px;	
+  width: 4.375rem;	
+  height: 4.375rem;	
   background-color: white;	
   margin: 5px;	
   border-radius: 50%;	
