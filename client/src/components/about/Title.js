@@ -7,7 +7,7 @@ export default function Title() {
         <div className='col'>
           <div className='title-div'>
             <h3>
-              About me
+              <span>About Me</span>
             </h3>
           </div>
         </div>

@@ -1,0 +1,16 @@
+/* Title */
+
+.title-div h3{
+  font-size: 2.8em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.title-div > h3 > span {
+  padding: 0px 5px;
+  border: 14px solid black;
+  border-top: 0px;
+  border-bottom: 0px;
+}
