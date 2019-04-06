@@ -21,57 +21,41 @@ export default function Skills() {
       <div className='row no-gutters'>
         <div className='col'>
           <div className='row no-gutters'>
-            <div className='col-md-6'>
+            <div className='col-lg-5 offset-lg-2'>
               <div className='row no-gutters'>
-                <div className='col-sm-6'>
-                  <div className='d-flex'>
-                    <Circle svg={<Html width={rem} height={rem} />} text='Html 5' />
-                    <Circle svg={<Css width={rem} height={rem} />} text='Css 3' />
-                  </div>
-                </div>
-                <div className='col-sm-6'>
-                  <div className='d-flex'>
-                    <Circle svg={<Javascript width={rem} height={rem} />} text='Javascript' />
-                    <Circle svg={<JQuery width={rem} height={rem} />} text='JQuery' />
+                <div className='col-md-12'>
+                  <div className='row no-gutters'>
+                    <div className='col-sm-6'>
+                      <div className='d-flex'>
+                        <Circle svg={<Html width={rem} height={rem} />} text='Html 5' />
+                        <Circle svg={<Css width={rem} height={rem} />} text='Css 3' />
+                        <Circle svg={<Javascript width={rem} height={rem} />} text='Javascript' />
+                      </div>
+                    </div>
+                    <div className='col-sm-6'>
+                      <div className='d-flex'>
+                        <Circle svg={<JQuery width={rem} height={rem} />} text='JQuery' />
+                        <Circle svg={<ReactJs width={rem} height={rem} />} text='ReactJs' />
+                        <Circle svg={<Redux width={rem} height={rem} />} text='Redux' />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className='col-md-6'>
-              <div className='row no-gutters'>
-                <div className='col-sm-6'>
-                  <div className='d-flex'>
-                    <Circle svg={<ReactJs width={rem} height={rem} />} text='ReactJs' />
-                    <Circle svg={<Redux width={rem} height={rem} />} text='Redux' />
+              <div className='col'>
+                <div className='row no-gutters'>
+                  <div className='col-sm-6'>
+                    <div className='d-flex'>
+                      <Circle svg={<NodeJs height={rem} width='5.5em' />} text='NodeJs' />
+                      <Circle svg={<MongoDB height={rem} width='5.5em' />} text='MongoDB' />
+                      <Circle svg={<PostgreSQL height={rem} width={rem} />} text='PostgreSQL' />
+                    </div>
+                  </div>
+                  <div className='col-sm-6'>
+                    <div className='d-flex'>
                   </div>
                 </div>
-                <div className='col-sm-6'>
-                  <div className='d-flex'>
-                    <Circle svg={<MongoDB height={rem} width='5.5em' />} text='MongoDB' />
-                    <Circle svg={<NodeJs height={rem} width='5.5em' />} text='NodeJs' />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='row no-gutters'>
-            <div className='col-md-6'>
-              <div className='row no-gutters'>
-                <div className='col-sm-6'>
-                  <div className='d-flex'>
-                    <Circle svg={<PostgreSQL height={rem} width={rem} />} text='PostgreSQL' />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='col-md-6'>
-              <div className='row no-gutters'>
-                <div className='col-sm-6'>
-                  <div className='d-flex'>
-
-                  </div>
-                </div>
-
               </div>
             </div>
           </div>

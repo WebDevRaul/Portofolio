@@ -5,8 +5,10 @@ export default function Title() {
     <div className='title text-center'>
       <div className='row'>
         <div className='col'>
-          <div>
-            <h3>About Me</h3>
+          <div className='title-div'>
+            <h3>
+              About me
+            </h3>
           </div>
         </div>
       </div>
