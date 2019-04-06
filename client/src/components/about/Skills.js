@@ -15,7 +15,7 @@ import Css from '../../assets/Css';
 import Javascript from '../../assets/Javascript';
 
 export default function Skills() {
-  const rem = '3rem';
+  const rem = '3em';
   return (
     <div className='skills text-center'>
       <div className='row no-gutters'>
@@ -47,8 +47,8 @@ export default function Skills() {
                 </div>
                 <div className='col-sm-6'>
                   <div className='d-flex'>
-                    <Circle svg={<MongoDB height={rem} width='5.5rem' />} text='MongoDB' />
-                    <Circle svg={<NodeJs height={rem} width='5.5rem' />} text='NodeJs' />
+                    <Circle svg={<MongoDB height={rem} width='5.5em' />} text='MongoDB' />
+                    <Circle svg={<NodeJs height={rem} width='5.5em' />} text='NodeJs' />
                   </div>
                 </div>
               </div>

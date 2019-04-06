@@ -5,6 +5,7 @@ import Circle from '../common/Circle';
 
 // Img
 import Github from '../../assets/Github';
+import Boostrap from '../../assets/Boostrap';
 
 
 export default function MoreSkills() {
@@ -19,7 +20,7 @@ export default function MoreSkills() {
                 <div className='col-sm-6'>
                   <div className='d-flex'>
                     <Circle svg={<Github width={rem} height={rem} />} text='Github' />
-                    <Circle svg={<Github width={rem} height={rem} />} text='Github' />
+                    <Circle svg={<Boostrap width={rem} height={rem} />} text='Boostrap 4' />
                   </div>
                 </div>
                 <div className='col-sm-6'>

@@ -6,7 +6,7 @@ export default function Title() {
       <div className='row'>
         <div className='col'>
           <div>
-            <h3>About <span className='heading'>Me</span></h3>
+            <h3>About Me</h3>
           </div>
         </div>
       </div>
