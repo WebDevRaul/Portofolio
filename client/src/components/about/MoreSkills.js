@@ -9,7 +9,7 @@ import Boostrap from '../../assets/Boostrap';
 
 
 export default function MoreSkills() {
-  const rem = '3rem';
+  const rem = '3em';
   return (
     <div className='more-skills text-center'>
       <div className='row no-gutters'>
