@@ -6,11 +6,11 @@ export default function Title() {
       <div className='row mb-5 mt-5 no-gutters'>
         <div className='col'>
           <div className='title-div'>
-            <span className='span-div d-flex'>
-              <span className='top-border d-flex m-auto'>About me</span>
-              <span className='d-flex auto'>About me</span>
-              <span className='bottom-border d-flex m-auto'>About me</span>
-            </span>
+            <h3 className='m-0'>
+              <i></i>
+              <span className='title-span'>About Me</span>
+              <i></i>
+            </h3>
           </div>
         </div>
       </div>

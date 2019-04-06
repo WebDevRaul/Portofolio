@@ -1,49 +1,35 @@
 /* Title */
 
-.title-div{
-  font-size: 2.4em;
+.title-span {
+  font-size: 1.3em;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: black;
+  padding: 5px 10px;
+  border: 12px solid black;
 }
-.span-div :nth-child(2){
-  padding: 5px 11px;
-  border: 14px solid black;
-  border-top: 0px;
-  border-bottom: 0px;
+.title-div > h3 > :first-child {
+  height: 20px;
+  display: block;
+  width: 6em;
+  background: white;
+  position: absolute;
+  top: -30%;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 10;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
-
-.top-border {
+.title-div > h3 > :nth-last-child(1) {
+  height: 20px;
+  display: block;
+  width: 6em;
+  background: white;
   position: absolute;
-  top: 50%;
+  top: 130%;
+  bottom: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3rem;
-  color: white;
-  background-image: linear-gradient(to top, #000 10px, rgba(255,255,255,0) 1px), 
-    linear-gradient(to bottom, #000 10px, rgba(255,255,255,0) 1px);
-  background-position: left;
-  background-size: 15%;
-  background-repeat: no-repeat;
-  z-index: -10;
-}
-.bottom-border {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
-  color: white;
-  background-image: linear-gradient(to top, #000 10px, rgba(255,255,255,0) 1px), 
-    linear-gradient(to bottom, #000 10px, rgba(255,255,255,0) 1px);
-  background-position: right;
-  background-size: 15%;
-  background-repeat: no-repeat;
-  z-index: -11;
+  z-index: 10;
 }
