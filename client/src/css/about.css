@@ -1,35 +1,76 @@
 /* Title */
+.title-div {
+  border: 12px solid black;
+  width: 15.5em;
+  height: 5.1em;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
-.title-span {
+.title-text {
   font-size: 1.3em;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: black;
-  padding: 5px 10px;
-  border: 12px solid black;
+  position: relative;
+  opacity: 1;
 }
-.title-div > h3 > :first-child {
+.title-div > :first-child {
   height: 20px;
   display: block;
-  width: 6em;
+  width: 11em;
   background: white;
   position: absolute;
-  top: -30%;
+  top: 6%;
   bottom: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
 }
-.title-div > h3 > :nth-last-child(1) {
+.title-div > :nth-last-child(1) {
   height: 20px;
   display: block;
-  width: 6em;
+  width: 11em;
   background: white;
   position: absolute;
-  top: 130%;
+  top: 95%;
   bottom: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+}
+
+/* Title animation */
+.div-animation {
+  animation: border 4s;
+}
+@keyframes border {
+  0% {
+    width: 1.5em;
+  }
+  100% {
+    width: 15.5em
+  }
+}
+.border-animation {
+  animation: topAndBottom 4s;
+}
+@keyframes topAndBottom {
+  0% {
+    width: 0em;
+  }
+  10% {
+    width: 0em;
+  }
+  100% {
+    opacity: 12em;
+  }
+}
+
+
+/* Subtitle */
+.subtitle span {
+  border-bottom: 4px solid black;
 }
