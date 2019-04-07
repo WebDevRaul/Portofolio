@@ -41,6 +41,18 @@
   transform: translate(-50%, -50%);
   z-index: 10;
 }
+.text-hide-div {
+  height: 20px;
+  display: block;
+  width: 15.5em;
+  background: white;
+  position: absolute;
+  top: 175%;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
 
 /* Title animation */
 .div-animation {
@@ -191,7 +203,7 @@
     position: absolute;
     left: 50%;
     transform: rotate(0deg);
-    top: -5em;
+    top: -6em;
   }
   100% {
     position: absolute;
@@ -205,7 +217,7 @@
     position: absolute;
     left: 54%;
     transform: rotate(0deg);
-    top: -5em;
+    top: -6em;
   }
   100% {
     position: absolute;
@@ -219,7 +231,7 @@
     position: absolute;
     left: 58%;
     transform: rotate(0deg);
-    top: -5em;
+    top: -6em;
   }
   100% {
     position: absolute;
@@ -233,7 +245,7 @@
     position: absolute;
     left: 62%;
     transform: rotate(0deg);
-    top: -5em;
+    top: -6em;
   }
   100% {
     position: absolute;
@@ -247,7 +259,7 @@
     position: absolute;
     left: 46%;
     transform: rotate(0deg);
-    top: -5em;
+    top: -6em;
   }
   100% {
     position: absolute;
@@ -261,7 +273,7 @@
     position: absolute;
     left: 42%;
     transform: rotate(0deg);
-    top: -5em;
+    top: -6em;
   }
   100% {
     position: absolute;
@@ -275,7 +287,7 @@
     position: absolute;
     left: 38%;
     transform: rotate(0deg);
-    top: -5em;
+    top: -6em;
   }
   100% {
     position: absolute;
@@ -289,7 +301,7 @@
     position: absolute;
     left: 34%;
     transform: rotate(0deg);
-    top: -5em;
+    top: -6em;
   }
   100% {
     position: absolute;
@@ -303,7 +315,7 @@
     position: absolute;
     left: 30%;
     transform: rotate(0deg);
-    top: -5em;
+    top: -6em;
   }
   100% {
     position: absolute;

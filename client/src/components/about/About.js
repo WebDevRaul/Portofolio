@@ -10,13 +10,33 @@ import MoreSkills from './MoreSkills';
 import '../../css/about.css';
 
 export default class About extends Component {
+  state = {
+    active: true
+  }
+
+  componentDidMount() {
+    this.setState({ active: false })
+  };
+
+  componentDidUpdate(prevProps, prevState) {
+    const { active } = this.state;
+    if ((active !== prevState.active) && (this.state.active === false)) {
+      const timer = () => {setTimeout(() => this.setState({ active: true }), 1720)}
+      timer();
+    }
+  }
+
   render() {
+
+    const { active } = this.state;
+    console.log(this.state.active)
+
     return (
       <div className='about'>
         <div className='container-fluid'>
           <div className='row'>
             <div className='col'>
-              <Title />
+              <Title active={active} />
             </div>
           </div>
           <div className='row'>

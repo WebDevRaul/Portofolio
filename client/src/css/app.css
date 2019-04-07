@@ -9,7 +9,7 @@ html {
 
 /* About */
 .hide {
-  display: none !important;
+  display: none;
 }
 .skills, .more-skills{
   font-size: 10px;
