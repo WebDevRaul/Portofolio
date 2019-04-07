@@ -17,7 +17,6 @@ export default function Title() {
       <div className='row'>
         <div className='col'>
           <div className='subtitle-div text-uppercase mb-3'>
-            {/* <span className=''>Allow me to introduce myself</span> */}
             <div className='subtitle-text'>
               <span>A</span>
               <span>l</span>

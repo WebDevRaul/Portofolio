@@ -89,33 +89,225 @@
   padding: 2px;
 }
 .subtitle-text :nth-child(1) {
-  animation: fall 1.5s linear;
-  animation-delay: 500ms;
+  animation: nine 1.3s linear;
+  animation-delay: 1500ms;
 }
 .subtitle-text :nth-child(2) {
-  animation: fall 1.5s linear;
-  animation-delay: 700ms;
+  animation: eight 1.3s linear;
+  animation-delay: 1300ms;
 }
 .subtitle-text :nth-child(3) {
-  animation: fall 1.5s linear;
-  animation-delay: 900ms;
+  animation: seven 1.3s linear;
+  animation-delay: 1100ms;
 }
 .subtitle-text :nth-child(4) {
-  animation: fall 1.5s linear;
-  animation-delay: 500ms;
+  animation: six 1.3s linear;
+  animation-delay: 1200ms;
 }
 .subtitle-text :nth-child(5) {
-  animation: fall 1.5s linear;
+  animation: five 1.3s linear;
+  animation-delay: 1400ms;
+}
+.subtitle-text :nth-child(7) {
+  animation: one 1.3s linear;
   animation-delay: 700ms;
+}
+.subtitle-text :nth-child(8) {
+  animation: four 1.3s linear;
+  animation-delay: 1200ms;
+}
+.subtitle-text :nth-child(10) {
+  animation: three 1.3s linear;
+  animation-delay: 1100ms;
+}
+.subtitle-text :nth-child(11) {
+  animation: two 1.3s linear;
+  animation-delay: 1000ms;
+}
+.subtitle-text :nth-child(13) {
+  animation: one 1.3s linear;
+  animation-delay: 600ms;
+}
+.subtitle-text :nth-child(16) {
+  animation: five 1.3s linear;
+  animation-delay: 750ms;
+}
+.subtitle-text :nth-child(14) {
+  animation: seven 1.3s linear;
+  animation-delay: 1100ms;
+}
+.subtitle-text :nth-child(15) {
+  animation: two 1.3s linear;
+  animation-delay: 1100ms;
+}
+.subtitle-text :nth-child(17) {
+  animation: six 1.3s linear;
+  animation-delay: 1300ms;
+}
+.subtitle-text :nth-child(21) {
+  animation: eight 1.3s linear;
+  animation-delay: 1500ms;
+}
+.subtitle-text :nth-child(20) {
+  animation: three 1.3s linear;
+  animation-delay: 1600ms;
+}
+.subtitle-text :nth-child(18) {
+  animation: four 1.3s linear;
+  animation-delay: 1700ms;
+}
+.subtitle-text :nth-child(19) {
+  animation: nine 1.3s linear;
+  animation-delay: 1800ms;
+}
+.subtitle-text :nth-child(23) {
+  animation: four 1.3s linear;
+  animation-delay: 1200ms;
+}
+.subtitle-text :nth-child(26) {
+  animation: six 1.3s linear;
+  animation-delay: 1400ms;
+}
+.subtitle-text :nth-child(28) {
+  animation: eight 1.3s linear;
+  animation-delay: 1600ms;
+}
+.subtitle-text :nth-child(24) {
+  animation: one 1.3s linear;
+  animation-delay: 800ms;
+}
+.subtitle-text :nth-child(27) {
+  animation: three 1.3s linear;
+  animation-delay: 1100ms;
+}
+.subtitle-text :nth-child(25) {
+  animation: five 1.3s linear;
+  animation-delay: 1250ms;
 }
 
 /* Subtitle animation */
-@keyframes fall {
+@keyframes one {
   0% {
+    position: absolute;
+    left: 50%;
     transform: rotate(0deg);
     top: -5em;
   }
   100% {
+    position: absolute;
+    left: 50%;
+    transform: rotate(720deg);
+    top: 0em;
+  }
+}
+@keyframes two {
+  0% {
+    position: absolute;
+    left: 54%;
+    transform: rotate(0deg);
+    top: -5em;
+  }
+  100% {
+    position: absolute;
+    left: 54%;
+    transform: rotate(720deg);
+    top: 0em;
+  }
+}
+@keyframes three {
+  0% {
+    position: absolute;
+    left: 58%;
+    transform: rotate(0deg);
+    top: -5em;
+  }
+  100% {
+    position: absolute;
+    left: 58%;
+    transform: rotate(720deg);
+    top: 0em;
+  }
+}
+@keyframes four {
+  0% {
+    position: absolute;
+    left: 62%;
+    transform: rotate(0deg);
+    top: -5em;
+  }
+  100% {
+    position: absolute;
+    left: 62%;
+    transform: rotate(720deg);
+    top: 0em;
+  }
+}
+@keyframes five {
+  0% {
+    position: absolute;
+    left: 46%;
+    transform: rotate(0deg);
+    top: -5em;
+  }
+  100% {
+    position: absolute;
+    left: 46%;
+    transform: rotate(720deg);
+    top: 0em;
+  }
+}
+@keyframes six {
+  0% {
+    position: absolute;
+    left: 42%;
+    transform: rotate(0deg);
+    top: -5em;
+  }
+  100% {
+    position: absolute;
+    left: 42%;
+    transform: rotate(720deg);
+    top: 0em;
+  }
+}
+@keyframes seven {
+  0% {
+    position: absolute;
+    left: 38%;
+    transform: rotate(0deg);
+    top: -5em;
+  }
+  100% {
+    position: absolute;
+    left: 38%;
+    transform: rotate(720deg);
+    top: 0em;
+  }
+}
+@keyframes eight {
+  0% {
+    position: absolute;
+    left: 34%;
+    transform: rotate(0deg);
+    top: -5em;
+  }
+  100% {
+    position: absolute;
+    left: 34%;
+    transform: rotate(720deg);
+    top: 0em;
+  }
+}
+@keyframes nine {
+  0% {
+    position: absolute;
+    left: 30%;
+    transform: rotate(0deg);
+    top: -5em;
+  }
+  100% {
+    position: absolute;
+    left: 30%;
     transform: rotate(720deg);
     top: 0em;
   }

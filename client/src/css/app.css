@@ -1,6 +1,16 @@
 html {
   font-size: 16px;
 }
+
+/* Navbar */
+.active {
+  margin-top: 2px;
+}
+
+/* About */
+.hide {
+  display: none !important;
+}
 .skills, .more-skills{
   font-size: 10px;
 }
