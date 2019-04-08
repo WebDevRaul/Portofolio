@@ -6,7 +6,7 @@ class Title extends Component {
   render() {
     const { active } = this.props;
     return (
-      <div className='title text-center'>
+      <div className='title text-center mb-4'>
         <div className='row mb-5 mt-5 no-gutters'>
           <div className='col'>
             <div className='title-div m-auto div-animation'>

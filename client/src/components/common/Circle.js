@@ -21,7 +21,7 @@ const Circle = ({
           </div>
         </div>
       </div>
-      <p>{text}</p>
+      <p className='circle-text'>{text}</p>
     </div>
   );
 };
