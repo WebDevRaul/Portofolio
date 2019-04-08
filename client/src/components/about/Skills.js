@@ -20,6 +20,7 @@ export default function Skills() {
     <div className='skills text-center'>
       <div className='row no-gutters'>
         <div className='col'>
+          <p>Up to the present moment I have gained experience in the following:</p> 
           <div className='row no-gutters'>
             <div className='col-lg-5 offset-lg-2'>
               <div className='row no-gutters'>

@@ -11,15 +11,11 @@ class AboutMe extends Component {
           <div className='col col-md-7'>
             <div className='about-me-bio'>
               <p>
-                <span className='about-me-first-letter'>L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                <span className='about-me-first-letter'>H</span>ello! My name is Savin Raul-Calin, I`m 35y old currently living in UK.<br />
+                At the end of 2017 I wrote the first <i>Hello World</i>, and since then I have been learning to code, using diffrent sources of information and dedicating every minute of my spare time for this passion.
               </p>
-            </div>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col'>
-            <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <p>As a person I`m communicative and friendly. Over the years, the jobs i performed always involved being in contact with people and being part of the team.</p>
+              <p>I`m a dedicated self learner and problem solver. Programming has challenged me a lot but hard work, curiosity and persistence helped me evolve.</p>
             </div>
           </div>
         </div>
