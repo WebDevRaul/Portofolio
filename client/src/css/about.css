@@ -7,9 +7,13 @@
   overflow: hidden;
   white-space: nowrap;
 }
-
+.title-text-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .title-text {
-  font-size: 1.3em;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -323,4 +327,17 @@
     transform: rotate(720deg);
     top: 0em;
   }
+}
+
+/* //  //  //  //  //  //  //  //  //  // */
+
+/* About me */
+.about-me-first-letter {
+  font-size: 35px;
+}
+.about-me-bio {
+  text-align: left;
+  line-height: 2em;
+  letter-spacing: 0.05rem;
+  text-align: justify;
 }

@@ -27,10 +27,7 @@ export default class About extends Component {
   }
 
   render() {
-
     const { active } = this.state;
-    console.log(this.state.active)
-
     return (
       <div className='about'>
         <div className='container-fluid'>

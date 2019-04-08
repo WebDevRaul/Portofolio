@@ -1,6 +1,10 @@
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
+body {
+  font-family: 'EB Garamond', serif;
+}
+
 
 /* Navbar */
 .active {

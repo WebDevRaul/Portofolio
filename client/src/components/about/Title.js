@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
-export default class Title extends Component {
+class Title extends Component {
   render() {
     const { active } = this.props;
     return (
@@ -11,8 +12,8 @@ export default class Title extends Component {
             <div className='title-div m-auto div-animation'>
               <i className='border-animation'></i>
               <i className={classnames('text-hide-div', {'hide': active})}></i>
-              <h3 className='d-flex'>
-                <span className='title-text p-2 title-animation'>About Me</span>
+              <h3 className='d-flex title-text-center'>
+                <span className='title-text title-animation m-auto'>About Me</span>
               </h3>
               <i className='border-animation'></i>
             </div>
@@ -57,4 +58,11 @@ export default class Title extends Component {
       </div>
     )
   }
-}
+};
+
+Title.propTypes = {
+  active: PropTypes.bool.isRequired
+};
+
+
+export default Title;
