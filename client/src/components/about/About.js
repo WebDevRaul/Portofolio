@@ -27,8 +27,12 @@ export default class About extends Component {
       const timer = () => {setTimeout(() => this.setState({ active: false }), 1720)}
       timer();
     }
-    if ((position > 575) && (animateSkill !== true)) {
+    // Set animation on position
+    if ((position > 550) && (animateSkill !== true)) {
       this.setState({ animateSkill: true })
+    }
+    if ((position < 350) && (animateSkill === true)) {
+      this.setState({ animateSkill: false })
     }
   };
 
@@ -44,6 +48,7 @@ export default class About extends Component {
 
   render() {
     const { active, animateSkill } = this.state;
+    // console.log(this.state.position)
     return (
       <div className='about' onScroll={this.listenToScroll}>
         <div className='container-fluid'>
