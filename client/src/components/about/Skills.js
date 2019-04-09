@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import classnames from 'classnames';
 
 // Common
 import Circle from '../common/Circle';
@@ -14,13 +15,15 @@ import Html from '../../assets/Html';
 import Css from '../../assets/Css';
 import Javascript from '../../assets/Javascript';
 
-export default function Skills() {
-  const rem = '3em';
+export default class Skills extends Component {
+  render() {
+    const rem = '3em';
+    const { animate } = this.props;    
   return (
-    <div className='skills text-center'>
+    <div className={classnames('opacity text-center skills', {'circle-animation': animate, 'no-opacity': animate})}>
       <div className='row no-gutters'>
         <div className='col'>
-          <p className='circle-animation'>Up to the present moment I have gained experience in the following:</p> 
+          <p>Up to the present moment I have gained experience in the following:</p> 
           <div className='row no-gutters'>
             <div className='col-lg-5 offset-lg-2'>
               <div className='row no-gutters'>
@@ -63,5 +66,6 @@ export default function Skills() {
         </div>
       </div>
     </div>
-  )
+    )
+  }
 }

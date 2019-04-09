@@ -372,7 +372,7 @@
 @keyframes circle {
   from {
     opacity: 0;
-    transform: scale3d(.55, .55, 1);
+    transform: scale3d(.75, .75, 1);
   }
   to {
     opacity: 1;

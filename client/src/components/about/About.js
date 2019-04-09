@@ -12,7 +12,8 @@ import '../../css/about.css';
 export default class About extends Component {
   state = {
     active: false,
-    theposition: 0
+    animateSkill: false,
+    position: 0,
   }
 
   componentDidMount() {
@@ -21,10 +22,13 @@ export default class About extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    const { active } = this.state;
+    const { active, position, animateSkill } = this.state;
     if ((active !== prevState.active) && (this.state.active === true)) {
       const timer = () => {setTimeout(() => this.setState({ active: false }), 1720)}
       timer();
+    }
+    if ((position > 575) && (animateSkill !== true)) {
+      this.setState({ animateSkill: true })
     }
   };
 
@@ -33,18 +37,13 @@ export default class About extends Component {
   }
 
   listenToScroll = () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-    const scrolled = winScroll / height
-  
     this.setState({
-      theposition: scrolled,
+      position: window.pageYOffset
     })
   }
 
   render() {
-    const { active } = this.state;
-    console.log(window.pageYOffset)
+    const { active, animateSkill } = this.state;
     return (
       <div className='about' onScroll={this.listenToScroll}>
         <div className='container-fluid'>
@@ -60,7 +59,7 @@ export default class About extends Component {
           </div>
           <div className='row'>
             <div className='col'>
-              <Skills />
+              <Skills animate={animateSkill} />
             </div>
           </div>
           <div className='row'>

@@ -11,7 +11,7 @@ const Circle = ({
   svg,
 }) => {
   return (
-    <div className='m-auto circle-animation'>
+    <div className='m-auto'>
       <div className='circle d-flex m-auto'>
         <div className='outer-circle d-flex m-auto' >
           <div className='inner-circle d-flex m-auto' >
