@@ -11,7 +11,7 @@ class Title extends Component {
           <div className='col'>
             <div className='title-div m-auto div-animation'>
               <i className='border-animation'></i>
-              <i className={classnames('text-hide-div', {'hide': active})}></i>
+              <i className={classnames('text-hide-div', {'hide': !active})}></i>
               <h3 className='d-flex title-text-center'>
                 <span className='title-text title-animation m-auto'>About Me</span>
               </h3>

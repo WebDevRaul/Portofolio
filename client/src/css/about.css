@@ -342,3 +342,35 @@
   text-align: justify;
 }
 
+/* About me bio animation */
+.about-me-bio  p{
+  animation: move 2s linear;
+  position: relative;
+}
+@keyframes move {
+  0% {
+    right: -4em;
+    opacity: 0;
+  }
+  80% {
+    right: 0.2em;
+    opacity: 1;
+  }
+  100% {
+    right: 0em;
+  }
+}
+
+/* .about-me-bio  p{
+  animation: move 1s ease-in;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: scale3d(.85, .85, 1);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+} */

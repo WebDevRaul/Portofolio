@@ -11,17 +11,17 @@ import '../../css/about.css';
 
 export default class About extends Component {
   state = {
-    active: true
+    active: false
   }
 
   componentDidMount() {
-    this.setState({ active: false })
+    this.setState({ active: true })
   };
 
   componentDidUpdate(prevProps, prevState) {
     const { active } = this.state;
-    if ((active !== prevState.active) && (this.state.active === false)) {
-      const timer = () => {setTimeout(() => this.setState({ active: true }), 1720)}
+    if ((active !== prevState.active) && (this.state.active === true)) {
+      const timer = () => {setTimeout(() => this.setState({ active: false }), 1720)}
       timer();
     }
   }
