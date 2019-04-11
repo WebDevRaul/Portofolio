@@ -344,7 +344,7 @@
 }
 
 /* About me bio animation */
-.about-me-bio  p{
+.about-me-bio  span{
   animation: move 2s ease-in;
   position: relative;
 }
@@ -367,7 +367,7 @@
 /* Skill logo animation */
 
 .circle-animation{
-  animation: circle 1s ease-in-out;
+  animation: circle 1s ease-in;
 }
 @keyframes circle {
   from {

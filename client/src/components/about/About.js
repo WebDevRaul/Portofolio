@@ -41,6 +41,7 @@ export default class About extends Component {
   }
 
   listenToScroll = () => {
+    const height = window.outerHeight;
     this.setState({
       position: window.pageYOffset
     })
@@ -48,7 +49,6 @@ export default class About extends Component {
 
   render() {
     const { active, animateSkill } = this.state;
-    // console.log(this.state.position)
     return (
       <div className='about' onScroll={this.listenToScroll}>
         <div className='container-fluid'>
