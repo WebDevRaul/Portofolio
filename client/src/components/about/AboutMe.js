@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 
+// Photo
+import Photo from '../../assets/Photo.jpg'
+
 class AboutMe extends Component {
   render() {
     return (
       <div className='about-me text-center'>
-        <div className='row'>
+        <div className='row no-gutters'>
           <div className='col-md-5'>
-            photo here
+            <div className='about-me-photo-div mb-4'>
+              <img src={Photo} className='about-me-photo m-auto' alt='Photo of me' />
+            </div>
           </div>
           <div className='col col-md-7'>
             <div className='about-me-bio'>

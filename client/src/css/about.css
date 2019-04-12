@@ -336,9 +336,6 @@
 .about-me-first-letter {
   font-size: 35px;
 }
-.about-me-bio {
-  overflow: hidden;
-}
 
 /* About me bio animation */
 .about-me-bio p{
@@ -359,23 +356,27 @@
 @keyframes left {
   0% {
     right: -4em;
+    opacity: 0;
   }
   80% {
     right: 0.2em;
   }
   100% {
     right: 0em;
+    opacity: 1;
   }
 }
 @keyframes right {
   0% {
     left: -4em;
+    opacity: 0;
   }
   80% {
     left: 0.2em;
   }
   100% {
     left: 0em;
+    opacity: 1;
   }
 }
 
@@ -395,4 +396,24 @@
     opacity: 1;
     transform: scale3d(1, 1, 1);
   }
+}
+
+
+/* //  //  //  //  //  //  //  //  //  // */
+
+/* Photo */
+
+.about-me-photo {
+  height: 20em;
+  width: 17em;
+  padding: 20px;
+  background: white;
+  -moz-box-shadow: 0 0 1em rgba(204, 204, 204, 0.5);
+  -webkit-box-shadow: 0 0 1em rgba(204, 204, 204, 0.5);
+  box-shadow: 0 0 1em rgba(204, 204, 204, 0.5);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }

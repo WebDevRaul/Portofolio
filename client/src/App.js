@@ -25,7 +25,7 @@ class App extends Component {
             <Route exact path='/' component={Landing} />
             <Router>
               <div className='app'>
-                <div className='container-fluid pt-2'>
+                <div className=''>
                   <Navbar />
                   <Route exact path='/home' component={Home} />
                   <Route exact path='/about' component={About} />
