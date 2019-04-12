@@ -404,16 +404,17 @@
 /* Photo */
 
 .about-me-photo {
-  height: 20em;
-  width: 17em;
+  height: 18em;
+  width: 15em;
   padding: 20px;
   background: white;
-  -moz-box-shadow: 0 0 1em rgba(204, 204, 204, 0.5);
-  -webkit-box-shadow: 0 0 1em rgba(204, 204, 204, 0.5);
-  box-shadow: 0 0 1em rgba(204, 204, 204, 0.5);
+  -moz-box-shadow: 0.313em 0.625em 1em #8888889f;
+  -webkit-box-shadow: 0.313em 0.625em 1em #8888889f;
+  box-shadow: 0.313em 0.625em 1em #8888889f;
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
+  z-index: 1;
 }

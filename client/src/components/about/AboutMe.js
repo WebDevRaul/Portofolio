@@ -8,12 +8,12 @@ class AboutMe extends Component {
     return (
       <div className='about-me text-center'>
         <div className='row no-gutters'>
-          <div className='col-md-5'>
-            <div className='about-me-photo-div mb-4'>
+          <div className='col-md-5 m-auto d-flex'>
+            <div className='about-me-photo-div m-auto d-flex'>
               <img src={Photo} className='about-me-photo m-auto' alt='Photo of me' />
             </div>
           </div>
-          <div className='col col-md-7'>
+          <div className='col col-md-7 mt-5'>
             <div className='about-me-bio'>
               <p>
                 <span className='about-me-first-letter'>H</span>ello! My name is Savin Raul-Calin, I`m 35y old currently living in UK.<br />
