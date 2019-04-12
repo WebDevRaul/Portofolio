@@ -344,11 +344,12 @@
   text-align: justify;
   text-align-last: left;
 }
-.about-me-bio > p, .about-me-bio > p > span {
+.animation-left {
   animation: left 2s ease-in;
   position: relative;
 }
-.about-me-bio :nth-last-child(2) {
+
+.animation-right {
   animation: right 2s ease-in;
   position: relative;
 }

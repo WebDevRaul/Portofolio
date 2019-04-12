@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 
 // Photo
 import Photo from '../../assets/Photo.jpg'
 
 class AboutMe extends Component {
   render() {
+    const { animation } = this.props;
     return (
       <div className='about-me text-center'>
         <div className='row no-gutters'>
@@ -14,13 +16,13 @@ class AboutMe extends Component {
             </div>
           </div>
           <div className='col col-md-7 mt-5'>
-            <div className='about-me-bio'>
-              <p>
-                <span className='about-me-first-letter'>H</span>ello! My name is Savin Raul-Calin, I`m 35y old currently living in UK.<br />
+            <div className='about-me-bio p-3'>
+              <p className={classnames('', {'animation-left': animation})}>
+                <span className={classnames('about-me-first-letter', {'animation-left': animation})}>H</span>ello! My name is Savin Raul-Calin, I`m 35y old currently living in UK.<br />
                 At the end of 2017 I wrote the first <i>Hello World</i>, and since then I have been learning to code, using diffrent sources of information and dedicating every minute of my spare time for this passion.
               </p>
-              <p>As a person I`m communicative and friendly. Over the years, the jobs i performed always involved being in contact with people and being part of the team.</p>
-              <p>I`m a dedicated self learner and problem solver. Programming has challenged me a lot, but hard work, curiosity and persistence helped me evolve.</p>
+              <p className={classnames('', {'animation-right': animation})} >As a person I`m communicative and friendly. Over the years, the jobs i performed always involved being in contact with people and being part of the team.</p>
+              <p className={classnames('', {'animation-left': animation})} >I`m a dedicated self learner and problem solver. Programming has challenged me a lot, but hard work, curiosity and persistence helped me evolve.</p>
             </div>
           </div>
         </div>

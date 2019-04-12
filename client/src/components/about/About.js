@@ -13,6 +13,7 @@ export default class About extends Component {
   state = {
     active: false,
     animateSkill: false,
+    animateAboutMe: false,
     position: 0,
   }
 
@@ -48,26 +49,26 @@ export default class About extends Component {
   }
 
   render() {
-    const { active, animateSkill } = this.state;
+    const { active, animateSkill, animateAboutMe } = this.state;
     return (
       <div className='about' onScroll={this.listenToScroll}>
-        <div className='container-fluid'>
-          <div className='row'>
+        <div className='container-fluid p-0'>
+          <div className='row no-gutters'>
             <div className='col'>
               <Title active={active} />
             </div>
           </div>
-          <div className='row'>
+          <div className='row no-gutters'>
             <div className='col'>
-              <AboutMe />
+              <AboutMe animation={animateAboutMe} />
             </div>
           </div>
-          <div className='row'>
+          <div className='row no-gutters'>
             <div className='col'>
               <Skills animate={animateSkill} />
             </div>
           </div>
-          <div className='row'>
+          <div className='row no-gutters'>
             <div className='col'>
               <p>More Skills</p>
               <MoreSkills />

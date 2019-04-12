@@ -21,7 +21,7 @@ class Title extends Component {
         </div>
         <div className='row'>
           <div className='col'>
-            <div className='subtitle-div text-uppercase mb-3'>
+            <div className='subtitle-div text-uppercase mb-4'>
               <div className='subtitle-text'>
                 <span>A</span>
                 <span>l</span>
