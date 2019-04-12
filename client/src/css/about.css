@@ -343,6 +343,8 @@
   letter-spacing: 0.05rem;
   text-align: justify;
   text-align-last: left;
+  transition: all .2s ease-in-out;
+  opacity: 1;
 }
 .animation-left {
   animation: left 2s ease-in;

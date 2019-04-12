@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 // Css
 import '../../css/skill.css';
@@ -24,10 +23,6 @@ const Circle = ({
       <p className='circle-text'>{text}</p>
     </div>
   );
-};
-
-Circle.defaultProps = {
-  text: 'text'
 };
 
 export default Circle;

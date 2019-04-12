@@ -9,46 +9,58 @@ import MoreSkills from './MoreSkills';
 // Css
 import '../../css/about.css';
 
+
 export default class About extends Component {
   state = {
     active: false,
     animateSkill: false,
     animateAboutMe: false,
     position: 0,
+    isScrolling: false,
   }
 
   componentDidMount() {
     this.setState({ active: true });
-    window.addEventListener('scroll', this.listenToScroll)
-  };
-
-  componentDidUpdate(prevProps, prevState) {
-    const { active, position, animateSkill } = this.state;
-    if ((active !== prevState.active) && (this.state.active === true)) {
-      const timer = () => {setTimeout(() => this.setState({ active: false }), 1720)}
-      timer();
-    }
-    // Set animation on position
-    if ((position > 550) && (animateSkill !== true)) {
-      this.setState({ animateSkill: true })
-    }
-    if ((position < 350) && (animateSkill === true)) {
-      this.setState({ animateSkill: false })
-    }
+    window.addEventListener("scroll", this.throttleScroll, false);
   };
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.listenToScroll)
+    window.removeEventListener('scroll', this.throttleScroll)
   }
 
-  listenToScroll = () => {
-    const height = window.outerHeight;
-    this.setState({
-      position: window.pageYOffset
-    })
+  throttleScroll = (e) => {
+    const { isScrolling } = this.state;
+    if (isScrolling === false) {
+      window.requestAnimationFrame(() => {
+        this.scrolling(e);
+        this.setState({ isScrolling: false })
+      });
+    }
+    this.setState({ isScrolling: true })
   }
+
+  scrolling = (e) => {
+    if(this.aboutMeBioFirst) this.setState({ animateAboutMe: true })
+  }
+
+  // Callback from AboutMe component
+  aboutMeBioFirst = element => {
+    const top = element.top;
+    const bottom = element.bottom;
+ 
+    return ((top >= 0) && (bottom <= window.innerHeight))
+  }
+  aboutMeBioSecond = element => {
+    console.log(element)
+  }
+  aboutMeBioThird = element => {
+    console.log(element)
+  }
+
+
 
   render() {
+    console.log(this.state.animateAboutMe);
     const { active, animateSkill, animateAboutMe } = this.state;
     return (
       <div className='about' onScroll={this.listenToScroll}>
@@ -60,7 +72,12 @@ export default class About extends Component {
           </div>
           <div className='row no-gutters'>
             <div className='col'>
-              <AboutMe animation={animateAboutMe} />
+              <AboutMe 
+                animation={animateAboutMe} 
+                first={this.aboutMeBioFirst}
+                second={this.aboutMeBioSecond}
+                third={this.aboutMeBioThird}
+              />
             </div>
           </div>
           <div className='row no-gutters'>
