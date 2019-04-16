@@ -343,44 +343,6 @@
   letter-spacing: 0.05rem;
   text-align: justify;
   text-align-last: left;
-  transition: all .2s ease-in-out;
-  opacity: 1;
-}
-.animation-left {
-  animation: left 2s ease-in;
-  position: relative;
-}
-
-.animation-right {
-  animation: right 2s ease-in;
-  position: relative;
-}
-
-@keyframes left {
-  0% {
-    right: -4em;
-    opacity: 0;
-  }
-  80% {
-    right: 0.2em;
-  }
-  100% {
-    right: 0em;
-    opacity: 1;
-  }
-}
-@keyframes right {
-  0% {
-    left: -4em;
-    opacity: 0;
-  }
-  80% {
-    left: 0.2em;
-  }
-  100% {
-    left: 0em;
-    opacity: 1;
-  }
 }
 
 /* //  //  //  //  //  //  //  //  //  // */
