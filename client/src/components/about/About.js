@@ -18,7 +18,7 @@ export default class About extends Component {
 
   componentDidMount() {
     this.setState({ active: true });
-    const wow = new WOW()
+    const wow = new WOW();
     wow.init();
   };
 
@@ -38,8 +38,8 @@ export default class About extends Component {
           <div className='row no-gutters'>
             <div className='col'>
               <AboutMe
-                slideRight={slideRight}
                 slideLeft={slideLeft}
+                slideRight={slideRight}
               />
             </div>
           </div>
@@ -50,8 +50,7 @@ export default class About extends Component {
           </div>
           <div className='row no-gutters'>
             <div className='col'>
-              <p>More Skills</p>
-              <MoreSkills />
+              <MoreSkills slideUp={slideUp} />
             </div>
           </div>
         </div>

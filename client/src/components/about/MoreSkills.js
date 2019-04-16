@@ -1,45 +1,54 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-// Common
+// Circle
 import Circle from '../common/Circle';
 
-// Img
-import Github from '../../assets/Github';
+// Assests
 import Boostrap from '../../assets/Boostrap';
+import Github from '../../assets/Github';
 
-
-export default function MoreSkills() {
-  const rem = '3em';
-  return (
-    <div className='more-skills text-center'>
-      <div className='row no-gutters'>
-        <div className='col'>
+export default class MoreSkills extends Component {
+  render() {
+    const rem = '3em';
+    const { slideUp } = this.props;
+    return (
+      <div className='more-skills'>
+        <div className={slideUp} data-wow-duration="1500ms" data-wow-delay="0.5s">
           <div className='row no-gutters'>
-            <div className='col-md-6'>
-              <div className='row no-gutters'>
-                <div className='col-sm-6'>
-                  <div className='d-flex'>
-                    <Circle svg={<Github width={rem} height={rem} />} text='Github' />
-                    <Circle svg={<Boostrap width={rem} height={rem} />} text='Boostrap 4' />
-                  </div>
-                </div>
-                <div className='col-sm-6'>
-                  <div className='d-flex'>
-                    
-                  </div>
-                </div>
-              </div>
+            <div className='col'>
+              <p className='more-skills-title'>More Skills:</p>
             </div>
-            <div className='col-md-6'>
+          </div>
+          <div className='row no-gutters text-center'>
+            <div className='col'>
               <div className='row no-gutters'>
-                <div className='col-sm-6'>
-                  <div className='d-flex'>
-                    
+                <div className='col-md-6'>
+                  <div className='row no-gutters'>
+                    <div className='col-sm-6'>
+                      <div className='d-flex'>
+                        <Circle svg={<Github width={rem} height={rem} />} text='Github' />
+                        <Circle svg={<Boostrap width={rem} height={rem} />} text='Boostrap 4' />
+                      </div>
+                    </div>
+                    <div className='col-sm-6'>
+                      <div className='d-flex'>
+                        
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className='col-sm-6'>
-                  <div className='d-flex'>
-                    
+                <div className='col-md-6'>
+                  <div className='row no-gutters'>
+                    <div className='col-sm-6'>
+                      <div className='d-flex'>
+                        
+                      </div>
+                    </div>
+                    <div className='col-sm-6'>
+                      <div className='d-flex'>
+                        
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -47,6 +56,6 @@ export default function MoreSkills() {
           </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
 }

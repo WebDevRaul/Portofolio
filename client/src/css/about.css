@@ -334,7 +334,7 @@
 
 /* About me */
 .about-me-bio > p > span {
-  font-size: 35px;
+  font-size: 2em;
 }
 
 /* About me bio animation */
@@ -347,24 +347,6 @@
 
 /* //  //  //  //  //  //  //  //  //  // */
 
-/* Skill logo animation */
-
-.circle-animation{
-  animation: circle 1s ease-in;
-}
-@keyframes circle {
-  from {
-    opacity: 0;
-    transform: scale3d(.75, .75, 1);
-  }
-  to {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-
-/* //  //  //  //  //  //  //  //  //  // */
 
 /* Photo */
 
@@ -382,4 +364,13 @@
   -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
   z-index: 1;
+}
+
+/* //  //  //  //  //  //  //  //  //  // */
+
+/* More-Skills */
+
+.more-skills-title {
+  font-size: 2em;
+  padding-left: 5em;
 }

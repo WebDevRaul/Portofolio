@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
 
 // Common
 import Circle from '../common/Circle';
@@ -21,7 +20,7 @@ export default class Skills extends Component {
     const { slideUp } = this.props;    
   return (
     <div className='text-center skills'>
-      <div className={slideUp}>
+      <div className={slideUp} data-wow-duration="1500ms">
         <div className='row no-gutters'>
           <div className='col'>
             <p className='p-2'>Up to the present moment I have gained experience in the following:</p> 
