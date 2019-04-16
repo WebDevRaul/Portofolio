@@ -22,6 +22,14 @@ export default class About extends Component {
     wow.init();
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    const { active } = this.state;
+    if ((active !== prevState.active) && (this.state.active === true)) {
+      const timer = () => {setTimeout(() => this.setState({ active: false }), 620)}
+      timer();
+    }
+  };
+
   render() {
     const { active } = this.state;
     const slideRight = 'wow bounceInRight'

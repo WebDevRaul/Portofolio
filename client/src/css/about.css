@@ -61,7 +61,7 @@
 
 /* Title animation */
 .div-animation {
-  animation: border 4s;
+  animation: border 2.5s;
 }
 @keyframes border {
   0% {
@@ -72,7 +72,7 @@
   }
 }
 .border-animation {
-  animation: topAndBottom 4s;
+  animation: topAndBottom 2s;
 }
 @keyframes topAndBottom {
   0% {
@@ -106,100 +106,100 @@
   padding: 2px;
 }
 .subtitle-text :nth-child(1) {
-  animation: nine 1.58s linear;
-  animation-delay: 1500ms;
+  animation: nine 1s linear;
+  animation-delay: 600ms;
 }
 .subtitle-text :nth-child(2) {
-  animation: eight 1.58s linear;
-  animation-delay: 1300ms;
+  animation: eight 1s linear;
+  animation-delay:450ms;
 }
 .subtitle-text :nth-child(3) {
-  animation: seven 1.58s linear;
-  animation-delay: 1100ms;
+  animation: seven 1s linear;
+  animation-delay: 570ms;
 }
 .subtitle-text :nth-child(4) {
-  animation: six 1.58s linear;
-  animation-delay: 1200ms;
+  animation: six 1s linear;
+  animation-delay: 300ms;
 }
 .subtitle-text :nth-child(5) {
-  animation: five 1.58s linear;
-  animation-delay: 1400ms;
+  animation: five 1s linear;
+  animation-delay: 200ms;
 }
 .subtitle-text :nth-child(7) {
-  animation: one 1.58s linear;
-  animation-delay: 700ms;
+  animation: one 1s linear;
+  animation-delay: 550ms;
 }
 .subtitle-text :nth-child(8) {
-  animation: four 1.58s linear;
-  animation-delay: 1200ms;
+  animation: four 1s linear;
+  animation-delay: 450ms;
 }
 .subtitle-text :nth-child(10) {
-  animation: three 1.58s linear;
-  animation-delay: 1100ms;
+  animation: three 1s linear;
+  animation-delay: 350ms;
 }
 .subtitle-text :nth-child(11) {
-  animation: two 1.58s linear;
-  animation-delay: 1000ms;
+  animation: two 1s linear;
+  animation-delay: 250ms;
 }
 .subtitle-text :nth-child(13) {
-  animation: one 1.58s linear;
-  animation-delay: 750ms;
+  animation: one 1s linear;
+  animation-delay: 175ms;
 }
 .subtitle-text :nth-child(16) {
-  animation: five 1.58s linear;
-  animation-delay: 750ms;
+  animation: five 1s linear;
+  animation-delay: 560;
 }
 .subtitle-text :nth-child(14) {
-  animation: seven 1.58s linear;
-  animation-delay: 1100ms;
+  animation: seven 1s linear;
+  animation-delay: 425ms;
 }
 .subtitle-text :nth-child(15) {
-  animation: two 1.58s linear;
-  animation-delay: 1100ms;
+  animation: two 1s linear;
+  animation-delay: 325ms;
 }
 .subtitle-text :nth-child(17) {
-  animation: six 1.58s linear;
-  animation-delay: 1300ms;
+  animation: six 1s linear;
+  animation-delay: 225ms;
 }
 .subtitle-text :nth-child(21) {
-  animation: eight 1.58s linear;
-  animation-delay: 1500ms;
+  animation: eight 1s linear;
+  animation-delay: 535ms;
 }
 .subtitle-text :nth-child(20) {
-  animation: three 1.58s linear;
-  animation-delay: 1600ms;
+  animation: three 1s linear;
+  animation-delay: 375ms;
 }
 .subtitle-text :nth-child(18) {
-  animation: four 1.58s linear;
-  animation-delay: 1700ms;
+  animation: four 1s linear;
+  animation-delay: 475ms;
 }
 .subtitle-text :nth-child(19) {
-  animation: nine 1.58s linear;
-  animation-delay: 1650ms;
+  animation: nine 1s linear;
+  animation-delay: 575ms;
 }
 .subtitle-text :nth-child(23) {
-  animation: four 1.58s linear;
-  animation-delay: 1200ms;
+  animation: four 1s linear;
+  animation-delay: 490ms;
 }
 .subtitle-text :nth-child(26) {
-  animation: six 1.58s linear;
-  animation-delay: 1400ms;
+  animation: six 1s linear;
+  animation-delay: 560ms;
 }
 .subtitle-text :nth-child(28) {
-  animation: eight 1.58s linear;
-  animation-delay: 1600ms;
+  animation: eight 1s linear;
+  animation-delay: 565ms;
 }
 .subtitle-text :nth-child(24) {
-  animation: one 1.58s linear;
-  animation-delay: 800ms;
+  animation: one 1s linear;
+  animation-delay: 470ms;
 }
 .subtitle-text :nth-child(27) {
-  animation: three 1.58s linear;
-  animation-delay: 1100ms;
+  animation: three 1s linear;
+  animation-delay: 540ms;
 }
 .subtitle-text :nth-child(25) {
-  animation: five 1.58s linear;
-  animation-delay: 1250ms;
+  animation: five 1s linear;
+  animation-delay: 650ms;
 }
 
 /* Subtitle animation */
