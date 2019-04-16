@@ -1,8 +1,9 @@
 /* Skill */
 .skills, .more-skills{
   font-size: 10px;
+  position: relative;
 }
-.skills > div > div > p {
+.skills > div > div > div > p {
   font-size: 1rem;
 }
 

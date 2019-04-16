@@ -24,8 +24,9 @@ export default class About extends Component {
 
   render() {
     const { active } = this.state;
-    const slideRight = 'wow slideInRight'
-    const slideLeft = 'wow slideInLeft'
+    const slideRight = 'wow bounceInRight'
+    const slideLeft = 'wow bounceInLeft'
+    const slideUp = 'wow slideInUp'
     return (
       <div className='about'>
         <div className='container-fluid p-0'>
@@ -37,14 +38,14 @@ export default class About extends Component {
           <div className='row no-gutters'>
             <div className='col'>
               <AboutMe
-                slideLeft={slideLeft}
                 slideRight={slideRight}
+                slideLeft={slideLeft}
               />
             </div>
           </div>
           <div className='row no-gutters'>
             <div className='col'>
-              <Skills />
+              <Skills slideUp={slideUp} />
             </div>
           </div>
           <div className='row no-gutters'>
