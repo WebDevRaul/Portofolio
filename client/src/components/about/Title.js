@@ -19,7 +19,7 @@ class Title extends Component {
             </div>
           </div>
         </div>
-        <div className='row'>
+        <div className='row no-gutters'>
           <div className='col'>
             <div className='subtitle-div text-uppercase mb-4'>
               <div className='subtitle-text'>

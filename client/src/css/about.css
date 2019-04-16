@@ -333,7 +333,7 @@
 /* //  //  //  //  //  //  //  //  //  // */
 
 /* About me */
-.about-me-first-letter {
+.about-me-bio > p > span {
   font-size: 35px;
 }
 
