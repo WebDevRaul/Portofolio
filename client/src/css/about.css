@@ -199,7 +199,7 @@
 }
 .subtitle-text :nth-child(25) {
   animation: five 1s linear;
-  animation-delay: 650ms;
+  animation-delay: 600ms;
 }
 
 /* Subtitle animation */
