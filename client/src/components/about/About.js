@@ -32,9 +32,9 @@ export default class About extends Component {
 
   render() {
     const { active } = this.state;
-    const slideRight = 'wow bounceInRight'
-    const slideLeft = 'wow bounceInLeft'
-    const slideUp = 'wow fadeInUp'
+    const slideRight = 'wow bounceInRight';
+    const slideLeft = 'wow bounceInLeft';
+    const slideUp = 'wow fadeInUp';
     return (
       <div className='about'>
         <div className='container-fluid p-0'>
