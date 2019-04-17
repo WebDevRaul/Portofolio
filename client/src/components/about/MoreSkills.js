@@ -13,7 +13,7 @@ export default class MoreSkills extends Component {
     const { slideUp } = this.props;
     return (
       <div className='more-skills'>
-        <div className={slideUp} data-wow-duration="1500ms" data-wow-delay="0.5s">
+        <div className={slideUp} data-wow-duration="1500ms" data-wow-delay="1s">
           <div className='row no-gutters'>
             <div className='col'>
               <p className='more-skills-title'>More Skills:</p>
