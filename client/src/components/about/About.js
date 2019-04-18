@@ -38,28 +38,34 @@ export default class About extends Component {
     const zoomIn = 'wow zoomIn';
     return (
       <div className='about'>
-        <div className='container p-0'>
+        <div className='container-fluid p-0'>
           <div className='row no-gutters'>
             <div className='col'>
               <Title active={active} />
             </div>
           </div>
-          <div className='row no-gutters'>
-            <div className='col'>
-              <AboutMe
-                slideLeft={slideLeft}
-                slideRight={slideRight}
-              />
+          <div className='container p-0'>
+            <div className='row no-gutters'>
+              <div className='col'>
+                <AboutMe
+                  slideLeft={slideLeft}
+                  slideRight={slideRight}
+                />
+              </div>
             </div>
           </div>
-          <div className='row no-gutters'>
-            <div className='col'>
-              <Skills slideUp={slideUp} zoomIn={zoomIn} />
+          <div className='container-fluid p-0'>
+            <div className='row no-gutters'>
+              <div className='col'>
+                <Skills slideUp={slideUp} zoomIn={zoomIn} />
+              </div>
             </div>
           </div>
-          <div className='row no-gutters'>
-            <div className='col'>
-              <MoreSkills slideUp={slideUp} />
+          <div className='container'>
+            <div className='row no-gutters'>
+              <div className='col'>
+                <MoreSkills slideUp={slideUp} />
+              </div>
             </div>
           </div>
         </div>

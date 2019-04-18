@@ -6,6 +6,21 @@
 /* //  //  //  //  //  //  //  //  //  // */
 
 /* Title */
+.title-background-skew {
+  background: #fff;
+  -webkit-transform-origin: left bottom;
+  -ms-transform-origin: left bottom;
+  transform-origin: left bottom;
+  color: #000;
+  padding: 4%;
+  -ms-transform: skew(0deg,-5deg);
+  transform: skew(0deg,-5deg);
+  -webkit-transform: skew(0deg,-5deg);
+}
+
+.title-background-skew > div {
+  transform: skew(0deg, 5deg);
+}
 
 .title-div {
   border: 12px solid black;
