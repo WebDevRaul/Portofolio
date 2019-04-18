@@ -377,7 +377,7 @@
 /* //  //  //  //  //  //  //  //  //  // */
 
 /* Skills */
-.test {
+.bg-skew {
   z-index: -1000;
   background: -webkit-linear-gradient(290deg,rgb(105, 255, 243),rgb(105, 255, 243));
   background: -o-linear-gradient(290deg,rgb(105, 255, 243),rgb(105, 255, 243));
@@ -392,8 +392,11 @@
   -webkit-transform: skew(0deg,-5deg);
   margin-top: 5%;
 }
-.test > div {
+.bg-skew > div {
 	transform: skew(0deg, 5deg);
+}
+.bg-skew > .row > .col > p {
+  position: relative;
 }
 
 /* //  //  //  //  //  //  //  //  //  // */

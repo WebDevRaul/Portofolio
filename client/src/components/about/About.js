@@ -35,9 +35,10 @@ export default class About extends Component {
     const slideRight = 'wow bounceInRight';
     const slideLeft = 'wow bounceInLeft';
     const slideUp = 'wow fadeInUp';
+    const zoomIn = 'wow zoomIn';
     return (
       <div className='about'>
-        <div className='container-fluid p-0'>
+        <div className='container p-0'>
           <div className='row no-gutters'>
             <div className='col'>
               <Title active={active} />
@@ -51,9 +52,9 @@ export default class About extends Component {
               />
             </div>
           </div>
-          <div className='row no-gutters test'>
+          <div className='row no-gutters'>
             <div className='col'>
-              <Skills slideUp={slideUp} />
+              <Skills slideUp={slideUp} zoomIn={zoomIn} />
             </div>
           </div>
           <div className='row no-gutters'>
