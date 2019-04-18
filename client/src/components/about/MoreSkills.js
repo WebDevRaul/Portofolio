@@ -15,19 +15,19 @@ export default class MoreSkills extends Component {
       <div className='more-skills'>
         <div className={slideUp} data-wow-duration="1500ms" data-wow-delay="1s">
           <div className='row no-gutters'>
-            <div className='col'>
-              <p className='more-skills-title'>More Skills:</p>
+            <div className='col m-auto d-flex'>
+              <p className='more-skills-title m-auto d-flex'>More skills:</p>
             </div>
           </div>
           <div className='row no-gutters text-center'>
-            <div className='col'>
-              <div className='row no-gutters'>
+            <div className='col d-flex'>
+              <div className='row no-gutters m-auto'>
                 <div className='col-md-6'>
                   <div className='row no-gutters'>
                     <div className='col-sm-6'>
                       <div className='d-flex'>
-                        <Circle svg={<Github width={rem} height={rem} />} text='Github' />
-                        <Circle svg={<Boostrap width={rem} height={rem} />} text='Boostrap 4' />
+                        <span className='m-2'><Circle svg={<Github width={rem} height={rem} />} text='Github' /></span>
+                        <span className='m-2'><Circle svg={<Boostrap width={rem} height={rem} />} text='Boostrap 4' /></span>
                       </div>
                     </div>
                     <div className='col-sm-6'>
