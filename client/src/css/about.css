@@ -1,3 +1,5 @@
+@import './app.css';
+
 /* About PAGE */
 .about {
   overflow: hidden;
@@ -42,7 +44,9 @@
   text-transform: uppercase;
   color: black;
   position: relative;
-  opacity: 1;
+}
+.title-text span {
+  color: var(--mainCollor);
 }
 .title-div > :first-child {
   height: 20px;
@@ -115,7 +119,7 @@
 .subtitle-div {
   width: 15.5em;
   margin: 0 auto;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid var(--mainCollor);
   position: relative;
 }
 .subtitle-text span {
@@ -358,6 +362,7 @@
 /* About me */
 .about-me-bio > p > span {
   font-size: 2em;
+  color: var(--mainCollor);
 }
 
 /* About me bio animation */

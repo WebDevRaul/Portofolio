@@ -1,3 +1,5 @@
+@import './app.css';
+
 /* Skill */
 .skills, .more-skills{
   font-size: 10px;
@@ -13,7 +15,7 @@
   height: 6.25em;	
   border-radius: 50%;	
   background: linear-gradient(35deg, 
-  rgba(61, 99, 114, 0.7) 0%, 
+  var(--secondaryCollor) 0%, 
   rgba(255, 255, 255, 0.7) 50% );
 }
 
