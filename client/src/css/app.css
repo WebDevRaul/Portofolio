@@ -1,6 +1,5 @@
 :root { 
-  --bgCollor:  rgba(218, 218, 218, 0.144);
-  --bgPhoto: url('../assets//bricks-brickwall-brickwork-1092364.jpg');
+  --bgPhoto: url('../assets/bricks-brickwal.jpg');
 }
 
 html {
@@ -9,6 +8,8 @@ html {
 body {
   font-family: 'EB Garamond', serif;
   background: var(--bgPhoto);
+  background-attachment: fixed;
+  background-size: cover;
 } 
 
 
