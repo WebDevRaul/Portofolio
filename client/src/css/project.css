@@ -2,9 +2,17 @@
 
 /* Project-title */
 .project-title-div {
-  padding: 6em 2em;
+  padding: 4em 1em;
+  display: block;
+  
 }
-.test {
-  padding: 5px;
-  border: 2px solid var(--mainCollor);
+.project-title-div :first-child {
+  font-size: 1.1em;
+}
+.project-title-div-heading {
+  display: inline-block;
+  padding: 20px 10px;
+  border: 5px solid var(--mainCollor);
+  border-bottom-left-radius: 25%;
+  border-top-right-radius: 25%;
 }

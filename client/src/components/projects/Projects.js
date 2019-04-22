@@ -12,12 +12,12 @@ export default class Projects extends Component {
         <div className='container'>
           <div className='row no-gutters'>
             <div className='col'>
-              <Title />
+              <Responsive />
             </div>
           </div>
           <div className='row no-gutters'>
             <div className='col'>
-              <Responsive />
+              <Title />
             </div>
           </div>
           <div className='row no-gutters'>
