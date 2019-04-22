@@ -1,0 +1,10 @@
+@import './app.css';
+
+/* Project-title */
+.project-title-div {
+  padding: 6em 2em;
+}
+.test {
+  padding: 5px;
+  border: 2px solid var(--mainCollor);
+}
