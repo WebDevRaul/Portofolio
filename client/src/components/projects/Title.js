@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 
 // Css
 import '../../css/project.css';
 
 export default class Title extends Component {
   render() {
+    const { slideRight, slideLeft } = this.props;
     return (
       <div className='project-title'>
         <div className='container bg-white'>
@@ -13,7 +15,10 @@ export default class Title extends Component {
                 <div className='d-flex'>
                   <div className='m-auto project-title-main-title'>
                       <div className='d-flex'>
-                        <h5 className='text-center m-auto'>My Recent</h5><span className='project-title-div-heading ml-2 mb-0'>Projects</span>
+                        <h5 className={classnames(`text-center m-auto ${slideLeft}`)} data-wow-delay="1s">
+                          <span className='text-center m-auto'>My Recent</span>
+                        </h5>
+                        <span className={classnames(`project-title-div-heading ml-2 mb-0 ${slideRight}`)}  data-wow-delay="1s">Projects</span>
                     </div>
                   </div>
                 </div>

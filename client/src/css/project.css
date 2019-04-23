@@ -5,6 +5,9 @@
   padding: 3em 1em;
   display: block;
 }
+.project-title-main-title > div > h5 > span {
+  position: relative;
+}
 
 .project-title-main-title :first-child {
   font-size: 1.1em;
