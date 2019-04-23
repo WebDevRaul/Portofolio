@@ -19,6 +19,7 @@ export default class Projects extends Component {
   render() {
     const slideRight = 'wow fadeInRight';
     const slideLeft = 'wow fadeInLeft';
+    const fadeInUp = 'wow fadeInUp';
     return (
       <div className='projects'>
         <div className='container'>
@@ -27,6 +28,7 @@ export default class Projects extends Component {
               <Title
                 slideLeft={slideLeft}
                 slideRight={slideRight}
+                fadeInUp={fadeInUp}
               />
             </div>
           </div>

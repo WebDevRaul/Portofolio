@@ -6,10 +6,10 @@ import '../../css/project.css';
 
 export default class Title extends Component {
   render() {
-    const { slideRight, slideLeft } = this.props;
+    const { slideRight, slideLeft, fadeInUp } = this.props;
     return (
       <div className='project-title'>
-        <div className='container bg-white'>
+        <div className='container bg-white mt-4'>
             <div className='row no-gutters'>
               <div className='col'>
                 <div className='d-flex'>
@@ -27,8 +27,8 @@ export default class Title extends Component {
             <div className='row no-gutters'>
               <div className='col'>
                 <div className='d-flex'>
-                  <div className='project-title-subtitle m-auto'>
-                    <p className='mt-4 m-0'>Here are a few recent design projects.</p>  
+                  <div className={classnames(`project-title-subtitle m-auto ${fadeInUp}`)} data-wow-delay="1s">
+                    <p className='mt-3 m-0'>Here are a few recent design projects.</p>  
                   </div>
                 </div>  
               </div>
