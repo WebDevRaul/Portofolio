@@ -1,17 +1,19 @@
 @import './app.css';
 
-/* Project-title */
-.project-title-div {
-  padding: 4em 1em;
+/* Title */
+.project-title-main-title {
+  padding: 3em 1em;
   display: block;
-  
 }
-.project-title-div :first-child {
+
+.project-title-main-title :first-child {
   font-size: 1.1em;
 }
+
 .project-title-div-heading {
   display: inline-block;
   padding: 20px 10px;
+  color: var(--mainCollor);
   border: 5px solid var(--mainCollor);
   border-bottom-left-radius: 25%;
   border-top-right-radius: 25%;
