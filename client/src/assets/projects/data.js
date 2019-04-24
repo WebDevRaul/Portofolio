@@ -1,4 +1,5 @@
 import photo from './Photo.jpg';
+import brick from './bricks-brickwal.jpg'
 
 const data = {
   'properties': [
@@ -8,7 +9,7 @@ const data = {
     },
     {
       'index': 1,
-      'picture': photo
+      'picture': brick
     },
     {
       'index': 2,
