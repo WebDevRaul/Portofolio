@@ -33,8 +33,11 @@ export default class ProjectList extends Component {
           <div className='row no-guters'>
             <div className='col d-flex'>
               <div className='project-list-div m-auto'>
-                {/* <img  src={this.state.property.picture} width='200px' height='250px' alt="test" /> */}
-                <ProjectPhoto property={property} />
+                <div className='cards-slider'>
+                  <div className='cards-slider-wrapper'>
+                    <ProjectPhoto property={property} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
