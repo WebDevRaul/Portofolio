@@ -4,15 +4,15 @@ import React, { Component } from 'react';
 import Circle from '../common/Circle';
 
 // Img
-import Redux from '../../assets/Redux';
-import MongoDB from '../../assets/MongoDB';
-import NodeJs from '../../assets/NodeJs';
-import PostgreSQL from '../../assets/PostgreSQL';
-import ReactJs from '../../assets/ReactJs';
-import JQuery from '../../assets/JQuery';
-import Html from '../../assets/Html';
-import Css from '../../assets/Css';
-import Javascript from '../../assets/Javascript';
+import Redux from '../../assets/skills/Redux';
+import MongoDB from '../../assets/skills/MongoDB';
+import NodeJs from '../../assets/skills/NodeJs';
+import PostgreSQL from '../../assets/skills/PostgreSQL';
+import ReactJs from '../../assets/skills/ReactJs';
+import JQuery from '../../assets/skills/JQuery';
+import Html from '../../assets/skills/Html';
+import Css from '../../assets/skills/Css';
+import Javascript from '../../assets/skills/Javascript';
 
 export default class Skills extends Component {
   render() {

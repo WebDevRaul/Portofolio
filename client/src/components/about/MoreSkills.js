@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import Circle from '../common/Circle';
 
 // Assests
-import Boostrap from '../../assets/Boostrap';
-import Github from '../../assets/Github';
+import Boostrap from '../../assets/skills/Boostrap';
+import Github from '../../assets/skills/Github';
 
 export default class MoreSkills extends Component {
   render() {
