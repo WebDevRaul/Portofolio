@@ -7,7 +7,7 @@
 }
 
 .project-title-subtitle {
-  padding: 0em 1em 6em 1em;
+  padding: 0em 1em 2em 1em;
   font-size: 0.8em;
 }
 
@@ -26,4 +26,19 @@
   border: 5px solid var(--mainCollor);
   border-bottom-left-radius: 25%;
   border-top-right-radius: 25%;
+}
+
+/* //  //  //  //  //  //  //  //  //  // */
+
+/* PtojectList */
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: red;
+  margin: 20px;
+}
+
+.half-background {
+  background: linear-gradient(0deg, transparent 50%, rgb(255, 255, 255) 50%); 
 }

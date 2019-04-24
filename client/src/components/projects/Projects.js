@@ -3,7 +3,7 @@ import WOW from "wow.js";
 
 // Components
 import Title from './Title';
-import ListOfProjects from './ListOfProjects';
+import ProjectList from './Project-list';
 
 export default class Projects extends Component {
   state = {
@@ -34,7 +34,7 @@ export default class Projects extends Component {
           </div>
           <div className='row no-gutters'>
             <div className='col'>
-              <ListOfProjects />
+              <ProjectList />
             </div>
           </div>
         </div>
