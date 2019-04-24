@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
 // Images
-import data from '../../assets/projects/data'
+import data from '../../assets/projects/data';
+
+// Components
+import ProjectPhoto from './ProjectPhoto';
 
 export default class ProjectList extends Component {
   constructor(props) {
@@ -22,13 +25,16 @@ export default class ProjectList extends Component {
     this.setState({ property: data.properties[newIndex] })
   }
   render() {
+    const { property } = this.state;
+
     return (
       <div className='project-list'>
         <div className='container no-guters half-background'>
           <div className='row no-guters'>
             <div className='col d-flex'>
               <div className='project-list-div m-auto'>
-                  <img  src={this.state.property.picture} width='200px' height='250px' alt="test" />
+                {/* <img  src={this.state.property.picture} width='200px' height='250px' alt="test" /> */}
+                <ProjectPhoto property={property} />
               </div>
             </div>
           </div>
@@ -38,11 +44,13 @@ export default class ProjectList extends Component {
               <button
                   className='btn btn-success'
                   onClick={this.clickPrev}
+                  disabled={property.index === 0}
                 >prev</button>
                   <span> </span>
                 <button
                   className='btn btn-success'
                   onClick={this.clickNext}
+                  disabled={property.index === data.properties.length-1}
                 >next</button>
               </div>
             </div>

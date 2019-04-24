@@ -3,7 +3,7 @@ import WOW from "wow.js";
 
 // Components
 import Title from './Title';
-import ProjectList from './Project-list';
+import ProjectList from './ProjectList';
 
 export default class Projects extends Component {
   state = {
