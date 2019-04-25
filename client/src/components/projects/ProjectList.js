@@ -39,10 +39,10 @@ class ProjectList extends Component {
       <div className='project-list'>
         <div className='container no-guters half-background'>
           <div className='row no-gutters'>
-            <div className='col'>
-              <div className="project-list-div">
-                <div className={`cards-slider active-slide-${property.index}`}>
-                  <div className="cards-slider-wrapper" style={{
+            <div className='col d-flex'>
+              <div className="project-list-div m-auto">
+                <div className={`project-slider active-slide-${property.index}`}>
+                  <div className="project-slider-wrappe" style={{
                     'transform': `translateX(-${property.index*(100/properties.length)}%)`
                   }}>
                     {
@@ -54,19 +54,21 @@ class ProjectList extends Component {
             </div>
           </div>
           <div className='row no-gutters'>
-            <div className='col'>
-              <button 
-                className='btn btn-success'
-                onClick={this.onClickPrev} 
-                disabled={property.index === 0}
-              >Prev
-              </button>
-              <button 
-                className='btn btn-success'
-                onClick={this.onClickNext} 
-                disabled={property.index === data.properties.length-1}
-              >Next
-              </button>
+            <div className='col d-flex'>
+              <div className='m-auto'>
+                <button 
+                  className='btn btn-success'
+                  onClick={this.onClickPrev} 
+                  disabled={property.index === 0}
+                >Prev
+                </button>
+                <button 
+                  className='btn btn-success'
+                  onClick={this.onClickNext} 
+                  disabled={property.index === data.properties.length-1}
+                >Next
+                </button>
+              </div>
             </div>
           </div>
         </div>
