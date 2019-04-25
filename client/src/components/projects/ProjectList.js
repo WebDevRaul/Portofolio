@@ -42,7 +42,7 @@ class ProjectList extends Component {
             <div className='col d-flex'>
               <div className="project-list-div m-auto">
                 <div className={`project-slider active-slide-${property.index}`}>
-                  <div className="project-slider-wrappe" style={{
+                  <div className="project-slider-wrapper" style={{
                     'transform': `translateX(-${property.index*(100/properties.length)}%)`
                   }}>
                     {
