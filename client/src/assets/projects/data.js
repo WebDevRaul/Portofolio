@@ -17,6 +17,16 @@ const data = {
       'id': '2',
       'index': 2,
       'picture': photo
+    },
+    {
+      'id': '3',
+      'index': 3,
+      'picture': photo
+    },
+    {
+      'id': '4',
+      'index': 4,
+      'picture': photo
     }
   ]
 };

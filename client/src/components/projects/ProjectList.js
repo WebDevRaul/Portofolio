@@ -37,10 +37,10 @@ class ProjectList extends Component {
     const {properties, property} = this.state;
     return (
       <div className='project-list'>
-        <div className='container no-guters half-background'>
+        <div className='container pl-0 pr-0 half-background pt-3'>
           <div className='row no-gutters'>
-            <div className='col d-flex'>
-              <div className="project-list-div m-auto">
+            <div className='col'>
+              <div className="project-list-div">
                 <div className={`project-slider active-slide-${property.index}`}>
                   <div className="project-slider-wrapper" style={{
                     'transform': `translateX(-${property.index*(100/properties.length)}%)`
