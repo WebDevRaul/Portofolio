@@ -17,21 +17,49 @@ class ProjectList extends Component {
       properties: data.properties,
       property: data.properties[0]
     }
+  };
+
+  componentDidMount() {
+    // start interval
+    this.interval = setInterval(() => this.timer(), 4000);
+  }
+
+  componentWillUnmount() {
+    // clear interval
+    clearInterval(this.interval);
+  }
+
+
+  timer = () => {
+    const newIndex = this.state.property.index+1;
+    if (newIndex !== this.state.properties.length) {
+      setTimeout(() => this.setState({ property: data.properties[newIndex] }), 0);
+    } else {
+      this.setState({ property: data.properties[0] })
+    }
   }
 
   onClickNext = () => {
+    // onClick clear interval
+    clearInterval(this.interval);
     const newIndex = this.state.property.index+1;
     this.setState({
       property: data.properties[newIndex]
-    })
-  }
+    });
+    // restart timer
+    this.interval = setInterval(() => this.timer(), 4000);
+  };
 
   onClickPrev = () => {
+    // onClick clear interval
+    clearInterval(this.interval);
     const newIndex = this.state.property.index-1;
     this.setState({
       property: data.properties[newIndex]
-    })
-  }
+    });
+    // restart timer
+    this.interval = setInterval(() => this.timer(), 4000);
+  };
 
   render() {
     const {properties, property} = this.state;
