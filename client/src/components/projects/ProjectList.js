@@ -39,6 +39,10 @@ class ProjectList extends Component {
     }
   }
 
+  onClickMe = id => {
+    console.log(id)
+  }
+
   onClickNext = () => {
     // onClick clear interval
     clearInterval(this.interval);
@@ -69,12 +73,12 @@ class ProjectList extends Component {
           <div className='row no-gutters'>
             <div className='col'>
               <div className="project-list-div">
-                <div className={`project-slider active-slide-${property.index}`}>
+                <div className={`project-slider active-slide-${property.index}`} onClick={this.onClickFunc}>
                   <div className="project-slider-wrapper" style={{
                     'transform': `translateX(-${property.index*(100/properties.length)}%)`
                   }}>
                     {
-                      properties.map(property => <Card key={property.index} property={property} />)
+                      properties.map(property => <Card key={property.index} property={property} onClickFunc={this.onClickMe} />)
                     }
                   </div>
                 </div>

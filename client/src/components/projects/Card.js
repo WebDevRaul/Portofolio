@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({property}) => {
-    const { id, picture } = property;
+export default class Card extends Component {
+
+  onClick = id => () => {
+    this.props.onClickFunc(id)
+  }
+  render() {
+  const { id, picture } = this.props.property;
     return (
-      <div id={`card-${id}`} className="project-card" >
+      <div 
+        id={`card-${id}`} 
+        className="project-card" 
+        onClick={this.onClick(id)}
+        >
         <img src={picture} alt=''/>
       </div>
     )
-}
+  }
+};
 
 Card.propTypes = {
-    property: PropTypes.object.isRequired
-}
-
-export default Card;
+  property: PropTypes.object.isRequired
+};
