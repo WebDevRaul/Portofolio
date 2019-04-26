@@ -10,7 +10,7 @@ class CardInfo extends Component {
         <div className='row no-gutters'>
           <div className='col-sm-12 d-flex col-md-6'>
             <div className='m-auto'>
-              <img src={picture} width='220px' height='264px'/>
+              <img src={picture} width='220px' height='264px' alt=''/>
             </div>
           </div>
           <div className='col-sm-12 col-md-6'>

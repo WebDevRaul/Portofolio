@@ -72,10 +72,11 @@ class ProjectList extends Component {
     const {properties, property, cardInfo} = this.state;
     return (
       <div className='project-list'>
-        <div className='container pl-0 pr-0 half-background pt-3'>
+        <div className='container pl-0 pr-0 pt-3 background'>
           <div className='row no-gutters'>
             <div className='col'>
               <div className="project-list-div">
+                <div className='right'></div>
                 <div className={`project-slider active-slide-${property.index}`} onClick={this.onClickFunc}>
                   <div className="project-slider-wrapper" style={{
                     'transform': `translateX(-${property.index*(100/properties.length)}%)`
@@ -85,6 +86,7 @@ class ProjectList extends Component {
                     }
                   </div>
                 </div>
+                <div className='left'></div>
               </div>
             </div>
           </div>
