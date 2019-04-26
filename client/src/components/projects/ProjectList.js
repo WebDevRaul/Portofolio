@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // Components
 import Card from './Card';
+import CardInfo from './CardInfo';
 
 // Images
 import data from '../../assets/projects/data'
@@ -15,7 +16,8 @@ class ProjectList extends Component {
     super(props);
     this.state = {
       properties: data.properties,
-      property: data.properties[0]
+      property: data.properties[0],
+      cardInfo: data.properties[0]
     }
   };
 
@@ -39,8 +41,9 @@ class ProjectList extends Component {
     }
   }
 
-  onClickMe = id => {
-    console.log(id)
+  onClickProp = id => {
+    const newIndex = (this.state.property.index * 0 ) + Number(id);
+    this.setState({ cardInfo: data.properties[newIndex] });
   }
 
   onClickNext = () => {
@@ -66,7 +69,7 @@ class ProjectList extends Component {
   };
 
   render() {
-    const {properties, property} = this.state;
+    const {properties, property, cardInfo} = this.state;
     return (
       <div className='project-list'>
         <div className='container pl-0 pr-0 half-background pt-3'>
@@ -78,7 +81,7 @@ class ProjectList extends Component {
                     'transform': `translateX(-${property.index*(100/properties.length)}%)`
                   }}>
                     {
-                      properties.map(property => <Card key={property.index} property={property} onClickFunc={this.onClickMe} />)
+                      properties.map(property => <Card key={property.index} property={property} onClickProp={this.onClickProp} />)
                     }
                   </div>
                 </div>
@@ -101,6 +104,11 @@ class ProjectList extends Component {
                 >Next
                 </button>
               </div>
+            </div>
+          </div>
+          <div className='row no-gutters'>
+            <div className='col'>
+              <CardInfo cardInfo={cardInfo} />
             </div>
           </div>
         </div>

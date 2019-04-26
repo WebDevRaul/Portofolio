@@ -6,7 +6,11 @@ const data = {
     {
       'id': '0',
       'index': 0,
-      'picture': photo
+      'picture': photo,
+      "title": 'dummy title',
+      "summary": "text summary",
+      "link": 'link here',
+      "logo": 'logo`s'
     },
     {
       'id': '1',

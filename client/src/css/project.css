@@ -32,7 +32,7 @@
 
 /* PtojectList */
 .half-background {
-  background: white;
+  /* background: white; */
   overflow: hidden; 
 }
 
@@ -51,7 +51,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -2;
+  z-index: 2;
 }
 .project-list-div::after {
   content: '';
@@ -62,7 +62,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: -2;
+  z-index: 2;
 } */
 
 
@@ -154,4 +154,9 @@
   max-width: calc(100%);
   margin: 0 auto;
   display: block; 
+}
+
+/* CardInfo */
+.card-info {
+  height: 100%;
 }

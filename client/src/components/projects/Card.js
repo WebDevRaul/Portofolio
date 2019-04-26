@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default class Card extends Component {
 
   onClick = id => () => {
-    this.props.onClickFunc(id)
+    this.props.onClickProp(id)
   }
   render() {
   const { id, picture } = this.props.property;
@@ -21,5 +21,6 @@ export default class Card extends Component {
 };
 
 Card.propTypes = {
-  property: PropTypes.object.isRequired
+  property: PropTypes.object.isRequired,
+  onClickProp: PropTypes.func.isRequired
 };
