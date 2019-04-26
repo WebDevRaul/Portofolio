@@ -32,7 +32,7 @@
 
 /* PtojectList */
 .half-background {
-  background: linear-gradient(0deg, transparent 50%, rgb(255, 255, 255) 50%);
+  background: white;
   overflow: hidden; 
 }
 

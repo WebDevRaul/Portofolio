@@ -57,13 +57,13 @@ class ProjectList extends Component {
             <div className='col d-flex'>
               <div className='m-auto'>
                 <button 
-                  className='btn btn-success'
+                  className='btn btn-success m-3'
                   onClick={this.onClickPrev} 
                   disabled={property.index === 0}
                 >Prev
                 </button>
                 <button 
-                  className='btn btn-success'
+                  className='btn btn-success m-3'
                   onClick={this.onClickNext} 
                   disabled={property.index === data.properties.length-1}
                 >Next
