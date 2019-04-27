@@ -9,7 +9,8 @@ const data = {
       'picture': photo,
       "title": 'dummy title',
       "summary": "text summary",
-      "link": 'link here',
+      "link": 'https://test.com/',
+      "linkName": 'dummy name',
       "logo": 'logo`s'
     },
     {

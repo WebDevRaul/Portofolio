@@ -162,35 +162,35 @@
 
 /* Animation */
 
-.bounceInRight {
-  animation: bounceInRight 1.5s;
+.bounceInRightCard {
+  animation: bounceInRightCard 1.5s;
 }
 
-@keyframes bounceInRight {
+@keyframes bounceInRightCard {
   0%, 60%, 75%, 90%, 100% {
     -webkit-animation-timing-function: cubic-bezier(.215,.61,.355,1);
     animation-timing-function: cubic-bezier(.215,.61,.355,1);
-}
-0% {
-    opacity: 0;
-    -webkit-transform: translate3d(3000px,0,0);
-    transform: translate3d(3000px,0,0);
-}
-60% {
-    opacity: 1;
-    -webkit-transform: translate3d(-25px,0,0);
-    transform: translate3d(-25px,0,0);
-}
-75% {
-    -webkit-transform: translate3d(10px,0,0);
-    transform: translate3d(10px,0,0);
-}
-90% {
-    -webkit-transform: translate3d(-5px,0,0);
-    transform: translate3d(-5px,0,0);
-}
-100% {
-    -webkit-transform: none;
-    transform: none;
-}
+  }
+  0% {
+      opacity: 0;
+      -webkit-transform: translate3d(3000px,0,0);
+      transform: translate3d(3000px,0,0);
+  }
+  60% {
+      opacity: 1;
+      -webkit-transform: translate3d(-25px,0,0);
+      transform: translate3d(-25px,0,0);
+  }
+  75% {
+      -webkit-transform: translate3d(10px,0,0);
+      transform: translate3d(10px,0,0);
+  }
+  90% {
+      -webkit-transform: translate3d(-5px,0,0);
+      transform: translate3d(-5px,0,0);
+  }
+  100% {
+      -webkit-transform: none;
+      transform: none;
+  }
 }

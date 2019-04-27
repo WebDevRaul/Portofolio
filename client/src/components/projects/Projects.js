@@ -8,12 +8,8 @@ import Title from './Title';
 import ProjectList from './ProjectList';
 
 export default class Projects extends Component {
-  state = {
-    active: false,
-  }
 
   componentDidMount() {
-    this.setState({ active: true });
     const wow = new WOW();
     wow.init();
   };
