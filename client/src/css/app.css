@@ -1,7 +1,7 @@
 :root { 
   --bgPhoto: url('../assets/bricks-brickwal.jpg');
   --mainCollor: rgb(93, 93, 190);
-  --secondaryCollor: red;
+  --secondaryCollor: rgba(97, 218, 251);
 }
 
 html {

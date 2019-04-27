@@ -23,7 +23,7 @@ class ProjectList extends Component {
 
   componentDidMount() {
     // start interval
-    this.interval = setInterval(() => this.timer(), 4000);
+    this.interval = setInterval(() => this.timer(), 5000);
   }
 
   componentWillUnmount() {
@@ -54,7 +54,7 @@ class ProjectList extends Component {
       property: data.properties[newIndex]
     });
     // restart timer
-    this.interval = setInterval(() => this.timer(), 4000);
+    this.interval = setInterval(() => this.timer(), 5000);
   };
 
   onClickPrev = () => {
@@ -65,7 +65,7 @@ class ProjectList extends Component {
       property: data.properties[newIndex]
     });
     // restart timer
-    this.interval = setInterval(() => this.timer(), 4000);
+    this.interval = setInterval(() => this.timer(), 5000);
   };
 
   render() {

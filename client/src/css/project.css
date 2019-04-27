@@ -22,8 +22,8 @@
 .project-title-div-heading {
   display: inline-block;
   padding: 20px 10px;
-  color: var(--mainCollor);
-  border: 5px solid var(--mainCollor);
+  color: var(--secondaryCollor);
+  border: 5px solid var(--secondaryCollor);
   border-bottom-left-radius: 25%;
   border-top-right-radius: 25%;
 }
@@ -72,7 +72,7 @@
   display: block;
   width: 200px;
   height: 264px;
-  outline: 5px solid #61DAFB;
+  outline: 5px solid var(--secondaryCollor);
 }
 
 .project-slider.active-slide-0 #card-0 {
@@ -153,6 +153,8 @@
 }
 
 /* CardInfo */
-.card-info {
-  height: 100%;
+.card-info .card{
+  -moz-box-shadow: 0.313em 0.625em 1em #8888889f;
+  -webkit-box-shadow: 0.313em 0.625em 1em #8888889f;
+  box-shadow: 0.313em 0.625em 1em #8888889f;
 }
