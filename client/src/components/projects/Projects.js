@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+// Animation
 import WOW from "wow.js";
 
 // Components
