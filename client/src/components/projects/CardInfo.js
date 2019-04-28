@@ -43,7 +43,7 @@ class CardInfo extends Component {
               </div>
               <img className="card-img-top" src={picture} alt="" />
               <hr />
-              <div className="card-body">
+              <div className="card-body pt-0 pb-0">
                 <p className="card-text">{summary}</p>
                 <div className='d-flex'>
                   <p className='m-auto'><span className="badge badge-secondary">{logo}</span></p>

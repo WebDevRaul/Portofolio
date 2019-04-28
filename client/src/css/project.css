@@ -40,7 +40,6 @@
 .project-list-div {
   height: 264px;
   position: relative;
-  padding-left: 20px;
 }
 
 .project-list-div .left {
@@ -70,8 +69,8 @@
 .project-slider:after {
   content: '';
   display: block;
-  width: 200px;
-  height: 264px;
+  width: 300px;
+  height: 210px;
   outline: 5px solid var(--secondaryCollor);
 }
 
@@ -80,7 +79,7 @@
   transform: scale(1);
   background-color: #f3f3f3;
   border-color: #f3f3f3; 
-  height: 264px;
+  height: 210px;
 }
 
 .project-slider.active-slide-1 #card-1 {
@@ -88,7 +87,7 @@
   transform: scale(1);
   background-color: #f3f3f3;
   border-color: #f3f3f3;
-  height: 264px;
+  height: 210px;
 }
 
 .project-slider.active-slide-2 #card-2 {
@@ -96,7 +95,7 @@
   transform: scale(1);
   background-color: #f3f3f3;
   border-color: #f3f3f3;
-  height: 264px; 
+  height: 210px; 
 }
 
 .project-slider.active-slide-3 #card-3 {
@@ -104,7 +103,7 @@
   transform: scale(1);
   background-color: #f3f3f3;
   border-color: #f3f3f3; 
-  height: 264px;
+  height: 210px;
 }
 
 .project-slider.active-slide-4 #card-4 {
@@ -112,7 +111,7 @@
   transform: scale(1);
   background-color: #f3f3f3;
   border-color: #f3f3f3; 
-  height: 264px;
+  height: 210px;
 }
 
 
@@ -123,7 +122,7 @@
   transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); 
 }
 .project-slider-wrapper .project-card {
-  min-width: 200px;
+  min-width: 300px;
   opacity: 0.7;
   transform: scale(0.8);
   box-shadow: none;

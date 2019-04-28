@@ -1,4 +1,3 @@
-import photo from './Photo.jpg';
 import proteinTracker from './proteinTracker.jpg';
 import liveCurrency from './liveCurrency.jpg';
 
@@ -27,17 +26,17 @@ const data = {
     {
       'id': '2',
       'index': 2,
-      'picture': photo
+      'picture': proteinTracker
     },
     {
       'id': '3',
       'index': 3,
-      'picture': photo
+      'picture': liveCurrency
     },
     {
       'id': '4',
       'index': 4,
-      'picture': photo
+      'picture': proteinTracker
     }
   ]
 };

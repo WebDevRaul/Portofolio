@@ -11,10 +11,10 @@ export default class Card extends Component {
     return (
       <div 
         id={`card-${id}`} 
-        className="project-card" 
+        className="project-card d-flex" 
         onClick={this.onClick(id)}
         >
-        <img src={picture} alt=''/>
+        <img src={picture} className='m-auto' alt=''/>
       </div>
     )
   }
