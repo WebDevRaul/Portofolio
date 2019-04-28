@@ -35,13 +35,14 @@ class CardInfo extends Component {
     return (
       <div className='card-info mb-5 mt-5'>
         <div className='row no-gutters'>
-          <div className='col d-flex'>
-            <div className={classnames('card m-auto w-50 mb-3 p-2', {'bounceInRightCard': animateCard})}>
-              <div className='card-body'>
+          <div className='d-flex col-10 offset-1 col-sm-10 offset-sm-1 col-md-6 offset-md-3'>
+            <div className={classnames('card m-auto mb-3 p-2', {'bounceInRightCard': animateCard})}>
+              <div className='card-body pb-0'>
                 <h5 className="card-title">{title}</h5>
                 <hr />
               </div>
-              <img className="card-img-top" src={picture} alt="" height='220px' width='264px' />
+              <img className="card-img-top" src={picture} alt="" />
+              <hr />
               <div className="card-body">
                 <p className="card-text">{summary}</p>
                 <div className='d-flex'>

@@ -1,12 +1,12 @@
 import photo from './Photo.jpg';
-import brick from './bricks-brickwal.jpg'
+import proteinTracker from './proteinTracker.jpg';
 
 const data = {
   'properties': [
     {
       'id': '0',
       'index': 0,
-      'picture': photo,
+      'picture': proteinTracker,
       "title": 'dummy title',
       "summary": "text summary",
       "link": 'https://test.com/',
@@ -16,7 +16,7 @@ const data = {
     {
       'id': '1',
       'index': 1,
-      'picture': brick
+      'picture': photo
     },
     {
       'id': '2',
