@@ -37,7 +37,7 @@ class CardInfo extends Component {
         <div className='row no-gutters'>
           <div className='d-flex col-10 offset-1 col-sm-10 offset-sm-1 col-md-6 offset-md-3'>
             <div className={classnames('card m-auto mb-3 p-2', {'bounceInRightCard': animateCard})}>
-              <div className='card-body pb-0'>
+              <div className='card-body pb-0 pt-0'>
                 <h5 className="card-title">{title}</h5>
                 <hr />
               </div>

@@ -1,5 +1,6 @@
 import photo from './Photo.jpg';
 import proteinTracker from './proteinTracker.jpg';
+import liveCurrency from './liveCurrency.jpg';
 
 const data = {
   'properties': [
@@ -7,16 +8,21 @@ const data = {
       'id': '0',
       'index': 0,
       'picture': proteinTracker,
-      "title": 'dummy title',
+      "title": 'Protein Tracker',
       "summary": "text summary",
       "link": 'https://test.com/',
-      "linkName": 'dummy name',
+      "linkName": 'Protein-Tracker',
       "logo": 'logo`s'
     },
     {
       'id': '1',
       'index': 1,
-      'picture': photo
+      'picture': liveCurrency,
+      "title": 'Live Currency',
+      "summary": "text summary",
+      "link": 'https://test.com/',
+      "linkName": 'Live-Currency',
+      "logo": 'logo`s'
     },
     {
       'id': '2',
