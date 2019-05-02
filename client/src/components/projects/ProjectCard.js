@@ -7,8 +7,20 @@ import Data from '../../assets/projects/data';
 import CardItem from './CardItem';
 
 class ProjectCard extends Component {
+  constructor() {
+    super();
+    this.state = {
+      cardItem: false
+    }
+  }
+
+  onClickCardItem = id => {
+    this.setState({ cardItem: !this.state.cardItem })
+  }
+
   render() {
-    const card = Data.map(i => <CardItem key={i.id} data={i} />);
+    const {cardItem} = this.state;
+    const card = Data.map(i => <CardItem key={i.id} data={i} onClickCardItem={this.onClickCardItem} cardItem={cardItem} />);
     return (
       <div className='projectCard'>
         <div className='row no-gutters'>

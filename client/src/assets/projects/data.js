@@ -10,7 +10,7 @@ const data = [
       "summary": "text summary",
       "link": 'https://test.com/',
       "linkName": 'Protein-Tracker',
-      "logo": 'logo`s'
+      "skills": 'skills'
     },
     {
       'id': '1',
@@ -20,7 +20,7 @@ const data = [
       "summary": "text summary",
       "link": 'https://test.com/',
       "linkName": 'Live-Currency',
-      "logo": 'logo`s'
+      "skills": 'skills'
     },
     {
       'id': '2',
