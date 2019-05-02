@@ -1,8 +1,7 @@
 import proteinTracker from './proteinTracker.jpg';
 import liveCurrency from './liveCurrency.jpg';
 
-const data = {
-  'properties': [
+const data = [
     {
       'id': '0',
       'index': 0,
@@ -39,6 +38,5 @@ const data = {
       'picture': proteinTracker
     }
   ]
-};
 
 export default data;

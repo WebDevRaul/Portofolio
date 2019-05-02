@@ -5,7 +5,7 @@ import WOW from "wow.js";
 
 // Components
 import Title from './Title';
-import ProjectList from './ProjectList';
+import ProjectCard from './ProjectCard';
 
 export default class Projects extends Component {
 
@@ -32,7 +32,7 @@ export default class Projects extends Component {
           </div>
           <div className='row no-gutters'>
             <div className='col'>
-              <ProjectList />
+              <ProjectCard />
             </div>
           </div>
         </div>
