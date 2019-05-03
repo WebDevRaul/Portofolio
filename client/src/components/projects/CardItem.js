@@ -2,18 +2,35 @@ import React, { Component } from 'react';
 import clasnames from 'classnames'; 
 
 class CardItem extends Component {
-
-  onClick = id => () => {
-    this.props.onClickCardItem(id)
+  constructor() {
+    super();
+    this.state = {
+      hover: false,
+      active: false,
+    }
   }
+
+  onMouseEnter = () => {
+    this.setState({ hover: true })
+  }
+
+  onMouseLeave = () => {
+    this.setState({ hover: false })
+  }
+
 
   render() {
     const { picture, title, summary, skills, link, linkName, id } = this.props.data;
-    const { cardItem } = this.props;
+    const { hover, active } = this.state;
     return (
-      <div className='cardItem' onClick={this.onClick(id)}  id={`cardItem-${id}`}>
+      <div 
+        className='cardItem' 
+        id={`cardItem-${id}`}
+        onMouseEnter={this.onMouseEnter}
+        onMouseLeave={this.onMouseLeave}
+        >
         <img src={picture} alt=''/>
-        <div className={clasnames('hide cardItemInfo', {'show': cardItem})}>
+        <div className={clasnames('hide cardItemInfo', {'show': hover || active})}>
             <div className='cardInfoDiv'>
               <h5 className='cardInfoTitle pb-1'>{title}</h5>
               <p>{summary}</p>
