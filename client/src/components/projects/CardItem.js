@@ -22,17 +22,17 @@ class CardItem extends Component {
   };
   
 
-  onMouseEnter = () => {
-    this.setState({ hover: true });
-    setTimeout(() => this.setState({ titleAnimation: true }), 200);
-    setTimeout(() => this.setState({ summaryAnimation: true }), 300);
-    setTimeout(() => this.setState({ skillsAnimation: true }), 400);
-    setTimeout(() => this.setState({ linkAnimation: true }), 500);
-  }
+  // onMouseEnter = () => {
+  //   this.setState({ hover: true });
+  //   setTimeout(() => this.setState({ titleAnimation: true }), 200);
+  //   setTimeout(() => this.setState({ summaryAnimation: true }), 300);
+  //   setTimeout(() => this.setState({ skillsAnimation: true }), 400);
+  //   setTimeout(() => this.setState({ linkAnimation: true }), 500);
+  // }
   
-  onMouseLeave = () => {
-    this.setState({ hover: false, titleAnimation: false, summaryAnimation: false, skillsAnimation: false, linkAnimation: false })
-  }
+  // onMouseLeave = () => {
+  //   this.setState({ hover: false, titleAnimation: false, summaryAnimation: false, skillsAnimation: false, linkAnimation: false })
+  // }
 
 
   render() {
@@ -49,10 +49,16 @@ class CardItem extends Component {
         <img src={picture} alt=''/>
         <div className={clasnames('hide cardItemInfo', {'show': hover})}>
             <div className='cardInfoDiv'>
-              <h5 className={clasnames('cardInfoTitle hide pb-1 bounceInRightCard', {'show': titleAnimation })}>{title}</h5>
+              <h5 className={clasnames('cardInfoTitle text-center hide pb-1 bounceInRightCard', {'show': titleAnimation })}>
+                <span className='pb-1'>{title}</span>
+              </h5>
               <p className={clasnames('bounceInRightCard hide', {'show': summaryAnimation})}>{summary}</p>
-              <p className={clasnames('bounceInRightCard box hide', {'show': skillsAnimation})}>{skills}</p>
-              <p className={clasnames('bounceInRightCard hide', {'show': linkAnimation})}><a href={link} target='_blank' rel="noopener noreferrer">{linkName}</a></p>
+              <div className={clasnames('bounceInRightCard hide', {'show': skillsAnimation})}>
+                <div className='d-flex'>
+                  <span className='m-auto'>{skills}</span>
+                </div>
+              </div>
+              <p className={clasnames('bounceInRightCard float-right mr-3 hide', {'show': linkAnimation})}><a href={link} target='_blank' rel="noopener noreferrer">{linkName}</a></p>
             </div>
         </div>
       </div>
