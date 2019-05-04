@@ -226,7 +226,39 @@
   -webkit-transition: ease 1s;
 }
 
-.cardItemInfo {
+.cardItemDiv {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 50%; 
+  right: 50%;
+  transform: translate(50%,-50%);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.cardItemCenter {
+  width: 100%;
+  position: absolute;
+  top: 50%; 
+  right: 50%;
+  transform: translate(50%,-50%);
+}
+
+.cardItemTitleBorder h5 span{
+  border-bottom: 2px solid var(--secondaryCollor);
+}
+
+.carItemLink a{
+  color: black !important; 
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+}
+
+/* .cardItemInfo {
   height: 100%;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9);
@@ -264,4 +296,4 @@
 
 .cardInfoTitle span{
   border-bottom: 2px solid var(--secondaryCollor)
-}
+} */

@@ -10,7 +10,7 @@ import liveCurrency from './liveCurrency.jpg';
 // Logos
 import Logo from '../skills/Logo';
 
-const em = '1.5em';
+const em = '1.3em';
 const specialEm = '2.5em';
 
 const data = [
