@@ -8,11 +8,11 @@ class CardItem extends Component {
   constructor() {
     super();
     this.state = {
-      hover: false,
-      titleAnimation: false,
-      summaryAnimation: false,
-      skillsAnimation: false,
-      linkAnimation: false
+      hover: true,
+      titleAnimation: true,
+      summaryAnimation: true,
+      skillsAnimation: true,
+      linkAnimation: true
     }
   }
 
@@ -51,7 +51,7 @@ class CardItem extends Component {
             <div className='cardInfoDiv'>
               <h5 className={clasnames('cardInfoTitle hide pb-1 bounceInRightCard', {'show': titleAnimation })}>{title}</h5>
               <p className={clasnames('bounceInRightCard hide', {'show': summaryAnimation})}>{summary}</p>
-              <p className={clasnames('bounceInRightCard hide', {'show': skillsAnimation})}>{skills}</p>
+              <p className={clasnames('bounceInRightCard box hide', {'show': skillsAnimation})}>{skills}</p>
               <p className={clasnames('bounceInRightCard hide', {'show': linkAnimation})}><a href={link} target='_blank' rel="noopener noreferrer">{linkName}</a></p>
             </div>
         </div>

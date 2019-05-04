@@ -1,5 +1,16 @@
+import React from 'react';
+
+// Components
+import DataCircle from '../../components/common/DataCircle';
+
+// Picture
 import proteinTracker from './proteinTracker.jpg';
 import liveCurrency from './liveCurrency.jpg';
+
+// Logos
+import Logo from '../skills/Logo';
+
+const em = '0.7em';
 
 const data = [
     {
@@ -10,7 +21,14 @@ const data = [
       "summary": "text summary",
       "link": 'https://test.com/',
       "linkName": 'Protein-Tracker',
-      "skills": 'skills'
+      "skills": [
+        <DataCircle svg={<Logo.ReactJs width={em} height={em} />} />,
+        <Logo.Redux width={em} height={em} />,
+        <Logo.MongoDB width={em} height={em} />,
+        <Logo.NodeJs width={em} height={em} />,
+        <Logo.Bootstrap width={em} height={em} />,
+        <Logo.Css width={em} height={em} />
+      ]
     },
     {
       'id': '1',

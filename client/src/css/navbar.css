@@ -1,6 +1,7 @@
 /* Navbar */
 .navbar {
   background: #fff !important;
+  overflow: hidden;
 }
 
 /* Navbar btn */

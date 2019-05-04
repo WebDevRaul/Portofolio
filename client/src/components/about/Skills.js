@@ -3,16 +3,8 @@ import React, { Component } from 'react';
 // Common
 import Circle from '../common/Circle';
 
-// Img
-import Redux from '../../assets/skills/Redux';
-import MongoDB from '../../assets/skills/MongoDB';
-import NodeJs from '../../assets/skills/NodeJs';
-import PostgreSQL from '../../assets/skills/PostgreSQL';
-import ReactJs from '../../assets/skills/ReactJs';
-import JQuery from '../../assets/skills/JQuery';
-import Html from '../../assets/skills/Html';
-import Css from '../../assets/skills/Css';
-import Javascript from '../../assets/skills/Javascript';
+// Assests
+import Logo from '../../assets/skills/Logo';
 
 export default class Skills extends Component {
   render() {
@@ -32,16 +24,16 @@ export default class Skills extends Component {
                       <div className='row no-gutters'>
                         <div className='col-sm-6'>
                           <div className='d-flex'>
-                            <Circle svg={<Html width={rem} height={rem} />} text='Html 5' />
-                            <Circle svg={<Css width={rem} height={rem} />} text='Css 3' />
-                            <Circle svg={<Javascript width={rem} height={rem} />} text='Javascript' />
+                            <Circle svg={<Logo.Html width={rem} height={rem} />} text='Html 5' />
+                            <Circle svg={<Logo.Css width={rem} height={rem} />} text='Css 3' />
+                            <Circle svg={<Logo.Javascript width={rem} height={rem} />} text='Javascript' />
                           </div>
                         </div>
                         <div className='col-sm-6'>
                           <div className='d-flex'>
-                            <Circle svg={<JQuery width={rem} height={rem} />} text='JQuery' />
-                            <Circle svg={<ReactJs width={rem} height={rem} />} text='ReactJs' />
-                            <Circle svg={<Redux width={rem} height={rem} />} text='Redux' />
+                            <Circle svg={<Logo.JQuery width={rem} height={rem} />} text='JQuery' />
+                            <Circle svg={<Logo.ReactJs width={rem} height={rem} />} text='ReactJs' />
+                            <Circle svg={<Logo.Redux width={rem} height={rem} />} text='Redux' />
                           </div>
                         </div>
                       </div>
@@ -52,9 +44,9 @@ export default class Skills extends Component {
                     <div className='row no-gutters'>
                       <div className='col-sm-6'>
                         <div className='d-flex'>
-                          <Circle svg={<NodeJs height={rem} width='5.5em' />} text='NodeJs' />
-                          <Circle svg={<MongoDB height={rem} width='5.5em' />} text='MongoDB' />
-                          <Circle svg={<PostgreSQL height={rem} width={rem} />} text='PostgreSQL' />
+                          <Circle svg={<Logo.NodeJs height={rem} width='5.5em' />} text='NodeJs' />
+                          <Circle svg={<Logo.MongoDB height={rem} width='5.5em' />} text='MongoDB' />
+                          <Circle svg={<Logo.PostgreSQL height={rem} width={rem} />} text='PostgreSQL' />
                         </div>
                       </div>
                       <div className='col-sm-6'>

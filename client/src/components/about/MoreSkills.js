@@ -4,8 +4,7 @@ import React, { Component } from 'react';
 import Circle from '../common/Circle';
 
 // Assests
-import Boostrap from '../../assets/skills/Boostrap';
-import Github from '../../assets/skills/Github';
+import Logo from '../../assets/skills/Logo';
 
 export default class MoreSkills extends Component {
   render() {
@@ -26,8 +25,8 @@ export default class MoreSkills extends Component {
                   <div className='row no-gutters'>
                     <div className='col-sm-6'>
                       <div className='d-flex'>
-                        <span className='m-2'><Circle svg={<Github width={rem} height={rem} />} text='Github' /></span>
-                        <span className='m-2'><Circle svg={<Boostrap width={rem} height={rem} />} text='Boostrap 4' /></span>
+                        <span className='m-2'><Circle svg={<Logo.Bootstrap width={rem} height={rem} />} text='Github' /></span>
+                        <span className='m-2'><Circle svg={<Logo.Github width={rem} height={rem} />} text='Boostrap 4' /></span>
                       </div>
                     </div>
                     <div className='col-sm-6'>
