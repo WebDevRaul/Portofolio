@@ -49,21 +49,6 @@ const data = [
         <DataCircle  svg={<Logo.Css width={em} height={em} />}/>,
       ]
     },
-    {
-      'id': '2',
-      'index': 2,
-      'picture': proteinTracker
-    },
-    {
-      'id': '3',
-      'index': 3,
-      'picture': liveCurrency
-    },
-    {
-      'id': '4',
-      'index': 4,
-      'picture': proteinTracker
-    }
   ]
 
 export default data;

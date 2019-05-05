@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import clasnames from 'classnames'; 
 
 // Animation
@@ -41,7 +42,7 @@ class CardItem extends Component {
 
     return (
       <div 
-        className='cardItem' 
+        className='cardItem'
         id={`cardItem-${id}`}
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
@@ -56,9 +57,16 @@ class CardItem extends Component {
                 </div>
               </div>
             </div>
+            <div className='row no-gutters hide'>
+              <div className='col'>
+                <div className=''>
+                  <p className={clasnames('hide bounceInRightCard', {'show': summaryAnimation })}>{summary}</p>
+                </div>
+              </div>
+            </div>
             <div className='row no-gutters'>
               <div className='col'>
-                <div className={clasnames('bounceInRightCard hide', {'show': skillsAnimation})}>
+                <div className={clasnames(' hide bounceInRightCard', {'show': skillsAnimation})}>
                   <div className='d-flex'>
                     <span className='m-auto'>{skills}</span>
                   </div>
@@ -71,6 +79,10 @@ class CardItem extends Component {
       </div>
     )
   }
+}
+
+CardItem.propTypes = {
+  data: PropTypes.object.isRequired,
 }
 
 
