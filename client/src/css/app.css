@@ -35,6 +35,9 @@ body {
 .show {
   display: block !important;
 }
+a {
+  text-decoration: none !important;
+}
 
 @media (min-width : 420px) and (max-width : 480px) {
     /* Project */

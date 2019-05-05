@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+// Components
+import CardItem from './CardItem';
 
 // Data
 import Data from '../../assets/projects/data';
 
-// Component
-import CardItem from './CardItem';
-
-class ProjectCard extends Component {
-  render() {
-    const card = Data.map(i => <CardItem key={i.id} data={i} />);
+export default function ProjectCard() {
+  
+  const card = Data.map(i => <CardItem key={i.id} data={i} />);
     return (
       <div className='projectCard'>
         <div className='row no-gutters'>
@@ -20,7 +20,4 @@ class ProjectCard extends Component {
         </div>
       </div>
     )
-  }
 }
-
-export default ProjectCard;
