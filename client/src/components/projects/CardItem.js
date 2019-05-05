@@ -57,16 +57,16 @@ class CardItem extends Component {
                 </div>
               </div>
             </div>
-            <div className='row no-gutters hide'>
+            <div className='row no-gutters summary text-center'>
               <div className='col'>
                 <div className=''>
-                  <p className={clasnames('hide bounceInRightCard', {'show': summaryAnimation })}>{summary}</p>
+                  <p className={clasnames('hide mb-0 bounceInRightCard', {'show': summaryAnimation })}>{summary}</p>
                 </div>
               </div>
             </div>
             <div className='row no-gutters'>
               <div className='col'>
-                <div className={clasnames(' hide bounceInRightCard', {'show': skillsAnimation})}>
+                <div className={clasnames('card-item-skill hide bounceInRightCard', {'show': skillsAnimation})}>
                   <div className='d-flex'>
                     <span className='m-auto'>{skills}</span>
                   </div>
@@ -74,7 +74,7 @@ class CardItem extends Component {
               </div>
             </div>
           </div>
-          <p className={clasnames('carItemLink mr-3 hide', {'show': linkAnimation})}><a href={link} target='_blank' rel="noopener noreferrer">{linkName}</a></p>
+          <p className={clasnames('card-item-link mr-3 hide', {'show': linkAnimation})}><a href={link} target='_blank' rel="noopener noreferrer">{linkName}</a></p>
         </div>
       </div>
     )

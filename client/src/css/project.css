@@ -245,17 +245,23 @@
 }
 
 .cardItemTitleBorder h5 span{
-  padding-bottom: 2px;
+  padding-bottom: 3px;
   border-bottom: 2px solid var(--secondaryCollor);
 }
 
-.carItemLink a{
+.card-item-link a{
   color: black !important; 
   font-size: 0.8em;
   position: absolute;
   bottom: 2%;
   right: 5%;
 }
-.carItemLink a:hover{
+.card-item-link a:hover{
   color: var(--secondaryCollor) !important;
+}
+.logo-wrapper-font-size {
+  font-size: 1em;
+}
+.summary {
+  display: none;
 }

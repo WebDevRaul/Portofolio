@@ -46,6 +46,10 @@ a {
     .cardInfoDiv {
       font-size: 1.1em !important;
     }
+    /* LogoWrapper */
+    .logo-wrapper-font-size {
+      font-size: 1.41em !important;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 576px) {
@@ -58,6 +62,13 @@ a {
   /* projectCard */
   .cardInfoDiv {
     font-size: 1.3em !important;
+  }
+  /* CardItem */
+  .cardItem h5, .card-item-skill {
+    font-size: 1.6em;
+  }
+  .card-item-link a {
+    font-size: 1em !important;
   }
 }
 
@@ -72,8 +83,15 @@ a {
   .projectCardDiv {
     grid-template-columns: auto auto !important;
   }
+  /* CardItem */
   .cardItem {
     height: 20vw !important;
+  }
+  .logo-wrapper-font-size {
+    font-size: 0.91em !important;
+  }
+  .card-item-link a {
+    font-size: 0.6em !important;
   }
 }
   
@@ -94,8 +112,12 @@ a {
   .projectCardDiv {
     grid-template-columns: auto auto !important;
   }
+  /* CardItem */
   .cardItem {
     height: 20vw !important;
+  }
+  .logo-wrapper-font-size {
+    font-size: 1.31em !important;
   }
 }
 
@@ -116,15 +138,27 @@ a {
   .projectCardDiv {
     grid-template-columns: auto auto !important;
   }
+  /* CardItem */
   .cardItem {
     height: 20vw !important;
+  }
+  .logo-wrapper-font-size {
+    font-size: 2.21em !important;
+  }
+  .card-item-link a {
+    font-size: 1em !important;
+  }
+  .summary {
+    display: block !important;
+    font-size: 1.21em;
+    margin: 0 20px;
   }
 }
 
 @media (min-width: 1281px) {
   /* Project */
   
-  /* project-list */
+  /* &project-list */
   .project-list-div:before, .project-list-div::after {
     width: 50% !important;
   }
@@ -134,11 +168,26 @@ a {
   .cardInfoDiv {
     font-size: 1.3em !important;
   }
-  /* projectCard */
+  /* &projectCard */
   .projectCardDiv {
     grid-template-columns: auto auto !important;
   }
+  /* &CardItem */
   .cardItem {
     height: 20vw !important;
+  }
+  .cardItem h5 {
+    font-size: 1.6em;
+  }
+  .logo-wrapper-font-size {
+    font-size: 2.51em !important;
+  }
+  .card-item-link a {
+    font-size: 1.3em !important;
+  }
+  .summary {
+    display: block !important;
+    font-size: 1.41em;
+    margin: 0 20px;
   }
 }

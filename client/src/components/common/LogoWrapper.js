@@ -4,14 +4,14 @@ import React from 'react';
 import '../../css/skill.css';
 
 
-const DataCircle = ({
+const LogoWrapper = ({
   svg,
 }) => {
   return (
     <span className='m-auto'>
-      <i className='m-1'>{svg}</i>
+      <i className='m-1 logo-wrapper-font-size'>{svg}</i>
     </span>
   );
 };
 
-export default DataCircle;
+export default LogoWrapper;

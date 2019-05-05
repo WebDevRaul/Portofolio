@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import DataCircle from '../../components/common/DataCircle';
+import LogoWrapper from '../../components/common/LogoWrapper';
 
 // Picture
 import proteinTracker from './proteinTracker.jpg';
@@ -10,8 +10,9 @@ import liveCurrency from './liveCurrency.jpg';
 // Logos
 import Logo from '../skills/Logo';
 
-const em = '1.3em';
-const specialEm = '2.5em';
+const em = '0.8em';
+const mongoDB = '2.2em';
+const nodeJs = '1.5em';
 
 const data = [
     {
@@ -23,13 +24,13 @@ const data = [
       "link": 'https://test.com/',
       "linkName": 'Protein-Tracker',
       "skills": [
-        <DataCircle  svg={<Logo.ReactJs width={em} height={em} />}/>,
-        <DataCircle  svg={<Logo.Javascript width={em} height={em} />}/>,
-        <DataCircle  svg={<Logo.Redux width={em} height={em} />}/>,
-        <DataCircle svg={<Logo.MongoDB width={specialEm} height={specialEm} />}/>,
-        <DataCircle  svg={<Logo.NodeJs width={specialEm} height={specialEm} />}/>,
-        <DataCircle  svg={<Logo.Bootstrap width={em} height={em} />}/>,
-        <DataCircle  svg={<Logo.Css width={em} height={em} />}/>,
+        <LogoWrapper key='ReactJs'  svg={<Logo.ReactJs width={em} height={em} />}/>,
+        <LogoWrapper key='Javascript'  svg={<Logo.Javascript width={em} height={em} />}/>,
+        <LogoWrapper key='Redux'  svg={<Logo.Redux width={em} height={em} />}/>,
+        <LogoWrapper key='MongoDB' svg={<Logo.MongoDB width={mongoDB} height={mongoDB} />}/>,
+        <LogoWrapper key='NodeJs'  svg={<Logo.NodeJs width={nodeJs} height={nodeJs} />}/>,
+        <LogoWrapper key='Bootstrap' svg={<Logo.Bootstrap width={em} height={em} />}/>,
+        <LogoWrapper key='Css' svg={<Logo.Css width={em} height={em} />}/>,
       ]
     },
     {
@@ -41,12 +42,12 @@ const data = [
       "link": 'https://test.com/',
       "linkName": 'Live-Currency',
       "skills": [
-        <DataCircle  svg={<Logo.ReactJs width={em} height={em} />}/>,
-        <DataCircle  svg={<Logo.Javascript width={em} height={em} />}/>,
-        <DataCircle  svg={<Logo.Redux width={em} height={em} />}/>,
-        <DataCircle  svg={<Logo.NodeJs width={specialEm} height={specialEm} />}/>,
-        <DataCircle  svg={<Logo.Bootstrap width={em} height={em} />}/>,
-        <DataCircle  svg={<Logo.Css width={em} height={em} />}/>,
+        <LogoWrapper key='ReactJs' svg={<Logo.ReactJs width={em} height={em} />}/>,
+        <LogoWrapper key='Javascript' svg={<Logo.Javascript width={em} height={em} />}/>,
+        <LogoWrapper key='Redux' svg={<Logo.Redux width={em} height={em} />}/>,
+        <LogoWrapper key='NodeJs' svg={<Logo.NodeJs width={nodeJs} height={nodeJs} />}/>,
+        <LogoWrapper key='Bootstrap' svg={<Logo.Bootstrap width={em} height={em} />}/>,
+        <LogoWrapper key='Css' svg={<Logo.Css width={em} height={em} />}/>,
       ]
     },
   ]
