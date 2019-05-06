@@ -64,6 +64,10 @@
   display: block;
 }
 
+.card-slider img:hover {
+  cursor: pointer;
+}
+
 .project-image-slide .left {
   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
   width: 264px;

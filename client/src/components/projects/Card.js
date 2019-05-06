@@ -21,6 +21,6 @@ export default class Card extends Component {
 };
 
 Card.propTypes = {
-  data: PropTypes.object.isRequired,
+  card: PropTypes.object.isRequired,
   onClickProp: PropTypes.func
 };

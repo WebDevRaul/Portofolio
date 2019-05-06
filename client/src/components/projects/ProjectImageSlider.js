@@ -12,6 +12,7 @@ class ProjectImageSlider extends Component {
     this.state = {
       data: data,
       card: data[0],
+      cardClick: data[0]
     }
   };
   
@@ -56,6 +57,11 @@ class ProjectImageSlider extends Component {
     this.interval = setInterval(() => this.timer(), 5000);
   };
 
+  onClickProp = id => {
+    const newIndex = (this.state.card.index * 0 ) + Number(id);
+    this.setState({ cardClick: data[newIndex] });
+  }
+  
   render() {
     const { data, card } = this.state;
     const style = {'transform': `translateX(-${card.index*(100/data.length)}%)`};
