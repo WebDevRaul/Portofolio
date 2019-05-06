@@ -60,8 +60,8 @@ class ProjectImageSlider extends Component {
     const { data, card } = this.state;
     const style = {'transform': `translateX(-${card.index*(100/data.length)}%)`};
     return (
-      <div className='project-image-slide mb-3'>
-        <div className='container pl-0 pr-0 background'>
+      <div className='project-image-slide d-flex mb-3'>
+        <div className='container pl-0 pr-0'>
           <div className='row no-gutters'>
             <div className='col'>
               <div className="project-image-slide-div">
