@@ -197,6 +197,30 @@
 
 /* //  //  //  //  //  //  //  //  //  // */
 /* //  //  //  //  //  //  //  //  //  // */
+.project-image-slide-div {
+  position: relative;
+  width: 226px;
+  margin: 0 auto;
+  height: 200px;
+}
+.project-slide-wrapper {
+  display: flex;
+  position: absolute;
+  margin-left: 15px;
+}
+.project-slide-wrapper .card-slider {
+  flex: 1;
+  min-width: 200px;
+}
+
+.card-slider img {
+  max-width: calc(100%);
+  margin: 0 auto;
+  display: block;
+}
+
+/* //  //  //  //  //  //  //  //  //  // */
+/* //  //  //  //  //  //  //  //  //  // */
 
 
 /* ProjectCard */

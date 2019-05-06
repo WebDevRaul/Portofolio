@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 
-// Css
-import '../../css/project.css';
-
 export default class Title extends Component {
   render() {
     const { slideRight, slideLeft, fadeInUp } = this.props;
     return (
       <div className='project-title'>
-        <div className='container bg-white mt-4'>
+        <div className='container mt-4'>
             <div className='row no-gutters'>
               <div className='col'>
                 <div className='d-flex'>

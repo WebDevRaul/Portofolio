@@ -5,7 +5,11 @@ import WOW from "wow.js";
 
 // Components
 import Title from './Title';
+import ProjectImageSlider from './ProjectImageSlider';
 import ProjectCard from './ProjectCard';
+
+// CSS
+import '../../css/project.css';
 
 export default class Projects extends Component {
 
@@ -28,6 +32,11 @@ export default class Projects extends Component {
                 slideRight={slideRight}
                 fadeInUp={fadeInUp}
               />
+            </div>
+          </div>
+          <div className='row no-gutters'>
+            <div className='col'>
+              <ProjectImageSlider />
             </div>
           </div>
           <div className='row no-gutters'>

@@ -7,11 +7,11 @@ export default class Card extends Component {
     this.props.onClickProp(id)
   }
   render() {
-  const { id, picture } = this.props.property;
+  const { id, picture } = this.props.card;
     return (
       <div 
         id={`card-${id}`} 
-        className="project-card d-flex" 
+        className="card-slider" 
         onClick={this.onClick(id)}
         >
         <img src={picture} className='m-auto' alt=''/>
@@ -21,6 +21,6 @@ export default class Card extends Component {
 };
 
 Card.propTypes = {
-  property: PropTypes.object.isRequired,
-  onClickProp: PropTypes.func.isRequired
+  data: PropTypes.object.isRequired,
+  onClickProp: PropTypes.func
 };
