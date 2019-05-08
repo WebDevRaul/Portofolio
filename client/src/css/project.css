@@ -82,7 +82,7 @@
   z-index: 50;
   position: absolute;
   left: 0;
-  top: 19%;
+  top: 18.5%;
 }
 .right {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0.7) 30%, rgb(255, 255, 255) 100%);
@@ -91,9 +91,31 @@
   z-index: 50;
   position: absolute;
   right: 0;
-  top: 19%;
+  top: 18.5%;
+}
+.arrow-right, .arrow-left {
+  height: 168px;
+  z-index: 100;
+  position: absolute;
+  background: transparent;
+  padding: 0 20px 0 10px;
+}
+.arrow-right {
+  right: 0;
+}
+.arrow-left {
+  left: 0;
+}
+.arrow-right i, .arrow-left i {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
+.arrow-right:hover, .arrow-left:hover {
+  cursor: pointer;
+}
 /* //  //  //  //  //  //  //  //  //  // */
 /* //  //  //  //  //  //  //  //  //  // */
 

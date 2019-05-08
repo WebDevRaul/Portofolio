@@ -66,12 +66,14 @@ class ProjectImageSlider extends Component {
     const { data, card } = this.state;
     const style = {'transform': `translateX(-${card.index*(100/data.length)}%)`, 'transition': '0.5s'};
     return (
-      <div className='container pl-0 pr-0'>
+      <div className='container pl-0 pr-0 mb-3'>
         <div className='row no-gutters'>
           <div className='col'>
             <div className='project-image-slider-wrapper'>
-                <div className='left'></div>
-                <div className='right'></div>
+              <div className='left'></div>
+              <div className='right'></div>
+              <div className='arrow-left'><i className="fas fa-chevron-left"></i></div>
+              <div className='arrow-right'><i className="fas fa-chevron-right"></i></div>
               <div className='project-image-slide d-flex'>
                 <div className="project-image-slide-div">
                   <div className="project-slide-wrapper" style={style}>
