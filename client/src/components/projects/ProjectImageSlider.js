@@ -64,20 +64,22 @@ class ProjectImageSlider extends Component {
   
   render() {
     const { data, card } = this.state;
-    const style = {'transform': `translateX(-${card.index*(100/data.length)}%)`};
+    const style = {'transform': `translateX(-${card.index*(100/data.length)}%)`, 'transition': '0.5s'};
     return (
-      <div className='project-image-slide d-flex mb-3'>
-        <div className='container pl-0 pr-0'>
-          <div className='row no-gutters'>
-            <div className='col'>
-              <div className="project-image-slide-div">
-                <div className='right'></div>
-                <div className="project-slide-wrapper" style={style}>
-                    {
-                      data.map(card => <Card key={card.index} card={card} onClickProp={this.onClickProp} />)
-                    }
-                  </div>
-                <div className='left'></div>
+      <div className='container pl-0 pr-0'>
+        <div className='row no-gutters'>
+          <div className='col'>
+            <div className='project-image-slider-wrapper'>
+              <div className='project-image-slide d-flex'>
+                <div className="project-image-slide-div">
+                  <div className='right'></div>
+                  <div className="project-slide-wrapper" style={style}>
+                      {
+                        data.map(card => <Card key={card.index} card={card} onClickProp={this.onClickProp} />)
+                      }
+                    </div>
+                  <div className='left'></div>
+                </div>
               </div>
             </div>
           </div>

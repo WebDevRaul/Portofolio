@@ -14,7 +14,7 @@ export default class Card extends Component {
         className="card-slider" 
         onClick={this.onClick(id)}
         >
-        <img src={picture} className='m-auto' alt=''/>
+        <img src={picture} alt=''/>
       </div>
     )
   }
