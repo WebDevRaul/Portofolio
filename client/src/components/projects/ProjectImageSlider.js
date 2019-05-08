@@ -70,15 +70,15 @@ class ProjectImageSlider extends Component {
         <div className='row no-gutters'>
           <div className='col'>
             <div className='project-image-slider-wrapper'>
+                <div className='left'></div>
+                <div className='right'></div>
               <div className='project-image-slide d-flex'>
                 <div className="project-image-slide-div">
-                  <div className='right'></div>
                   <div className="project-slide-wrapper" style={style}>
                       {
                         data.map(card => <Card key={card.index} card={card} onClickProp={this.onClickProp} />)
                       }
                     </div>
-                  <div className='left'></div>
                 </div>
               </div>
             </div>
