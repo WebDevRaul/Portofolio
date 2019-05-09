@@ -36,7 +36,7 @@ const data = [
     {
       'id': '1',
       'index': 1,
-      'picture': proteinTracker,
+      'picture': liveCurrency,
       "title": 'Live Currency',
       "summary": "text summary",
       "link": 'https://test.com/',
@@ -53,7 +53,7 @@ const data = [
     {
       'id': '2',
       'index': 2,
-      'picture': proteinTracker,
+      'picture': liveCurrency,
       "title": 'Live Currency',
       "summary": "text summary",
       "link": 'https://test.com/',

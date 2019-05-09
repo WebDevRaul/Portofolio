@@ -60,8 +60,14 @@ class ProjectImageSlider extends Component {
   onClickProp = id => {
     const newIndex = (this.state.card.index * 0 ) + Number(id);
     this.setState({ cardClick: data[newIndex] });
+    console.log(id, 'prop')
   }
   
+  onClickCurrentCard = () => {
+    const { card } = this.state;
+    console.log(card.id, 'curentCard')
+  }
+
   render() {
     const { data, card } = this.state;
     const style = {'transform': `translateX(-${card.index*(100/data.length)}%)`, 'transition': '0.5s'};
@@ -82,7 +88,8 @@ class ProjectImageSlider extends Component {
                   <i className="fas fa-chevron-right"></i>
                 </button>
               </div>
-              <div className='project-image-slide d-flex'>
+              <div className='project-image-slide'>
+                <div className='project-image-slide-card-border' onClick={this.onClickCurrentCard}></div>
                 <div className="project-image-slide-div">
                   <div className="project-slide-wrapper" style={style}>
                       {
