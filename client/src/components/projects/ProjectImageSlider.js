@@ -72,8 +72,16 @@ class ProjectImageSlider extends Component {
             <div className='project-image-slider-wrapper'>
               <div className='left'></div>
               <div className='right'></div>
-              <div className='arrow-left'><i className="fas fa-chevron-left"></i></div>
-              <div className='arrow-right'><i className="fas fa-chevron-right"></i></div>
+              <div className='arrow-left'>
+                <button className='btn'  onClick={this.onClickPrev} disabled={card.index === 0} >
+                  <i className="fas fa-chevron-left"></i>
+                </button>
+              </div>
+              <div className='arrow-right'>
+                <button className='btn' onClick={this.onClickNext} disabled={card.index === data.length-1}>
+                  <i className="fas fa-chevron-right"></i>
+                </button>
+              </div>
               <div className='project-image-slide d-flex'>
                 <div className="project-image-slide-div">
                   <div className="project-slide-wrapper" style={style}>
