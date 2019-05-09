@@ -16,7 +16,18 @@ export default class Projects extends Component {
   componentDidMount() {
     const wow = new WOW();
     wow.init();
+    this.onScrollToCard()
   };
+
+  onClickSlider = id => {
+    console.log('id', id)
+    // window.scrollTo(0, ref.current.offsetTop);
+  }
+
+  onScrollToCard = (ref, id) => {
+    console.log('ref', ref);
+    console.log('id', id)
+  }
 
   render() {
     const slideRight = 'wow fadeInRight';
@@ -36,12 +47,12 @@ export default class Projects extends Component {
           </div>
           <div className='row no-gutters'>
             <div className='col'>
-              <ProjectImageSlider />
+              <ProjectImageSlider onClickSlider={this.onClickSlider} />
             </div>
           </div>
           <div className='row no-gutters'>
             <div className='col'>
-              <ProjectCard />
+              <ProjectCard onScrollToCard={this.onScrollToCard} />
             </div>
           </div>
         </div>

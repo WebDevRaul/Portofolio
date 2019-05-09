@@ -11,8 +11,7 @@ class ProjectImageSlider extends Component {
     super();
     this.state = {
       data: data,
-      card: data[0],
-      cardClick: data[0]
+      card: data[0]
     }
   };
   
@@ -58,14 +57,12 @@ class ProjectImageSlider extends Component {
   };
 
   onClickProp = id => {
-    const newIndex = (this.state.card.index * 0 ) + Number(id);
-    this.setState({ cardClick: data[newIndex] });
-    console.log(id, 'prop')
+    this.props.onClickSlider(id);
   }
   
   onClickCurrentCard = () => {
     const { card } = this.state;
-    console.log(card.id, 'curentCard')
+    this.props.onClickSlider(card.id);
   }
 
   render() {

@@ -14,12 +14,16 @@ class CardItem extends Component {
       summaryAnimation: false,
       skillsAnimation: false,
       linkAnimation: false
-    }
-  }
+    };
+    this.myref = React.createRef();
+  };
 
   componentDidMount() {
     const wow = new WOW();
     wow.init();
+
+    const { id }= this.props.data;
+    this.props.onScrollToCard(this.myref, id)
   };
   
 
@@ -42,6 +46,7 @@ class CardItem extends Component {
 
     return (
       <div 
+        ref={this.myref}
         className='cardItem'
         id={`cardItem-${id}`}
         onMouseEnter={this.onMouseEnter}
