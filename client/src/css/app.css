@@ -44,6 +44,14 @@ a {
 
 @media (min-width : 420px) and (max-width : 480px) {
   /* Project */
+
+  /* Title */
+  .project-title-subtitle {
+    font-size: 0.525em !important;
+  }
+  .project-title-main-title {
+    font-size: 1.1em;
+  }
   
   /* LogoWrapper */
   .logo-wrapper-font-size {
@@ -53,6 +61,14 @@ a {
 
 @media (min-width: 481px) and (max-width: 576px) {
   /* Project */
+
+   /* Title */
+   .project-title-subtitle {
+    font-size: 0.6em !important;
+  }
+  .project-title-main-title {
+    font-size: 1.2em;
+  }
 
   /* & CardItem */
   .cardItem h5, .card-item-skill {
@@ -84,6 +100,17 @@ a {
 
 @media (min-width: 576px) and (max-width: 767px) {
   /* Project */
+
+   /* Title */
+   .project-title-subtitle {
+    font-size: 0.7em !important;
+  }
+  .project-title-div-heading {
+    padding: 16px 8px !important;
+  }
+  .project-title-main-title {
+    font-size: 1.2em;
+  }
   
   /* & ProjectCard */
   .projectCardDiv {
@@ -123,6 +150,17 @@ a {
 @media (min-width : 768px) and (max-width : 1024px) {
   /* Project */
 
+   /* Title */
+   .project-title-subtitle {
+    font-size: 0.9em !important;
+  }
+  .project-title-div-heading {
+    padding: 16px 8px !important;
+  }
+  .project-title-main-title {
+    font-size: 1.3em;
+  }
+
   /* & Project-list */
   .projectCardDiv {
     grid-template-columns: auto auto !important;
@@ -157,6 +195,17 @@ a {
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   /* Project */
+
+   /* Title */
+   .project-title-subtitle {
+    font-size: 1em !important;
+  }
+  .project-title-div-heading {
+    padding: 20px 10px !important;
+  }
+  .project-title-main-title {
+    font-size: 1.4em !important;
+  }
   
   /* & ProjectCard */
   .projectCardDiv {
@@ -200,6 +249,17 @@ a {
 
 @media (min-width: 1281px) {
   /* Project */
+
+  /* Title */
+  .project-title-subtitle {
+    font-size: 1.2em !important;
+  }
+  .project-title-div-heading {
+    padding: 20px 10px !important;
+  }
+  .project-title-main-title {
+    font-size: 1.6em !important;
+  }
   
   /* & ProjectCard */
   .projectCardDiv {

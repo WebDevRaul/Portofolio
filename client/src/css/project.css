@@ -7,8 +7,8 @@
 }
 
 .project-title-subtitle {
-  padding: 0em 1em 2em 1em;
-  font-size: 1.1em;
+  padding-bottom: 10px;
+  font-size: 8px;
 }
 
 .project-title-main-title > div > h5 > span {
@@ -16,12 +16,12 @@
 }
 
 .project-title-main-title :first-child {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .project-title-div-heading {
   display: inline-block;
-  padding: 20px 10px;
+  padding: 12px 5px;
   color: var(--secondaryCollor);
   border: 5px solid var(--secondaryCollor);
   border-bottom-left-radius: 25%;
@@ -43,14 +43,14 @@
 .project-image-slide {
   background: white;
   width: 100%;
-  height: 168px;
+  height: 148px;
   overflow: hidden;
 }
 .project-image-slide-card-border {
   content: '';
   display: block;
-  height: 168px;
-  width: 250px;
+  height: 148px;
+  width: 210px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -63,17 +63,17 @@
 }
 .project-image-slide-div {
   position: relative;
-  width: 310px;
+  width: 260px;
   margin: 0 auto;
 }
 .project-slide-wrapper {
   display: flex;
   position: absolute;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 .project-slide-wrapper .card-slider {
   flex: 1;
-  width: 250px;
+  width: 210px;
 }
 
 .card-slider {
@@ -94,7 +94,7 @@
 .left {
   background: linear-gradient(90deg, rgba(255, 255, 255) 0%,rgba(255, 255, 255, 0.7) 70%, rgba(255, 255, 255, 0) 100%);
   width: 20px;
-  height: 168px;
+  height: 148px;
   z-index: 50;
   position: absolute;
   left: 0;
@@ -103,14 +103,14 @@
 .right {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0.7) 30%, rgb(255, 255, 255) 100%);
   width: 20px;
-  height: 168px;
+  height: 148px;
   z-index: 50;
   position: absolute;
   right: 0;
   top: 18.5%;
 }
 .arrow-right, .arrow-left {
-  height: 168px;
+  height: 148px;
   z-index: 100;
   position: absolute;
   background: transparent;
