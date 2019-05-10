@@ -12,9 +12,9 @@ export default class Title extends Component {
                 <div className='d-flex'>
                   <div className='m-auto project-title-main-title'>
                       <div className='d-flex'>
-                        <h5 className={classnames(`text-center m-auto ${slideLeft}`)} data-wow-delay="1s">
+                        <h3 className={classnames(`text-center m-auto ${slideLeft}`)} data-wow-delay="1s">
                           <span className='text-center m-auto'>My Recent</span>
-                        </h5>
+                        </h3>
                         <span className={classnames(`project-title-div-heading ml-2 mb-0 ${slideRight}`)}  data-wow-delay="1s">Projects</span>
                     </div>
                   </div>
@@ -25,7 +25,9 @@ export default class Title extends Component {
               <div className='col'>
                 <div className='d-flex'>
                   <div className={classnames(`project-title-subtitle m-auto ${fadeInUp}`)} data-wow-delay="1s">
-                    <p className='mt-3 m-0'>Here are a few recent design projects.</p>  
+                    <p className='mb-0'>01101101 01111001</p>
+                    <p className='mb-0'>01110010 01100101 01100011 01100101 01101110 01110100</p>
+                    <p className='mb-0'>01110000 01110010 01101111 01101010 01100101 01100011 01110100 01110011</p>
                   </div>
                 </div>  
               </div>

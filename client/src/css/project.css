@@ -8,7 +8,7 @@
 
 .project-title-subtitle {
   padding: 0em 1em 2em 1em;
-  font-size: 0.8em;
+  font-size: 1.1em;
 }
 
 .project-title-main-title > div > h5 > span {
@@ -16,7 +16,7 @@
 }
 
 .project-title-main-title :first-child {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .project-title-div-heading {
