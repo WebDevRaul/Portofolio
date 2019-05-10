@@ -22,6 +22,7 @@ export default class Projects extends Component {
   onClickSlider = id => {
     const el = document.getElementById(`cardItem-${id}`);
     el.scrollIntoView({block: 'center', inline: 'center'});
+    el.classList.add('active-card');
   }
   
   render() {
