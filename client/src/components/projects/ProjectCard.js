@@ -10,7 +10,7 @@ class ProjectCard extends Component {
   render() {
     const card = Data.map(i => <CardItem key={i.id} data={i} />);
     return (
-      <div className='projectCard'>
+      <div className='projectCard mb-5'>
         <div className='row no-gutters'>
           <div className='col'>
             <div className='projectCardDiv'>
