@@ -154,8 +154,8 @@
   border-radius: 5px;
   margin: 1em;
   position: relative;
-  -webkit-box-shadow: 0px 20px 80px rgba(50, 50, 50, 0.7);
-  box-shadow: 0px 20px 80px rgba(50, 50, 50, 0.7);
+  -webkit-box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.7);
 }
 
 .cardItem img {
@@ -209,8 +209,8 @@
 }
 
 .active-card {
-  -webkit-box-shadow: 0px 20px 80px var(--secondaryCollor) !important;
-  box-shadow: 0px 20px 80px var(--secondaryCollor) !important;
+  -webkit-box-shadow: 0px 10px 80px var(--secondaryCollor) !important;
+  box-shadow: 0px 10px 80px var(--secondaryCollor) !important;
 }
 
 /* //  //  //  //  //  //  //  //  //  // */
