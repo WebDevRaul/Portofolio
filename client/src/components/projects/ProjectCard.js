@@ -7,12 +7,8 @@ import CardItem from './CardItem';
 import Data from '../../assets/projects/data';
 
 class ProjectCard extends Component {
-
-  onScrollToCard = (ref, id) => {
-    this.props.onScrollToCard(ref, id);
-  }
   render() {
-    const card = Data.map(i => <CardItem key={i.id} data={i} onScrollToCard={this.onScrollToCard}/>);
+    const card = Data.map(i => <CardItem key={i.id} data={i} />);
     return (
       <div className='projectCard'>
         <div className='row no-gutters'>

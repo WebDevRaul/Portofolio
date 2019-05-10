@@ -11,24 +11,19 @@ import ProjectCard from './ProjectCard';
 // CSS
 import '../../css/project.css';
 
-export default class Projects extends Component {
 
+export default class Projects extends Component {
+  
   componentDidMount() {
     const wow = new WOW();
     wow.init();
-    this.onScrollToCard()
   };
-
+  
   onClickSlider = id => {
-    console.log('id', id)
-    // window.scrollTo(0, ref.current.offsetTop);
+    const el = document.getElementById(`cardItem-${id}`);
+    el.scrollIntoView({block: 'center', inline: 'center'});
   }
-
-  onScrollToCard = (ref, id) => {
-    console.log('ref', ref);
-    console.log('id', id)
-  }
-
+  
   render() {
     const slideRight = 'wow fadeInRight';
     const slideLeft = 'wow fadeInLeft';
@@ -52,7 +47,7 @@ export default class Projects extends Component {
           </div>
           <div className='row no-gutters'>
             <div className='col'>
-              <ProjectCard onScrollToCard={this.onScrollToCard} />
+              <ProjectCard />
             </div>
           </div>
         </div>
