@@ -1,6 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { withRouter } from "react-router-dom";
 
-export default class Landing extends Component {
+class Landing extends Component {
+
+  componentDidMount() {
+    setInterval(() => this.props.history.push('/home'), 5000);
+  }
   render() {
     return (
       <div>
@@ -9,3 +14,6 @@ export default class Landing extends Component {
     )
   }
 }
+
+
+export default withRouter(Landing)
