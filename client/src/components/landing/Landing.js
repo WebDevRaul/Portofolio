@@ -22,7 +22,7 @@ class Landing extends Component {
     const wow = new WOW();
     wow.init();
     // Start interval
-    this.interval = setInterval(() => this.setState({ number: this.state.number + 1 }), 30);
+    this.interval = setInterval(() => this.setState({ number: this.state.number + 1 }), 10);
   };
 
   componentDidUpdate() {
@@ -43,14 +43,20 @@ class Landing extends Component {
     
     render() {
       const { number, cicle } = this.state;
-      console.log(cicle)
+      const loading = (
+        <h1 className={classnames('m-auto', {'fadeUp':cicle})}><span>{number} %</span></h1>
+      );
+      const message = (
+        <h5 className='m-auto'>With a passion for learning</h5>
+      );
     return (
       <div className='landing'>
         <div className='container'>
           <div className='row no-gutters'>
             <div className='col'>
               <div className='landing-loading d-flex'>
-                <h1 className={classnames('m-auto', {'fadeUp':cicle})}>{number} %</h1>
+                {loading}
+                <div className='landing-text-background rollUp'></div>
               </div>
             </div>
           </div>

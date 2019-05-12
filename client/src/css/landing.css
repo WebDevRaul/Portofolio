@@ -1,22 +1,62 @@
 .landing-loading {
-  height: 80vh;
+  height: 100vh;
 }
 .landing-loading h1{
-  font-size: 6em;
+  font-size: 6.1em;
   position: relative;
+  z-index: 10;
+  font-family: 'Lato', sans-serif;
 }
+
+.landing-text-background {
+  height: 50vh;
+  width: 100%;
+  position: absolute;
+  background: -webkit-linear-gradient(45deg,#7be7d7 1%,#7be7d7 40%,#7be7d7 40%,#86a4e3 100%);
+  background: -webkit-linear-gradient(45deg, #7be7d7 1%, #7be7d7 40%, #7be7d7 40%, #86a4e3 100%);
+  background: linear-gradient(45deg,#7be7d7 1%,#7be7d7 40%,#7be7d7 40%,#86a4e3 100%);
+}
+
+/* //  //  //  //  //  //  //  //  //  // */
+/* //  //  //  //  //  //  //  //  //  // */
+
+
+/* Animation */
 
 .fadeUp {
   animation: fadeUp 2s;
+  transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -o-transition: all 2s linear;
+}
+
+.rollUp {
+  animation: rollUp 2s;
+  transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -o-transition: all 2s linear;
 }
 
 @keyframes fadeUp {
   0% {
     opacity: 1;
-}
+  }
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(0,-100%,0);
-    transform: translate3d(0,-100%,0);
+    -webkit-transform: translate3d(0,-150%,0);
+    transform: translate3d(0,-150%,0);
+  }
 }
+
+@keyframes rollUp {
+  0% {
+    height: 1%;
+    top: 50%;
+  }
+  100% {
+    height: 50vh;
+    top: 0;
+  }
 }
