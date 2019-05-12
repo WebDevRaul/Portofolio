@@ -55,8 +55,10 @@ class Landing extends Component {
           <div className='row no-gutters'>
             <div className='col'>
               <div className='landing-loading d-flex'>
-                {loading}
-                <div className='landing-text-background rollUp'></div>
+                <div className='m-auto'>
+                  {loading}
+                  <div className='landing-text-background rollUp'></div>
+                </div>
               </div>
             </div>
           </div>
