@@ -13,7 +13,8 @@ class Landing extends Component {
     super();
     this.state = {
       number: 0,
-      cicle: false
+      cicle: false,
+      hide: false,
     }
   };
 
@@ -34,7 +35,11 @@ class Landing extends Component {
     // Start animation
     if ((number === 100) && (cicle === false)) {
       this.setState({ cicle: true })
-    }
+    };
+    // Hide loading after finish
+    if (cicle) {
+      setInterval(() => this.setState({ hide: true }), 2001);
+    };
     // Redirect on home when cicle i complete
     // if (number === 100) {
     //     setInterval(() => this.props.history.push('/home'), 2000);
@@ -42,9 +47,9 @@ class Landing extends Component {
     };
     
     render() {
-      const { number, cicle } = this.state;
+      const { number, cicle, hide } = this.state;
       const loading = (
-        <h1 className={classnames('m-auto', {'fadeUp':cicle})}><span>{number} %</span></h1>
+        <h1 className={classnames('m-auto', {'fadeUp':cicle, 'hide': hide})}><span>{number} %</span></h1>
       );
       const message = (
         <h5 className='m-auto'>With a passion for learning</h5>

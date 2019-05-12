@@ -14,7 +14,7 @@
   top: 25%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background: -webkit-linear-gradient(45deg,#7be7d7 1%,#7be7d7 40%,#7be7d7 40%,#86a4e3 100%);
+  background: -webkit-linear-gradient(45deg,#7be78d 1%,#7be7d7 40%,#7be7d7 40%,#86a4e3 100%);
   background: -webkit-linear-gradient(45deg, #7be7d7 1%, #7be7d7 40%, #7be7d7 40%, #86a4e3 100%);
   background: linear-gradient(45deg,#7be7d7 1%,#7be7d7 40%,#7be7d7 40%,#86a4e3 100%);
   z-index: -10;
