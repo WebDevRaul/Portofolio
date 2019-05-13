@@ -47,13 +47,9 @@ class Landing extends Component {
     };
     
     render() {
-      const { number, cicle, hide } = this.state;
-      const loading = (
-        <h1 className={classnames('m-auto', {'fadeUp':cicle, 'hide': hide})}><span>{number} %</span></h1>
-      );
-      const message = (
-        <h5 className='m-auto'>With a passion for learning</h5>
-      );
+      
+    const { number, cicle, hide } = this.state;
+
     return (
       <div className='landing'>
         <div className='container'>
@@ -61,8 +57,16 @@ class Landing extends Component {
             <div className='col'>
               <div className='landing-loading d-flex'>
                 <div className='m-auto'>
-                  {loading}
                   <div className='landing-text-background rollUp'></div>
+                  <div className={classnames('landing-hi-div d-flex', { 'hide': !hide })}>
+                    <div className='m-auto'>
+                      <span>H</span>
+                      <span>i</span>
+                    </div>
+                  </div>
+                  <h1 className={classnames('m-auto', {'fadeUp':cicle, 'hide': hide})}>
+                    <span>{number} %</span>
+                  </h1>
                 </div>
               </div>
             </div>
