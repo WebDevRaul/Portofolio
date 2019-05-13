@@ -57,11 +57,13 @@ class Landing extends Component {
             <div className='col'>
               <div className='landing-loading d-flex'>
                 <div className='m-auto'>
-                  <div className='landing-text-background rollUp'></div>
-                  <div className={classnames('landing-hi-div d-flex', { 'hide': !hide })}>
-                    <div className='m-auto'>
-                      <span>H</span>
-                      <span>i</span>
+                  <div className='landing-text-background rollUp d-flex'></div>
+                  <div className='m-auto'>
+                    <div className={classnames('landing-hi-div d-flex', { 'hide': !hide })}>
+                      <div className='m-auto'>
+                        <span className={classnames('sizeUp', {'': hide})}>H</span>
+                        <span className={classnames('sizeUp', {'': hide})}>i</span>
+                      </div>
                     </div>
                   </div>
                   <h1 className={classnames('m-auto', {'fadeUp':cicle, 'hide': hide})}>
