@@ -71,12 +71,12 @@ class Landing extends Component {
 
     const webDeveloper = (
       <div className='m-auto d-flex landing-web-developer'>
-        <div className={classnames('landing-web', {'show': web, 'hide': !web})}>
+        <div className={classnames('landing-web slide-in-right', {'show': web, 'hide': !web})}>
           <p className='mb-0 mr-3'>Web</p>
         </div>
-        {/* <div className='landing-developer'>
-          <p className='mb-0'>Developer</p>
-        </div> */}
+        <div className={classnames('landing-web slide-in-left', {'show': web, 'hide': !web})}>
+          <p className='mb-0 mr-3'>Developer</p>
+        </div>
       </div>
     );
 
