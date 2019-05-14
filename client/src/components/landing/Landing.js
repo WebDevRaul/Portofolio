@@ -15,6 +15,8 @@ class Landing extends Component {
       number: 0,
       cicle: false,
       hide: false,
+      show: false,
+      web: false,
     }
   };
 
@@ -36,9 +38,13 @@ class Landing extends Component {
     if ((number === 100) && (cicle === false)) {
       this.setState({ cicle: true })
     };
-    // Hide loading after finish
     if (cicle) {
+      // Hide loading after finish
       setInterval(() => this.setState({ hide: true }), 2001);
+      // Show fullStack text
+      setInterval(() => this.setState({ show: true }),3500);
+      // Show webDeveloper text
+      setInterval(() => this.setState({ web: true }),4500);
     };
     // Redirect on home when cicle i complete
     // if (number === 100) {
@@ -48,7 +54,31 @@ class Landing extends Component {
     
     render() {
       
-    const { number, cicle, hide } = this.state;
+    const { number, cicle, hide, show, web } = this.state;
+
+    const fullStack = (
+      <div className='m-auto d-flex'>
+        <div className='sizeDown d-flex'>
+          F
+          <span className={classnames('', {'show mr-3': show, 'hide': !show})}>ull</span>
+        </div>
+        <div className='sizeDown d-flex'>
+          S
+          <span className={classnames('', {'show': show, 'hide': !show})}>tack</span>
+        </div>
+      </div>
+    );
+
+    const webDeveloper = (
+      <div className='m-auto d-flex landing-web-developer'>
+        <div className={classnames('landing-web', {'show': web, 'hide': !web})}>
+          <p className='mb-0 mr-3'>Web</p>
+        </div>
+        {/* <div className='landing-developer'>
+          <p className='mb-0'>Developer</p>
+        </div> */}
+      </div>
+    );
 
     return (
       <div className='landing'>
@@ -60,12 +90,17 @@ class Landing extends Component {
                   <div className='landing-text-background rollUp d-flex'></div>
                   <div className='m-auto'>
                     <div className={classnames('landing-intro-div d-flex', { 'hide': !hide })}>
-                      <div className='m-auto d-flex'>
-                        <div className={classnames('sizeDown')}>
-                          F
-                          <span className={classnames('')}></span>
+                      <div className='m-auto'>
+                        <div className='row no-gutters'>
+                          <div className='col d-flex'>
+                            {fullStack}
+                          </div>
                         </div>
-                        <div className={classnames('sizeDown', {'': hide})}>S</div>
+                        <div className='row no-gutters'>
+                          <div className='col d-flex'>
+                            {webDeveloper}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
