@@ -20,12 +20,16 @@
   background: linear-gradient(45deg,var(--secondaryCollor) 1%,var(--secondaryCollor) 40%,var(--secondaryCollor) 40%,var(--mainCollor) 100%);
   z-index: -10;
 }
-.landing-hi-div {
+.landing-intro-div {
   height: 70vh;
   width: 80%;
-  font-size: 5.5em;
   color: white;
   z-index: 20;
+  font-size: 4em;
+  transition: font-size 1s;
+  -webkit-transition: font-size 1s;
+  -moz-transition: font-size 1s;
+  -o-transition: font-size 1s;
 }
 
 /* //  //  //  //  //  //  //  //  //  // */
@@ -48,8 +52,8 @@
   -moz-transition: all 3.8s linear;
   -o-transition: all 3.8s linear;
 }
-.sizeUp {
-  animation: sizeUp 4s linear infinite alternate;
+.sizeDown {
+  animation: sizeDown 1s;
 }
 
 @keyframes fadeUp {
@@ -74,19 +78,17 @@
     width: 80%;
     top: 50%;
   }
-  90% {
-    height: 52.5vh;
-  }
   100% {
+    height: 50vh;
     top: 50%;
     left: 50%;
   }
 }
-@keyframes sizeUp {
+@keyframes sizeDown {
   0% {
-    font-size: 1.5em;
+    font-size: 2.5em;
   }
   100% {
-    font-size: 1em;
+    font-size: 2.5em;
   }
 };
