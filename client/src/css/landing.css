@@ -81,6 +81,13 @@
   animation: slide-in-right 0.5s forwards;
   -webkit-animation: slide-in-right 0.5s forwards;
 }
+.fadeIn {
+  animation: fadeIn 1s;
+  transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+}
 @keyframes fadeUp {
   0% {
     opacity: 1;
@@ -153,6 +160,16 @@
   }
   100% { 
     -webkit-transform: translateX(100%);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 150%, 0);
+    transform: translate3d(0, 150%, 0);
+  }
+  100% {
     opacity: 1;
   }
 }

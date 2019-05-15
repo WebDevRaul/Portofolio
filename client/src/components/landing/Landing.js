@@ -90,7 +90,7 @@ class Landing extends Component {
     );
 
     const levelIntermediate = (
-      <div className={classnames('text-center landing-level', {'show': level, 'hide': !level})}>
+      <div className={classnames('text-center landing-level fadeIn', {'show': level, 'hide': !level})}>
         <p className='mb-0'>Level: intermediate</p>
       </div>
     );
