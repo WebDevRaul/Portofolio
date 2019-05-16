@@ -45,14 +45,12 @@ class Landing extends Component {
     if (prevState.hide !== hide) {
       setInterval(() => this.setState({ show: true }),1500);
     }
-    // if (hide) {
-    // }
-    // // Show webDeveloper text
-    // if (show) {      
-    //   setInterval(() => this.setState({ web: true }),1000);
-    // }
+    // Show webDeveloper text
+    if (prevState.show !== show) {      
+      setInterval(() => this.setState({ web: true }),1000);
+    }
     // // Show level
-    // if (web) {
+    // if (prevState.web !== web) {
     //   setInterval(() => this.setState({ level: true }),1000);
     // }
     // Redirect on home when cicle i complete
@@ -66,13 +64,13 @@ class Landing extends Component {
     const { number, cicle, hide, show, web, level } = this.state;
 
     const fullStack = (
-      <div className={classnames('m-auto d-flex landing-full-stack', { 'hide': !hide, 'scaleDown': show })}>
-        <div className='sizeDown d-flex'>
-          F
+      <div className={classnames('d-flex landing-full-stack', { 'hide': !hide })}>
+        <div className='d-flex'>
+          <span className='scaleDown'>F</span>
           <span className={classnames('', {'show mr-3': show, 'hide': !show})}>ull</span>
         </div>
-        <div className='sizeDown d-flex'>
-          S
+        <div className='d-flex'>
+          <span className='scaleDown'>S</span>
           <span className={classnames('', {'show': show, 'hide': !show})}>tack</span>
         </div>
       </div>
@@ -104,8 +102,13 @@ class Landing extends Component {
                 <div className={classnames('landing-loading-card d-flex expandUp', {'rotate': level})}>
                   <div className='m-auto'>
                     <div className='row no-gutters'>
-                      <div className='col d-flex'>
+                      <div className='col m-auto'>
                         {fullStack}
+                      </div>
+                    </div>
+                    <div className='row no-gutters'>
+                      <div className='col'>
+                        {webDeveloper}
                       </div>
                     </div>
                   </div>
