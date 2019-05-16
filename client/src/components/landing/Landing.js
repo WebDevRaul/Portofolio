@@ -13,7 +13,7 @@ class Landing extends Component {
     super();
     this.state = {
       number: 0,
-      cicle: false,
+      cicle: true,
       hide: false,
       show: false,
       web: false,
@@ -30,31 +30,31 @@ class Landing extends Component {
   };
 
   componentDidUpdate() {
-    const { number, cicle, hide, show, web } = this.state;
-    // Clear interval when reach 100
-    if (number === 100) {
-      clearInterval(this.interval);
-    };
-    // Start animation
-    if ((number === 100) && (cicle === false)) {
-      this.setState({ cicle: true })
-    };
-    // Hide loading after finish
-    if (cicle) {
-      setInterval(() => this.setState({ hide: true }), 2001);
-    };
-    // Show fullStack text
-    if (hide) {
-      setInterval(() => this.setState({ show: true }),1500);
-    }
-    // Show webDeveloper text
-    if (show) {      
-      setInterval(() => this.setState({ web: true }),1000);
-    }
-    // Show level
-    if (web) {
-      setInterval(() => this.setState({ level: true }),1000);
-    }
+    // const { number, cicle, hide, show, web } = this.state;
+    // // Clear interval when reach 100
+    // if (number === 100) {
+    //   clearInterval(this.interval);
+    // };
+    // // Start animation
+    // if ((number === 100) && (cicle === false)) {
+    //   this.setState({ cicle: true })
+    // };
+    // // Hide loading after finish
+    // if (cicle) {
+    //   setInterval(() => this.setState({ hide: true }), 2001);
+    // };
+    // // Show fullStack text
+    // if (hide) {
+    //   setInterval(() => this.setState({ show: true }),1500);
+    // }
+    // // Show webDeveloper text
+    // if (show) {      
+    //   setInterval(() => this.setState({ web: true }),1000);
+    // }
+    // // Show level
+    // if (web) {
+    //   setInterval(() => this.setState({ level: true }),1000);
+    // }
     // Redirect on home when cicle i complete
     // if (number === 100) {
     //     setInterval(() => this.props.history.push('/home'), 2000);
@@ -99,34 +99,9 @@ class Landing extends Component {
       <div className='landing'>
         <div className='container'>
           <div className='row no-gutters'>
-            <div className='col'>
-              <div className='landing-loading d-flex'>
-                <div className='m-auto'>
-                  <div className='landing-text-background rollUp d-flex'></div>
-                  <div className='m-auto'>
-                    <div className={classnames('landing-intro-div d-flex', { 'hide': !hide })}>
-                      <div className='m-auto'>
-                        <div className='row no-gutters'>
-                          <div className='col d-flex'>
-                            {fullStack}
-                          </div>
-                        </div>
-                        <div className='row no-gutters'>
-                          <div className='col d-flex'>
-                            {webDeveloper}
-                          </div>
-                        </div>
-                        <div className='row no-gutters'>
-                          <div className='col'>
-                            {levelIntermediate}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <h1 className={classnames('m-auto', {'fadeUp':cicle, 'hide': hide})}>
-                    <span>{number} %</span>
-                  </h1>
+            <div className='col d-flex'>
+              <div className='m-auto'>
+                <div className={classnames('landing-loading-card expandUp', {'rotate': level})}>
                 </div>
               </div>
             </div>
