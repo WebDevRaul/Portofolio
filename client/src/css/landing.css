@@ -36,7 +36,6 @@
   -o-transition-duration: 1s !important;
   transition-duration: 1s !important;
 }
-
 .landing-number-div {
   position: absolute;
   top: 50%;
@@ -46,7 +45,15 @@
   font-family: 'Lato', sans-serif;
   z-index: 10;
 }
-
+.landing-full-stack {
+  color: white;
+  font-size: 7em;
+  z-index: 20;
+  transition: font-size 1s;
+  -webkit-transition: font-size 1s;
+  -moz-transition: font-size 1s;
+  -o-transition: font-size 1s;
+}
 
 /* //  //  //  //  //  //  //  //  //  // */
 /* //  //  //  //  //  //  //  //  //  // */
@@ -67,6 +74,14 @@
   -webkit-transition: all 3.5s linear;
   -moz-transition: all 3.5s linear;
   -o-transition: all 3.5s linear;
+}
+.scaleDown {
+  animation: scaleDown 1s forwards;
+  animation-delay: 1s;
+  transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
 }
 
 @keyframes expandUp {
@@ -103,5 +118,21 @@
     -ms-transform: translate3d(0,-175%,0);
     -moz-transform: translate3d(0,-175%,0);
     -o-transform: translate3d(0,-175%,0);
+  }
+}
+@keyframes scaleDown {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  100%{
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -o-transform: scale(0.5);
   }
 }

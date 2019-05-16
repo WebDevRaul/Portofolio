@@ -39,12 +39,13 @@ class Landing extends Component {
     if ((number === 100) && (cicle === false)) {
       this.setState({ cicle: true });
       // Hide loading after finish
-      setInterval(() => this.setState({ hide: true }), 2001);
+      setInterval(() => this.setState({ hide: true }), 3300);
     };
     // Show fullStack text
-    
+    if (prevState.hide !== hide) {
+      setInterval(() => this.setState({ show: true }),1500);
+    }
     // if (hide) {
-      // setInterval(() => this.setState({ show: true }),1500);
     // }
     // // Show webDeveloper text
     // if (show) {      
@@ -61,11 +62,11 @@ class Landing extends Component {
     };
     
     render() {
-      
+  
     const { number, cicle, hide, show, web, level } = this.state;
 
     const fullStack = (
-      <div className='m-auto d-flex landing-full-stack'>
+      <div className={classnames('m-auto d-flex landing-full-stack', { 'hide': !hide, 'scaleDown': show })}>
         <div className='sizeDown d-flex'>
           F
           <span className={classnames('', {'show mr-3': show, 'hide': !show})}>ull</span>
@@ -100,7 +101,7 @@ class Landing extends Component {
           <div className='row no-gutters'>
             <div className='col d-flex'>
               <div className='m-auto'>
-                <div className={classnames('landing-loading-card expandUp', {'rotate': level})}>
+                <div className={classnames('landing-loading-card d-flex expandUp', {'rotate': level})}>
                   <div className='m-auto'>
                     <div className='row no-gutters'>
                       <div className='col d-flex'>
