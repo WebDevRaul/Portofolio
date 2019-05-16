@@ -65,11 +65,11 @@ class Landing extends Component {
 
     const fullStack = (
       <div className={classnames('d-flex landing-full-stack', { 'hide': !hide })}>
-        <div className='d-flex'>
+        <div className='d-flex ml-auto'>
           <span className='scaleDown'>F</span>
           <span className={classnames('', {'show mr-3': show, 'hide': !show})}>ull</span>
         </div>
-        <div className='d-flex'>
+        <div className='d-flex mr-auto'>
           <span className='scaleDown'>S</span>
           <span className={classnames('', {'show': show, 'hide': !show})}>tack</span>
         </div>
