@@ -13,7 +13,7 @@ class Landing extends Component {
     super();
     this.state = {
       number: 0,
-      cicle: true,
+      cicle: false,
       hide: false,
       show: false,
       web: false,
@@ -29,23 +29,22 @@ class Landing extends Component {
     this.interval = setInterval(() => this.setState({ number: this.state.number + 1 }), 10);
   };
 
-  componentDidUpdate() {
-    // const { number, cicle, hide, show, web } = this.state;
-    // // Clear interval when reach 100
-    // if (number === 100) {
-    //   clearInterval(this.interval);
-    // };
-    // // Start animation
-    // if ((number === 100) && (cicle === false)) {
-    //   this.setState({ cicle: true })
-    // };
-    // // Hide loading after finish
-    // if (cicle) {
-    //   setInterval(() => this.setState({ hide: true }), 2001);
-    // };
-    // // Show fullStack text
+  componentDidUpdate(prevProps, prevState) {
+    const { number, cicle, hide, show, web } = this.state;
+    // Clear interval when reach 100
+    if (number === 100) {
+      clearInterval(this.interval);
+    };
+    // Start animation
+    if ((number === 100) && (cicle === false)) {
+      this.setState({ cicle: true });
+      // Hide loading after finish
+      setInterval(() => this.setState({ hide: true }), 2001);
+    };
+    // Show fullStack text
+    
     // if (hide) {
-    //   setInterval(() => this.setState({ show: true }),1500);
+      // setInterval(() => this.setState({ show: true }),1500);
     // }
     // // Show webDeveloper text
     // if (show) {      
@@ -66,7 +65,7 @@ class Landing extends Component {
     const { number, cicle, hide, show, web, level } = this.state;
 
     const fullStack = (
-      <div className='m-auto d-flex'>
+      <div className='m-auto d-flex landing-full-stack'>
         <div className='sizeDown d-flex'>
           F
           <span className={classnames('', {'show mr-3': show, 'hide': !show})}>ull</span>
@@ -102,6 +101,18 @@ class Landing extends Component {
             <div className='col d-flex'>
               <div className='m-auto'>
                 <div className={classnames('landing-loading-card expandUp', {'rotate': level})}>
+                  <div className='m-auto'>
+                    <div className='row no-gutters'>
+                      <div className='col d-flex'>
+                        {fullStack}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className='landing-number-div'>
+                  <h1 className={classnames('', {'fadeUp':cicle, 'hide': hide})}>
+                    <span>{number} %</span>
+                  </h1>
                 </div>
               </div>
             </div>
