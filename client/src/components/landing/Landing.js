@@ -18,6 +18,7 @@ class Landing extends Component {
       show: false,
       web: false,
       level: false,
+      turn: false
     }
   };
 
@@ -30,7 +31,7 @@ class Landing extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    const { number, cicle, hide, show, web } = this.state;
+    const { number, cicle, hide, show, web, level } = this.state;
     // Clear interval when reach 100
     if (number === 100) {
       clearInterval(this.interval);
@@ -49,10 +50,14 @@ class Landing extends Component {
     if (prevState.show !== show) {      
       setInterval(() => this.setState({ web: true }),1000);
     }
-    // // Show level
-    // if (prevState.web !== web) {
-    //   setInterval(() => this.setState({ level: true }),1000);
-    // }
+    // Show levelIntermediate
+    if (prevState.web !== web) {
+      setInterval(() => this.setState({ level: true }),1000);
+    }
+    // Turn card
+    if (prevState.level !== level) {
+      setInterval(() => this.setState({ turn: true }),2000);
+    }
     // Redirect on home when cicle i complete
     // if (number === 100) {
     //     setInterval(() => this.props.history.push('/home'), 2000);
@@ -61,7 +66,7 @@ class Landing extends Component {
     
     render() {
   
-    const { number, cicle, hide, show, web, level } = this.state;
+    const { number, cicle, hide, show, web, level, turn } = this.state;
 
     const fullStack = (
       <div className={classnames('d-flex landing-full-stack', { 'hide': !hide })}>
@@ -77,19 +82,21 @@ class Landing extends Component {
     );
 
     const webDeveloper = (
-      <div className='m-auto d-flex landing-web-developer'>
-        <div className={classnames('landing-web slide-in-right', {'show': web, 'hide': !web})}>
-          <p className='mb-0'>Web</p>
+      <div className={classnames('d-flex landing-web-developer', { 'hide': !web })}>
+        <div className='d-flex ml-auto'>
+          <span className='slide-in-left'>Web</span>
         </div>
-        <div className={classnames('landing-web slide-in-left', {'show': web, 'hide': !web})}>
-          <p className='mb-0 mr-3'>Developer</p>
+        <div className='d-flex mr-auto'>
+          <span className='slide-in-right ml-3'>Developer</span>
         </div>
       </div>
     );
 
     const levelIntermediate = (
-      <div className={classnames('text-center landing-level fadeIn', {'show': level, 'hide': !level})}>
-        <p className='mb-0'>Level: intermediate</p>
+      <div className={classnames('landing-level', {'hide': !level})}>
+        <div className='d-flex ml-auto'>
+          <span className='fadeIn'>Level: Intermediate</span>
+        </div>
       </div>
     );
 
@@ -99,7 +106,7 @@ class Landing extends Component {
           <div className='row no-gutters'>
             <div className='col d-flex'>
               <div className='m-auto'>
-                <div className={classnames('landing-loading-card d-flex expandUp', {'rotate': level})}>
+                <div className={classnames('landing-loading-card d-flex expandUp', {'rotate': turn})}>
                   <div className='m-auto'>
                     <div className='row no-gutters'>
                       <div className='col m-auto'>
@@ -109,6 +116,11 @@ class Landing extends Component {
                     <div className='row no-gutters'>
                       <div className='col'>
                         {webDeveloper}
+                      </div>
+                    </div>
+                    <div className='row no-gutters'>
+                      <div className='col'>
+                        {levelIntermediate}
                       </div>
                     </div>
                   </div>
