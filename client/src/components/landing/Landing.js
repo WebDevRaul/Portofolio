@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { withRouter } from "react-router-dom";
 
-// Animation
-import WOW from "wow.js";
-
 // Css
 import '../../css/landing.css';
 
@@ -23,9 +20,6 @@ class Landing extends Component {
   };
 
   componentDidMount() {
-    // Init the WOW
-    const wow = new WOW();
-    wow.init();
     // Start interval
     this.interval = setInterval(() => this.setState({ number: this.state.number + 1 }), 10);
   };
@@ -93,9 +87,9 @@ class Landing extends Component {
     );
 
     const levelIntermediate = (
-      <div className={classnames('landing-level', {'hide': !level})}>
-        <div className='d-flex ml-auto'>
-          <span className='fadeIn'>Level: Intermediate</span>
+      <div className={classnames('d-flex landing-level', { 'hide': !level })}>
+        <div className='d-flex'>
+          <span className='fadeIn'>Level: intermediate</span>
         </div>
       </div>
     );
