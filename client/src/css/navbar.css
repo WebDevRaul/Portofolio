@@ -11,6 +11,10 @@
 .navbar--hidden {
   top: -75px;
 }
+.nav-link:hover {
+  cursor: pointer;
+  color: black !important;
+}
 
 /* Navbar btn */
 .btn-div {

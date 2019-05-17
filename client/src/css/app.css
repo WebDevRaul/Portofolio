@@ -18,11 +18,6 @@ html {
 }
 
 
-/* Navbar */
-.active {
-  margin-top: 2px;
-}
-
 /* About */
 .hide {
   display: none;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import classnames from 'classnames';
 
 // Redux
@@ -7,8 +7,10 @@ import { connect } from 'react-redux';
 
 class DesktopView extends Component {
 
-  onClick = () => {
+  onClick = id => () => {
     this.props.onClick();
+    const el = document.getElementById(id);
+    el.scrollIntoView();
   }
   render() {
     const { show } = this.props;
@@ -16,34 +18,16 @@ class DesktopView extends Component {
       <div className={classnames('collapse navbar-collapse', { 'show' : show })}>
         <ul className='navbar-nav ml-auto mr-5'>
           <li className="nav-item mr-3">
-          <NavLink 
-            to='/home' 
-            className='nav-link'
-            activeClassName='active'
-            onClick={this.onClick}
-            >
-            <span>Home</span>
-          </NavLink>
+            <span 
+              className='nav-link' 
+              onClick={this.onClick('home')}
+            >Home</span>
           </li>
           <li className="nav-item mr-3">
-          <NavLink 
-            to='/projects' 
-            className='nav-link'
-            activeClassName='active'
-            onClick={this.onClick}
-            >
-            <span>Projects</span>
-          </NavLink>
+            <span className='nav-link' onClick={this.onClick('projects')}>Projects</span>
           </li>
           <li className="nav-item mr-3">
-          <NavLink 
-            to='/about' 
-            className='nav-link'
-            activeClassName="active"
-            onClick={this.onClick}
-            >
-            <span>About</span>
-          </NavLink>
+            <span className='nav-link' onClick={this.onClick('about')}>About</span>
           </li>
         </ul>
       </div>

@@ -14,8 +14,11 @@ import '../../css/about.css';
 
 
 export default class About extends Component {
-  state = {
-    active: false,
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: false,
+    }
   }
 
   componentDidMount() {
@@ -39,7 +42,7 @@ export default class About extends Component {
     const slideUp = 'wow fadeInUp';
     const zoomIn = 'wow zoomIn';
     return (
-      <div className='about'>
+      <div className='about' id='about'>
         <div className='container-fluid p-0'>
           <div className='row no-gutters'>
             <div className='col'>

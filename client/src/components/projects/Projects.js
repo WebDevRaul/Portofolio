@@ -31,7 +31,7 @@ export default class Projects extends Component {
     const slideLeft = 'wow fadeInLeft';
     const fadeInUp = 'wow fadeInUp';
     return (
-      <div className='projects'>
+      <div className='projects' id='projects'>
         <div className='container'>
           <div className='row no-gutters'>
             <div className='col'>

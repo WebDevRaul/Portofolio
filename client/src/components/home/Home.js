@@ -11,7 +11,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='home' id='home'>
         <div className='row no-gutters'>
             <div className='col'>
             <button className='btn btn-primary' onClick={this.onClick} >back</button>
