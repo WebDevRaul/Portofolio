@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Components
 import Landing from './components/landing/Landing';
-import Navbar from './layout/Navbar/Navbar';
 import Index from './components/Index';
-import Footer from './layout/Footer';
+import NotFound from './components/common/NotFound';
 
 // Redux
 import store from './store';
@@ -22,6 +21,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={Landing} />
             <Route exact path='/home' component={Index} />
+            <Route component={NotFound} />
           </Switch>
         </Router>
       </Provider>
