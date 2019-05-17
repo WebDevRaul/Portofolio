@@ -2,6 +2,14 @@
 .navbar {
   background: #fff !important;
   overflow: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: top 0.6s;
+  z-index: 1000;
+}
+.navbar--hidden {
+  top: -75px;
 }
 
 /* Navbar btn */

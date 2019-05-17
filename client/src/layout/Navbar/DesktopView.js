@@ -15,7 +15,7 @@ class DesktopView extends Component {
     return (
       <div className={classnames('collapse navbar-collapse', { 'show' : show })}>
         <ul className='navbar-nav ml-auto mr-5'>
-          <li className="nav-item mr-3 mt-3">
+          <li className="nav-item mr-3">
           <NavLink 
             to='/home' 
             className='nav-link'
@@ -25,7 +25,7 @@ class DesktopView extends Component {
             <span>Home</span>
           </NavLink>
           </li>
-          <li className="nav-item mr-3 mt-3">
+          <li className="nav-item mr-3">
           <NavLink 
             to='/projects' 
             className='nav-link'
@@ -35,7 +35,7 @@ class DesktopView extends Component {
             <span>Projects</span>
           </NavLink>
           </li>
-          <li className="nav-item mr-3 mt-3">
+          <li className="nav-item mr-3">
           <NavLink 
             to='/about' 
             className='nav-link'

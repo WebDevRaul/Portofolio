@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import classnames from 'classnames';
 
 // Components
 import Logo from '../Logo';
@@ -28,6 +29,8 @@ class Navbar extends Component {
       openButton: false,
       closeButton: false,
       hideButton: true,
+      prevScrollpos: window.pageYOffset,
+      visible: true
     }
   };
   static propTypes = {
@@ -45,6 +48,10 @@ class Navbar extends Component {
   onButton = () => {
     this.setState({ open: true, cycle: true, show: !this.state.show });
    };
+
+   componentDidMount() {
+    window.addEventListener("scroll", this.onShowHide);
+  }
 
   componentDidUpdate(prevProp, prevState) {
     const { location } = this.props;
@@ -121,14 +128,29 @@ class Navbar extends Component {
       this.setState({ close: false, closeBorder: false, openButton: false, closeButton: false, cycle: false, hideBorder: false, hideFirst: false, hideSecond: false, hideThird: false, open: false, openBorder: false, returnAnimation: false, show: false })
     }
   };
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onShowHide);
+  }
 
+
+  // Show & Hide navbar
+  onShowHide = () => {
+    const { prevScrollpos } = this.state;
   
+    const currentScrollPos = window.pageYOffset;
+    const visible = prevScrollpos > currentScrollPos;
+  
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      visible
+    });
+  };
 
 
   render() {
-    const { show, openBorder, hideBorder, closeBorder, hideFirst, hideSecond, hideThird, openButton, closeButton, returnAnimation, hideButton } = this.state;
+    const { show, openBorder, hideBorder, closeBorder, hideFirst, hideSecond, hideThird, openButton, closeButton, returnAnimation, hideButton, visible } = this.state;
     return (
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className={classnames('navbar navbar-expand-lg navbar-light', {"navbar--hidden": !visible})}>
         <Logo />
         <div 
           className='btn-div navbar-toggler p-0 border-0'
