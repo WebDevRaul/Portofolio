@@ -25,7 +25,7 @@ class Landing extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    const { number, cicle, hide, show, web, level } = this.state;
+    const { number, cicle, hide, show, web, level, turn } = this.state;
     // Clear interval when reach 100
     if (number === 100) {
       clearInterval(this.interval);
@@ -53,9 +53,9 @@ class Landing extends Component {
       setInterval(() => this.setState({ turn: true }),2000);
     }
     // Redirect on home when cicle i complete
-    // if (number === 100) {
-    //     setInterval(() => this.props.history.push('/home'), 2000);
-    //   }
+    if (prevState.turn !== turn) {
+        setInterval(() => this.props.history.push('/home'), 4000);
+      }
     };
     
     render() {

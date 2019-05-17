@@ -4,9 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Components
 import Landing from './components/landing/Landing';
 import Navbar from './layout/Navbar/Navbar';
-import Home from './components/home/Home';
-import About from './components/about/About';
-import Projects from './components/projects/Projects';
+import Index from './components/Index';
 import Footer from './layout/Footer';
 
 // Redux
@@ -23,17 +21,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/' component={Landing} />
-            <Router>
-              <div className='app'>
-                <div className=''>
-                  <Navbar />
-                  <Route exact path='/home' component={Home} />
-                  <Route exact path='/about' component={About} />
-                  <Route exact path='/projects' component={Projects} />
-                  <Footer />
-                </div>
-              </div>
-            </Router>
+            <Route exact path='/home' component={Index} />
           </Switch>
         </Router>
       </Provider>
