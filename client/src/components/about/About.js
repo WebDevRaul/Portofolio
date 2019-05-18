@@ -69,7 +69,7 @@ export default class About extends Component {
           <div className='container'>
             <div className='row no-gutters'>
               <div className='col'>
-                <MoreSkills slideUp={slideUp} />
+                <MoreSkills />
               </div>
             </div>
           </div>

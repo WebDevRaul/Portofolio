@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 
 // Css
 import './css/app.css';
+import './css/animation.css';
 
 class App extends Component {
   render() {

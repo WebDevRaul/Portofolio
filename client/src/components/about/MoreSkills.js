@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+
+// Redux
+import { connect } from 'react-redux';
 
 // Circle
 import Circle from '../common/Circle';
@@ -6,13 +11,13 @@ import Circle from '../common/Circle';
 // Assests
 import Logo from '../../assets/skills/Logo';
 
-export default class MoreSkills extends Component {
+class MoreSkills extends Component {
   render() {
     const rem = '3em';
-    const { slideUp } = this.props;
+    const { more_skills } = this.props.about;
     return (
       <div className='more-skills' id='more-skills'>
-        <div className={slideUp} data-wow-duration="1500ms" data-wow-delay="1s">
+        <div className={classnames('', {'fadeInUp': more_skills, 'hide': !more_skills})}>
           <div className='row no-gutters'>
             <div className='col m-auto d-flex'>
               <p className='more-skills-title m-auto d-flex'>More skills:</p>
@@ -55,6 +60,16 @@ export default class MoreSkills extends Component {
           </div>
         </div>
       </div>
-    )
-  }
-}
+    );
+  };
+};
+
+MoreSkills.propTypes = {
+  about: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = state => ({
+  about: state.about
+});
+
+export default connect(mapStateToProps, {})(MoreSkills)

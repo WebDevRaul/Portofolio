@@ -1,0 +1,34 @@
+
+
+/* //  //  //  //  //  //  //  //  //  // */
+/* //  //  //  //  //  //  //  //  //  // */
+
+.fadeInUp {
+  animation: fadeInUp 2s forwards;
+  transform: translateY(150%);
+  -webkit-transform: translateY(150%);
+  -moz-transform: translateY(150%);
+  -ms-transform: translateY(150%);
+  -o-transform: translateY(150%);
+}
+
+/* //  //  //  //  //  //  //  //  //  // */
+/* //  //  //  //  //  //  //  //  //  // */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+  }
+}
+
+/* //  //  //  //  //  //  //  //  //  // */
+/* //  //  //  //  //  //  //  //  //  // */
+
