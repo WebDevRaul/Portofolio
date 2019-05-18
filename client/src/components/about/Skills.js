@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+
+// Redux
+import { connect } from 'react-redux';
 
 // Common
 import Circle from '../common/Circle';
@@ -6,17 +11,17 @@ import Circle from '../common/Circle';
 // Assests
 import Logo from '../../assets/skills/Logo';
 
-export default class Skills extends Component {
+class Skills extends Component {
   render() {
     const rem = '3em';
-    const { slideUp, zoomIn } = this.props;    
+    const { skills } = this.props.about;    
   return (
     <div className='text-center skills' id='skills'>
       <div className='bg-skew'>
         <div className='row no-gutters'>
           <div className='col'>
-            <p className={zoomIn} data-wow-duration="1500ms" data-wow-delay="700ms">Up to the present moment I have gained experience in the following:</p> 
-            <div className={slideUp} data-wow-duration="1500ms" data-wow-delay="700ms">
+            <p className={classnames('', {'zoomIn': skills, 'opacity': !skills})}>Up to the present moment I have gained experience in the following:</p> 
+            <div className={classnames('', {'fadeInUp': skills, 'opacity': !skills})}>
               <div className='row no-gutters'>
                 <div className='col-lg-5 offset-lg-2'>
                   <div className='row no-gutters'>
@@ -61,6 +66,16 @@ export default class Skills extends Component {
         </div>
       </div>
     </div>
-    )
-  }
-}
+    );
+  };
+};
+
+Skills.propTypes = {
+  about: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = state => ({
+  about: state.about
+});
+
+export default connect(mapStateToProps, {})(Skills);

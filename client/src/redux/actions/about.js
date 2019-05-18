@@ -7,3 +7,9 @@ export const setMoreSkills = data => {
     payload: data
   };
 };
+export const setSkills = data => {
+  return {
+    type: ABOUT.SKILLS,
+    payload: data
+  };
+};

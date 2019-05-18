@@ -10,7 +10,7 @@ import Footer from '../layout/Footer';
 
 // Redux
 import { connect } from 'react-redux';
-import { setMoreSkills } from '../redux/actions/about';
+import { setMoreSkills, setSkills } from '../redux/actions/about';
 
 // Class helper
 import scrollToElement from './common/ScrollToElement';
@@ -26,23 +26,30 @@ class Index extends Component {
   };
 
   scrollAnimation = () => {
-    const { more_skills } = this.props.about;
+    const { skills, more_skills } = this.props.about;
     const scrollToTop = document.documentElement.scrollTop
 
     // Find element
-    const skillElement = document.getElementById('more-skills').getBoundingClientRect();
+    const skillsElement = document.getElementById('skills').getBoundingClientRect();
+    const moreSkillsElement = document.getElementById('more-skills').getBoundingClientRect();
 
     // Create new class
-    const skillClass = new scrollToElement(skillElement);
+    const skillClass = new scrollToElement(skillsElement);
+    const moreskillClass = new scrollToElement(moreSkillsElement);
 
+    // Resolve skills animation
+    if ((skillClass.element < skillClass.scroll) && (skills === false)) {
+      this.props.setSkills(true);
+    }
     // Resolve more-skills animation
-    if ((skillClass.element < skillClass.scroll) && (more_skills === false)) {
+    if ((moreskillClass.element < moreskillClass.scroll) && (more_skills === false)) {
       this.props.setMoreSkills(true);
     }
 
     // Reset animations
-    if ((scrollToTop === 0) && more_skills) {
+    if ((scrollToTop === 0) && (more_skills || skills)) {
       this.props.setMoreSkills(false);
+      this.props.setSkills(false);
     }
     
   };
@@ -79,4 +86,4 @@ const mapStateToProps = state => ({
   about: state.about
 });
 
-export default connect(mapStateToProps, { setMoreSkills })(Index);
+export default connect(mapStateToProps, { setMoreSkills, setSkills })(Index);

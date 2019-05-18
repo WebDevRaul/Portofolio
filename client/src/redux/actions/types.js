@@ -4,6 +4,7 @@ const ERRORS = {
 };
 
 const ABOUT = {
+  SKILLS: 'ABOUT_SKILLS',
   MORE_SKILLS: 'ABOUT_MORE_SKILLS',
 };
 

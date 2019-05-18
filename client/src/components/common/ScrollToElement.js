@@ -6,7 +6,7 @@ class scrollToElement {
   }
   // Get element
   get element() {
-    return this.top + document.documentElement.scrollTop + (this.height / 2);
+    return this.top + document.documentElement.scrollTop + (this.height / 4);
   }
 
   // Get scroll
