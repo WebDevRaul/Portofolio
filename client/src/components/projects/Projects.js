@@ -23,7 +23,7 @@ export default class Projects extends Component {
     const el = document.getElementById(`cardItem-${id}`);
     el.scrollIntoView({block: 'center', inline: 'center'});
     el.classList.add('active-card');
-    setTimeout(() => el.classList.remove('active-card'), 5000)
+    setTimeout(() => el.classList.remove('active-card'), 5000);
   };
   
   render() {

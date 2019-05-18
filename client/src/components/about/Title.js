@@ -6,7 +6,7 @@ class Title extends Component {
   render() {
     const { active } = this.props;
     return (
-      <div className='row no-gutters'>
+      <div className='row no-gutters' id='title'>
         <div className='col title-background-skew'>
           <div className='title text-center'>
             <div className='row mb-3 mt-3 no-gutters'>

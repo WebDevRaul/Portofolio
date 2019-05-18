@@ -26,12 +26,10 @@ class Landing extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     const { number, cicle, hide, show, web, level, turn } = this.state;
-    // Clear interval when reach 100
-    if (number === 100) {
-      clearInterval(this.interval);
-    };
-    // Start animation
     if ((number === 100) && (cicle === false)) {
+      // Clear interval when reach 100
+      clearInterval(this.interval);
+      // Start animation
       this.setState({ cicle: true });
       // Hide loading after finish
       setInterval(() => this.setState({ hide: true }), 3300);
@@ -54,10 +52,10 @@ class Landing extends Component {
     }
     // Redirect on home when cicle i complete
     if (prevState.turn !== turn) {
-        setInterval(() => this.props.history.push('/home'), 4000);
+        setInterval(() => window.location.href = '/home', 5000)
       }
     };
-    
+
     render() {
   
     const { number, cicle, hide, show, web, level, turn } = this.state;

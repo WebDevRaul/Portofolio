@@ -11,7 +11,7 @@ export default class Skills extends Component {
     const rem = '3em';
     const { slideUp, zoomIn } = this.props;    
   return (
-    <div className='text-center skills'>
+    <div className='text-center skills' id='skills'>
       <div className='bg-skew'>
         <div className='row no-gutters'>
           <div className='col'>

@@ -1,1 +1,4 @@
 show Project/CardItem summary only on lg screens
+
+    let scrollTop = window.pageYOffset || el.getBoundingClientRect().top;
+    document.documentElement.scrollTop = scrollTop;

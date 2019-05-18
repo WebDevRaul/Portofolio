@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-// Redux
-import { connect } from 'react-redux';
 
 class DesktopView extends Component {
 
@@ -35,8 +33,9 @@ class DesktopView extends Component {
   }
 };
 
-const mapStateToProps = state => ({
+DesktopView.propTypes = {
+  onClick: PropTypes.func.isRequired,
+}
 
-});
 
-export default connect(mapStateToProps, {})(withRouter(DesktopView))
+export default DesktopView;

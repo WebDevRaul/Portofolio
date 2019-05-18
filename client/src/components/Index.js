@@ -9,7 +9,29 @@ import About from './about/About';
 import Footer from '../layout/Footer';
 
 export default class Index extends Component {
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.scrollAnimation);
+  };
   
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.scrollAnimation);
+  };
+
+
+  scrollAnimation() {
+    const el = document.getElementById('skills').getBoundingClientRect();
+    // console.log(el + document.documentElement.scrollTop, 'el')
+    // console.log(window.innerHeight, 'innerHeight');
+    // console.log(document.documentElement.scrollTop + window.innerHeight ,'document.documentElement.scrollTop')
+    const element = el.top + document.documentElement.scrollTop + (el.height / 2);
+    const elementBot = el.top + document.documentElement.scrollTop + (el.height - (el.height / 4));
+    const scroll = document.documentElement.scrollTop + window.innerHeight;
+    if ((element < scroll) && (elementBot > scroll)) {
+      console.log('test')
+    }
+    
+  };
   render() {
     return (
       <div className='index'>
