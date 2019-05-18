@@ -8,7 +8,17 @@ import Projects from './projects/Projects';
 import About from './about/About';
 import Footer from '../layout/Footer';
 
+
+// Class helper
+import scrollToElement from './common/ScrollToElement';
+
 export default class Index extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: false,
+    }
+  }
 
   componentDidMount() {
     window.addEventListener('scroll', this.scrollAnimation);
@@ -18,17 +28,18 @@ export default class Index extends Component {
     window.removeEventListener('scroll', this.scrollAnimation);
   };
 
+  scrollAnimation = () => {
+    const { title } = this.state;
 
-  scrollAnimation() {
-    const el = document.getElementById('skills').getBoundingClientRect();
-    // console.log(el + document.documentElement.scrollTop, 'el')
-    // console.log(window.innerHeight, 'innerHeight');
-    // console.log(document.documentElement.scrollTop + window.innerHeight ,'document.documentElement.scrollTop')
-    const element = el.top + document.documentElement.scrollTop + (el.height / 2);
-    const elementBot = el.top + document.documentElement.scrollTop + (el.height - (el.height / 4));
-    const scroll = document.documentElement.scrollTop + window.innerHeight;
-    if ((element < scroll) && (elementBot > scroll)) {
-      console.log('test')
+    // Find element
+    const skillElement = document.getElementById('title').getBoundingClientRect();
+
+    // Create new class
+    const skillClass = new scrollToElement(skillElement);
+
+    // Rezolve animation
+    if ((skillClass.element < skillClass.scroll) && (this.state.title === false)) {
+      this.setState({ title: true })
     }
     
   };
