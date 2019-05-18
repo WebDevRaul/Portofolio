@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 // Components
 import Navbar from '../layout/Navbar/Navbar';
 import Home from './home/Home';
@@ -8,17 +7,14 @@ import Projects from './projects/Projects';
 import About from './about/About';
 import Footer from '../layout/Footer';
 
+// Redux
+import { connect } from 'react-redux';
+import { setTitle } from '../redux/actions/about';
 
 // Class helper
 import scrollToElement from './common/ScrollToElement';
 
-export default class Index extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: false,
-    }
-  }
+class Index extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.scrollAnimation);
@@ -29,17 +25,17 @@ export default class Index extends Component {
   };
 
   scrollAnimation = () => {
-    const { title } = this.state;
+    const { more_skills } = this.props.about;
 
     // Find element
-    const skillElement = document.getElementById('title').getBoundingClientRect();
+    const skillElement = document.getElementById('more-skills').getBoundingClientRect();
 
     // Create new class
     const skillClass = new scrollToElement(skillElement);
 
-    // Rezolve animation
-    if ((skillClass.element < skillClass.scroll) && (this.state.title === false)) {
-      this.setState({ title: true })
+    // Rezolve moreSkills animation
+    if ((skillClass.element < skillClass.scroll) && (more_skills === false)) {
+      this.props.setTitle(true);
     }
     
   };
@@ -62,6 +58,13 @@ export default class Index extends Component {
           <Footer />
         </section>
       </div>
-    )
-  }
-}
+    );
+  };
+};
+
+
+const mapStateToProps = state => ({
+  about: state.about
+});
+
+export default connect(mapStateToProps, { setTitle })(Index);

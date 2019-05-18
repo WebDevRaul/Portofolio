@@ -1,2 +1,10 @@
-export const GET_ERRORS = 'GET_ERRORS';
-export const GET_CLEAR_ERROR = 'GET_CLEAR_ERROR';
+const ERRORS = {
+  ERROR: 'ERROR',
+  CLEAR_ERROR: 'CLEAR_ERROR'
+};
+
+const ABOUT = {
+  MORE_SKILLS: 'ABOUT_MORE_SKILLS',
+};
+
+export { ERRORS, ABOUT }
