@@ -13,3 +13,21 @@ export const setSkills = data => {
     payload: data
   };
 };
+export const setAboutMeP1 = data => {
+  return {
+    type: ABOUT.ABOUT_ME_P1,
+    payload: data
+  };
+};
+export const setAboutMeP2 = data => {
+  return {
+    type: ABOUT.ABOUT_ME_P2,
+    payload: data
+  };
+};
+export const setAboutMeP3 = data => {
+  return {
+    type: ABOUT.ABOUT_ME_P3,
+    payload: data
+  };
+};
