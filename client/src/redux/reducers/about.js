@@ -1,6 +1,7 @@
 import { ABOUT } from '../actions/types';
 
 const initialState = {
+  title: false,
   about_me_p1: false,
   about_me_p2: false,
   about_me_p3: false,
@@ -10,6 +11,11 @@ const initialState = {
 
 const about = (state=initialState, action) => {
   switch(action.type) {
+    case ABOUT.ABOUT_TITLE:
+      return {
+        ...state,
+        title: action.payload
+      }
     case ABOUT.ABOUT_ME_P1:
       return {
         ...state,

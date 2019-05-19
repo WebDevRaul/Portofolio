@@ -10,7 +10,7 @@ import Footer from '../layout/Footer';
 
 // Redux
 import { connect } from 'react-redux';
-import { setMoreSkills, setSkills, setAboutMeP1, setAboutMeP2, setAboutMeP3 } from '../redux/actions/about';
+import { setMoreSkills, setSkills, setAboutMeP1, setAboutMeP2, setAboutMeP3, setAboutTitle } from '../redux/actions/about';
 
 // Class helper
 import scrollToElement from './common/ScrollToElement';
@@ -26,10 +26,11 @@ class Index extends Component {
   };
 
   scrollAnimation = () => {
-    const { skills, more_skills, about_me_p1, about_me_p2, about_me_p3 } = this.props.about;
+    const { skills, more_skills, about_me_p1, about_me_p2, about_me_p3, title } = this.props.about;
     const scrollToTop = document.documentElement.scrollTop
 
     // Find element
+    const titleElement = document.querySelector('#title').getBoundingClientRect();
     const aboutMeP1Element = document.querySelector('#about-me-p1').getBoundingClientRect();
     const aboutMeP2Element = document.querySelector('#about-me-p2').getBoundingClientRect();
     const aboutMeP3Element = document.querySelector('#about-me-p3').getBoundingClientRect();
@@ -37,12 +38,17 @@ class Index extends Component {
     const moreSkillsElement = document.querySelector('#more-skills').getBoundingClientRect();
 
     // Create new class
+    const titleClass = new scrollToElement(titleElement);
     const aboutMeP1Class = new scrollToElement(aboutMeP1Element);
     const aboutMeP2Class = new scrollToElement(aboutMeP2Element);
     const aboutMeP3Class = new scrollToElement(aboutMeP3Element);
     const skillClass = new scrollToElement(skillsElement);
     const moreskillClass = new scrollToElement(moreSkillsElement);
 
+    // Resolve title animation
+    if ((titleClass.element < titleClass.scroll) && (title === false)) {
+      this.props.setAboutTitle(true);
+    }
     // Resolve about-me-p1 animation
     if ((aboutMeP1Class.element < aboutMeP1Class.scroll) && (about_me_p1 === false)) {
       this.props.setAboutMeP1(true);
@@ -65,12 +71,13 @@ class Index extends Component {
     }
 
     // Reset animations
-    if ((scrollToTop === 0) && (more_skills || skills || about_me_p1 || about_me_p2 || about_me_p3)) {
+    if ((scrollToTop === 0) && (more_skills || skills || about_me_p1 || about_me_p2 || about_me_p3 || title)) {
       this.props.setMoreSkills(false);
       this.props.setSkills(false);
       this.props.setAboutMeP1(false);
       this.props.setAboutMeP2(false);
       this.props.setAboutMeP3(false);
+      this.props.setAboutTitle(false);
     }
     
   };
@@ -99,8 +106,12 @@ class Index extends Component {
 
 Index.propTypes = {
   about: PropTypes.object.isRequired,
+  setAboutMeP1: PropTypes.func.isRequired,
+  setAboutMeP2: PropTypes.func.isRequired,
+  setAboutMeP3: PropTypes.func.isRequired,
   setSkills: PropTypes.func.isRequired,
-  setMoreSkills: PropTypes.func.isRequired
+  setMoreSkills: PropTypes.func.isRequired,
+  setAboutTitle: PropTypes.func.isRequired,
 };
 
 
@@ -108,4 +119,4 @@ const mapStateToProps = state => ({
   about: state.about
 });
 
-export default connect(mapStateToProps, { setMoreSkills, setSkills, setAboutMeP1, setAboutMeP2, setAboutMeP3 })(Index);
+export default connect(mapStateToProps, { setMoreSkills, setSkills, setAboutMeP1, setAboutMeP2, setAboutMeP3, setAboutTitle })(Index);

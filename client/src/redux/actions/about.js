@@ -31,3 +31,9 @@ export const setAboutMeP3 = data => {
     payload: data
   };
 };
+export const setAboutTitle = data => {
+  return {
+    type: ABOUT.ABOUT_TITLE,
+    payload: data
+  };
+};

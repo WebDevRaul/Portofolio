@@ -4,6 +4,7 @@ const ERRORS = {
 };
 
 const ABOUT = {
+  ABOUT_TITLE: 'ABOUT_TITLE',
   ABOUT_ME_P1: 'ABOUT_ME_P1',
   ABOUT_ME_P2: 'ABOUT_ME_P2',
   ABOUT_ME_P3: 'ABOUT_ME_P3',

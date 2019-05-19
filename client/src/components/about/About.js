@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-// Animation
-import WOW from "wow.js";
-
 // Components
 import Title from './Title';
 import AboutMe from './AboutMe';
@@ -23,8 +20,6 @@ export default class About extends Component {
 
   componentDidMount() {
     this.setState({ active: true });
-    const wow = new WOW();
-    wow.init();
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -37,8 +32,6 @@ export default class About extends Component {
 
   render() {
     const { active } = this.state;
-    const slideRight = 'wow bounceInRight';
-    const slideLeft = 'wow bounceInLeft';
     return (
       <div className='about' id='about'>
         <div className='container-fluid p-0'>
@@ -50,10 +43,7 @@ export default class About extends Component {
           <div className='container p-0'>
             <div className='row no-gutters'>
               <div className='col'>
-                <AboutMe
-                  slideLeft={slideLeft}
-                  slideRight={slideRight}
-                />
+                <AboutMe />
               </div>
             </div>
           </div>

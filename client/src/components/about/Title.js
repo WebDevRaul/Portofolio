@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
+// Redux
+import { connect } from 'react-redux';
+
 class Title extends Component {
   render() {
-    const { active } = this.props;
+    const { title } = this.props.about;
     return (
       <div className='row no-gutters' id='title'>
         <div className='col title-background-skew'>
@@ -13,7 +16,7 @@ class Title extends Component {
               <div className='col'>
                 <div className='title-div m-auto div-animation'>
                   <i className='border-animation'></i>
-                  <i className={classnames('text-hide-div', {'hide': !active})}></i>
+                  <i className={classnames('text-hide-div', {'hide': title})}></i>
                   <h3 className='d-flex title-text-center'>
                     <span className='title-text title-animation m-auto'><span>About</span> Me</span>
                   </h3>
@@ -60,13 +63,16 @@ class Title extends Component {
           </div>
         </div>
       </div>
-    )
-  }
+    );
+  };
 };
 
 Title.propTypes = {
-  active: PropTypes.bool.isRequired
+  about: PropTypes.object.isRequired,
 };
 
+const mapStateToProps = state => ({
+  about: state.about
+});
 
-export default Title;
+export default connect(mapStateToProps, {})(Title);

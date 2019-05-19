@@ -17,7 +17,7 @@ class MoreSkills extends Component {
     const { more_skills } = this.props.about;
     return (
       <div className='more-skills' id='more-skills'>
-        <div className={classnames('', {'fadeInUp': more_skills, 'opacity': !more_skills})}>
+        <div className={classnames('animation-delay-300ms', {'fadeInUp': more_skills, 'opacity': !more_skills})}>
           <div className='row no-gutters'>
             <div className='col m-auto d-flex'>
               <p className='more-skills-title m-auto d-flex'>More skills:</p>
