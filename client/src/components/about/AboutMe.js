@@ -21,12 +21,12 @@ class AboutMe extends Component {
           </div>
           <div className='col col-md-7 mt-5'>
             <div className='about-me-bio m-auto p-3'>
-              <p className={classnames('', {'': about_me_p1})} id='about-me-p1'>
+              <p className={classnames('', {'slideInLeft': about_me_p1, 'opacity': !about_me_p1})} id='about-me-p1'>
                 <span>H</span>ello! My name is Savin Raul-Calin, I`m 35y old currently living in UK.<br />
                 At the end of 2017 I wrote the first <i>Hello World</i>, and since then I have been learning to code, using diffrent sources of information and dedicating every minute of my spare time for this passion.
               </p>
-              <p className={classnames('', {'': about_me_p2})} id='about-me-p2'>As a person I`m communicative and friendly. Over the years, the jobs i performed always involved being in contact with people and being part of the team.</p>
-              <p className={classnames('', {'': about_me_p3})} id='about-me-p3'>I`m a dedicated self learner and problem solver. Programming has challenged me a lot, but hard work, curiosity and persistence helped me evolve.</p>
+              <p className={classnames('animation-delay-300ms', {'slideInRight': about_me_p2, 'opacity': !about_me_p2})} id='about-me-p2'>As a person I`m communicative and friendly. Over the years, the jobs i performed always involved being in contact with people and being part of the team.</p>
+              <p className={classnames('animation-delay-500ms', {'slideInLeft': about_me_p3, 'opacity': !about_me_p3})} id='about-me-p3'>I`m a dedicated self learner and problem solver. Programming has challenged me a lot, but hard work, curiosity and persistence helped me evolve.</p>
             </div>
           </div>
         </div>
