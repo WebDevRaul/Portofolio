@@ -106,12 +106,12 @@ class Index extends Component {
 
 Index.propTypes = {
   about: PropTypes.object.isRequired,
+  setAboutTitle: PropTypes.func.isRequired,
   setAboutMeP1: PropTypes.func.isRequired,
   setAboutMeP2: PropTypes.func.isRequired,
   setAboutMeP3: PropTypes.func.isRequired,
   setSkills: PropTypes.func.isRequired,
   setMoreSkills: PropTypes.func.isRequired,
-  setAboutTitle: PropTypes.func.isRequired,
 };
 
 
