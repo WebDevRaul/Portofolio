@@ -6,29 +6,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 class Title extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title_hide_div: false
-    }
-  }
-  componentDidUpdate(prevProps, prevState) {
-    const { title_hide_div } = this.state;
-    const { title } = this.props.about;
-    const scrollToTop = document.documentElement.scrollTop;
-
-    // Hide div on animation
-    if ((prevProps.about.title !== title) && !title_hide_div) {
-      this.setState({ title_hide_div: true })
-    };
-    if (prevState.title_hide_div !== title_hide_div) {
-      setTimeout(() => this.setState({ title_hide_div: false }),620);
-    };
-  };
-
   render() {
-    const { title } = this.props.about;
-    const { title_hide_div } = this.state;
+    const { title, title_hide_div } = this.props.about;
     return (
       <div className='row no-gutters' id='title'>
         <div className='col title-background-skew'>
@@ -37,7 +16,7 @@ class Title extends Component {
               <div className='col'>
                 <div className='title-div m-auto div-animation'>
                   <i className={classnames('', {'border-animation': title})}></i>
-                  <i className={classnames('text-hide-div', {'hide': !title_hide_div})}></i>
+                  <i className={classnames('text-hide-div', {'hide': title_hide_div})}></i>
                   <h3 className='d-flex title-text-center'>
                     <span className='title-text title-animation m-auto'><span>About</span> Me</span>
                   </h3>

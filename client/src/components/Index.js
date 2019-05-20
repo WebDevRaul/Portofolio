@@ -10,7 +10,7 @@ import Footer from '../layout/Footer';
 
 // Redux
 import { connect } from 'react-redux';
-import { setMoreSkills, setSkills, setAboutMeP1, setAboutMeP2, setAboutMeP3, setAboutTitle } from '../redux/actions/about';
+import { setMoreSkills, setSkills, setAboutMeP1, setAboutMeP2, setAboutMeP3, setAboutTitle, setAboutTitleHideDiv, setAbout } from '../redux/actions/about';
 
 // Class helper
 import scrollToElement from './common/ScrollToElement';
@@ -48,6 +48,8 @@ class Index extends Component {
     // Resolve title animation
     if ((titleClass.element < titleClass.scroll) && (title === false)) {
       this.props.setAboutTitle(true);
+      // This is to hide the div on subtitle
+      setTimeout(() => this.props.setAboutTitleHideDiv(true), 620);
     }
     // Resolve about-me-p1 animation
     if ((aboutMeP1Class.element < aboutMeP1Class.scroll) && (about_me_p1 === false)) {
@@ -72,12 +74,7 @@ class Index extends Component {
 
     // Reset animations
     if ((scrollToTop === 0) && (more_skills || skills || about_me_p1 || about_me_p2 || about_me_p3 || title)) {
-      this.props.setMoreSkills(false);
-      this.props.setSkills(false);
-      this.props.setAboutMeP1(false);
-      this.props.setAboutMeP2(false);
-      this.props.setAboutMeP3(false);
-      this.props.setAboutTitle(false);
+      this.props.setAbout(false);
     }
     
   };
@@ -112,6 +109,8 @@ Index.propTypes = {
   setAboutMeP3: PropTypes.func.isRequired,
   setSkills: PropTypes.func.isRequired,
   setMoreSkills: PropTypes.func.isRequired,
+  setAboutTitleHideDiv: PropTypes.func.isRequired,
+  setAbout: PropTypes.func.isRequired
 };
 
 
@@ -119,4 +118,4 @@ const mapStateToProps = state => ({
   about: state.about
 });
 
-export default connect(mapStateToProps, { setMoreSkills, setSkills, setAboutMeP1, setAboutMeP2, setAboutMeP3, setAboutTitle })(Index);
+export default connect(mapStateToProps, { setMoreSkills, setSkills, setAboutMeP1, setAboutMeP2, setAboutMeP3, setAboutTitle, setAboutTitleHideDiv, setAbout })(Index);

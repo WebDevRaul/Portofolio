@@ -37,3 +37,14 @@ export const setAboutTitle = data => {
     payload: data
   };
 };
+export const setAboutTitleHideDiv = data => {
+  return {
+    type: ABOUT.ABOUT_TITLE_HIDE_DIV,
+    payload: data
+  };
+};
+export const setAbout = () => {
+  return {
+    type: ABOUT.ABOUT,
+  };
+};
