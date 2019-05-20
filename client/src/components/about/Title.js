@@ -19,12 +19,13 @@ class Title extends Component {
 
     // Hide div on animation
     if ((prevProps.about.title !== title) && !title_hide_div) {
-      setTimeout(() => this.setState({ title_hide_div: true }),620);
+      this.setState({ title_hide_div: true })
     };
     if (prevState.title_hide_div !== title_hide_div) {
-      this.setState({ title_hide_div: false });
-    }
+      setTimeout(() => this.setState({ title_hide_div: false }),620);
+    };
   };
+
   render() {
     const { title } = this.props.about;
     const { title_hide_div } = this.state;
