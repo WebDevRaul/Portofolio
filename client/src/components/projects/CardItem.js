@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import clasnames from 'classnames'; 
 
-// Animation
-import WOW from "wow.js";
-
 class CardItem extends Component {
   constructor() {
     super();
@@ -15,11 +12,6 @@ class CardItem extends Component {
       skillsAnimation: false,
       linkAnimation: false
     };
-  };
-
-  componentDidMount() {
-    const wow = new WOW();
-    wow.init();
   };
   
 
@@ -47,25 +39,25 @@ class CardItem extends Component {
         onMouseLeave={this.onMouseLeave}
         >
         <img src={picture} alt=''/>
-        <div className={clasnames('hide cardItemDiv', {'show': hover})} >
+        <div className={clasnames(' cardItemDiv', {'hide': !hover})} >
           <div className='cardItemCenter'>
             <div className='row no-gutters'>
               <div className='col'>
                 <div className='cardItemTitleBorder text-center'>
-                  <h5 className={clasnames('hide bounceInRightCard', {'show': titleAnimation })}><span>{title}</span></h5>
+                  <h5 className={clasnames('bounceInRightCard', {'hide': !titleAnimation })}><span>{title}</span></h5>
                 </div>
               </div>
             </div>
             <div className='row no-gutters summary text-center'>
               <div className='col'>
                 <div className=''>
-                  <p className={clasnames('hide mb-0 bounceInRightCard', {'show': summaryAnimation })}>{summary}</p>
+                  <p className={clasnames(' mb-0 bounceInRightCard', {'hide': !summaryAnimation })}>{summary}</p>
                 </div>
               </div>
             </div>
             <div className='row no-gutters'>
               <div className='col'>
-                <div className={clasnames('card-item-skill hide bounceInRightCard', {'show': skillsAnimation})}>
+                <div className={clasnames('card-item-skill  bounceInRightCard', {'hide': !skillsAnimation})}>
                   <div className='d-flex'>
                     <span className='m-auto'>{skills}</span>
                   </div>
@@ -73,12 +65,12 @@ class CardItem extends Component {
               </div>
             </div>
           </div>
-          <p className={clasnames('card-item-link mr-3 hide', {'show': linkAnimation})}><a href={link} target='_blank' rel="noopener noreferrer">{linkName}</a></p>
+          <p className={clasnames('card-item-link mr-3 ', {'hide': !linkAnimation})}><a href={link} target='_blank' rel="noopener noreferrer">{linkName}</a></p>
         </div>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 CardItem.propTypes = {
   data: PropTypes.object.isRequired,

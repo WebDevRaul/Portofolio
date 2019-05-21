@@ -99,8 +99,8 @@ class ProjectImageSlider extends Component {
           </div>
         </div>
       </div>
-    )
-  }
+    );
+  };
 };
 
 
