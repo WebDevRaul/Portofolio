@@ -1,9 +1,8 @@
 import { PROJECT } from '../actions/types';
 
 const initialState = {
-  title_left: false,
-  title_right: false,
-  title_binary: false,
+  title: false,
+  binary: false,
 };
 
 const project = (state=initialState, action) => {
@@ -11,24 +10,18 @@ const project = (state=initialState, action) => {
     case PROJECT.PROJECT:
       return {
         ...state,
-        title_left: false,
-        title_right: false,
-        title_binary: false
+        title: false,
+        binary: false
       }
-    case PROJECT.PROJECT_TITLE_LEFT:
+    case PROJECT.PROJECT_TITLE:
       return {
         ...state,
-        title_left: true
+        title: true
       }
-    case PROJECT.PROJECT_TITLE_RIGHT:
+    case PROJECT.PROJECT_BINARY:
       return {
         ...state,
-        title_right: true
-      }
-    case PROJECT.PROJECT_TITLE_BINARY:
-      return {
-        ...state,
-        title_binary: true
+        binary: true
       }
     default:
       return state;

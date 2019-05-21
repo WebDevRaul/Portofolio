@@ -7,19 +7,19 @@ import { connect } from 'react-redux';
 
 class Title extends Component {
   render() {
-    const { slideRight, slideLeft, fadeInUp } = this.props.project;
+    const { title, binary } = this.props.project;
     return (
       <div className='project-title'>
         <div className='container mt-4'>
             <div className='row no-gutters'>
               <div className='col'>
                 <div className='d-flex'>
-                  <div className='m-auto project-title-main-title'>
+                  <div className='m-auto project-title-main-title' id='project-title'>
                       <div className='d-flex'>
-                        <h3 className={classnames(`text-center m-auto ${slideLeft}`)} data-wow-delay="1s">
+                        <h3 className={classnames(`text-center m-auto`, { 'slideInRight': title })} >
                           <span className='text-center m-auto'>My Recent</span>
                         </h3>
-                        <span className={classnames(`project-title-div-heading ml-2 mb-0 ${slideRight}`)}  data-wow-delay="1s">Projects</span>
+                        <span className={classnames(`project-title-div-heading ml-2 mb-0`, {'slideInLeft': title})}>Projects</span>
                     </div>
                   </div>
                 </div>
@@ -28,7 +28,7 @@ class Title extends Component {
             <div className='row no-gutters'>
               <div className='col'>
                 <div className='d-flex'>
-                  <div className={classnames(`project-title-subtitle m-auto ${fadeInUp}`)} data-wow-delay="1s">
+                  <div className={classnames(`project-title-subtitle m-auto`, {'fadeInUp': binary })} id='project-binary' >
                     <p className='mb-0'>01101101 01111001</p>
                     <p className='mb-0'>01110010 01100101 01100011 01100101 01101110 01110100</p>
                     <p className='mb-0'>01110000 01110010 01101111 01101010 01100101 01100011 01110100 01110011</p>
@@ -38,9 +38,9 @@ class Title extends Component {
             </div>
         </div>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 Title.propTypes = {
   project: PropTypes.object.isRequired

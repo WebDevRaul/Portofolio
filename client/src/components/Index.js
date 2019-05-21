@@ -11,6 +11,7 @@ import Footer from '../layout/Footer';
 // Redux
 import { connect } from 'react-redux';
 import { setMoreSkills, setSkills, setAboutMeP1, setAboutMeP2, setAboutMeP3, setAboutTitle, setAboutTitleHideDiv, setAbout } from '../redux/actions/about';
+import { setProjectTitle, setProjectBinary, setProject } from '../redux/actions/project';
 
 // Class helper
 import scrollToElement from './common/ScrollToElement';
@@ -27,54 +28,71 @@ class Index extends Component {
 
   scrollAnimation = () => {
     const { skills, more_skills, about_me_p1, about_me_p2, about_me_p3, title } = this.props.about;
+    const { binary } = this.props.project;
+    const project_title = this.props.project.title;
     const scrollToTop = document.documentElement.scrollTop
 
-    // Find element
-    const titleElement = document.querySelector('#title').getBoundingClientRect();
+    // Find element {About}
+    const aboutTitleElement = document.querySelector('#title').getBoundingClientRect();
     const aboutMeP1Element = document.querySelector('#about-me-p1').getBoundingClientRect();
     const aboutMeP2Element = document.querySelector('#about-me-p2').getBoundingClientRect();
     const aboutMeP3Element = document.querySelector('#about-me-p3').getBoundingClientRect();
-    const skillsElement = document.querySelector('#skills').getBoundingClientRect();
-    const moreSkillsElement = document.querySelector('#more-skills').getBoundingClientRect();
+    const aboutSkillsElement = document.querySelector('#skills').getBoundingClientRect();
+    const AboutMoreSkillsElement = document.querySelector('#more-skills').getBoundingClientRect();
+    // Find element {Project}
+    const projectTitleElement = document.querySelector('#project-title').getBoundingClientRect();
+    const projectBinaryElement = document.querySelector('#project-binary').getBoundingClientRect();
 
-    // Create new class
-    const titleClass = new scrollToElement(titleElement);
+    // Create new class {About}
+    const aboutTitleClass = new scrollToElement(aboutTitleElement);
     const aboutMeP1Class = new scrollToElement(aboutMeP1Element);
     const aboutMeP2Class = new scrollToElement(aboutMeP2Element);
     const aboutMeP3Class = new scrollToElement(aboutMeP3Element);
-    const skillClass = new scrollToElement(skillsElement);
-    const moreskillClass = new scrollToElement(moreSkillsElement);
+    const aboutSkillClass = new scrollToElement(aboutSkillsElement);
+    const aboutMoreSkillClass = new scrollToElement(AboutMoreSkillsElement);
+    // Create new class {Project}
+    const projectTitleClass = new scrollToElement(projectTitleElement);
+    const projectBinaryClass = new scrollToElement(projectBinaryElement);
 
-    // Resolve title animation
-    if ((titleClass.element < titleClass.scroll) && (title === false)) {
+    // Resolve title animation {About}
+    if ((aboutTitleClass.element < aboutTitleClass.scroll) && (title === false)) {
       this.props.setAboutTitle(true);
-      // This is to hide the div on subtitle
+      // This is to hide the div on subtitle {About}
       setTimeout(() => this.props.setAboutTitleHideDiv(true), 620);
     }
-    // Resolve about-me-p1 animation
+    // Resolve about-me-p1 animation {About}
     if ((aboutMeP1Class.element < aboutMeP1Class.scroll) && (about_me_p1 === false)) {
       this.props.setAboutMeP1(true);
     }
-    // Resolve about-me-p2 animation
+    // Resolve about-me-p2 animation {About}
     if ((aboutMeP2Class.element < aboutMeP2Class.scroll) && (about_me_p2 === false)) {
       this.props.setAboutMeP2(true);
     }
-    // Resolve about-me-p3 animation
+    // Resolve about-me-p3 animation {About}
     if ((aboutMeP3Class.element < aboutMeP3Class.scroll) && (about_me_p3 === false)) {
       this.props.setAboutMeP3(true);
     }
-    // Resolve skills animation
-    if ((skillClass.element < skillClass.scroll) && (skills === false)) {
+    // Resolve skills animation {About}
+    if ((aboutSkillClass.element < aboutSkillClass.scroll) && (skills === false)) {
       this.props.setSkills(true);
     }
-    // Resolve more-skills animation
-    if ((moreskillClass.element < moreskillClass.scroll) && (more_skills === false)) {
+    // Resolve more-skills animation {About}
+    if ((aboutMoreSkillClass.element < aboutMoreSkillClass.scroll) && (more_skills === false)) {
       this.props.setMoreSkills(true);
+    }
+    // Resolve project-title animation {Project}
+    if ((projectTitleClass.element < projectTitleClass.scroll) && (project_title === false)) {
+      this.props.setProjectTitle(true);
+    }
+    // Resolve project-binary animation {Project}
+    if ((projectBinaryClass.element < projectBinaryClass.scroll) && (binary === false)) {
+      this.props.setProjectBinary(true);
     }
 
     // Reset animations
-    if ((scrollToTop === 0) && (more_skills || skills || about_me_p1 || about_me_p2 || about_me_p3 || title)) {
-      this.props.setAbout(false);
+    if ((scrollToTop === 0) && (more_skills || skills || about_me_p1 || about_me_p2 || about_me_p3 || title || project_title || binary)) {
+      this.props.setAbout();
+      this.props.setProject();
     }
     
   };
@@ -103,6 +121,7 @@ class Index extends Component {
 
 Index.propTypes = {
   about: PropTypes.object.isRequired,
+  project: PropTypes.object.isRequired,
   setAboutTitle: PropTypes.func.isRequired,
   setAboutMeP1: PropTypes.func.isRequired,
   setAboutMeP2: PropTypes.func.isRequired,
@@ -110,12 +129,16 @@ Index.propTypes = {
   setSkills: PropTypes.func.isRequired,
   setMoreSkills: PropTypes.func.isRequired,
   setAboutTitleHideDiv: PropTypes.func.isRequired,
-  setAbout: PropTypes.func.isRequired
+  setAbout: PropTypes.func.isRequired,
+  setProjectTitle: PropTypes.func.isRequired,
+  setProjectBinary: PropTypes.func.isRequired,
+  setProject: PropTypes.func.isRequired
 };
 
 
 const mapStateToProps = state => ({
-  about: state.about
+  about: state.about,
+  project: state.project
 });
 
-export default connect(mapStateToProps, { setMoreSkills, setSkills, setAboutMeP1, setAboutMeP2, setAboutMeP3, setAboutTitle, setAboutTitleHideDiv, setAbout })(Index);
+export default connect(mapStateToProps, { setMoreSkills, setSkills, setAboutMeP1, setAboutMeP2, setAboutMeP3, setAboutTitle, setAboutTitleHideDiv, setAbout, setProjectTitle, setProjectBinary, setProject })(Index);
