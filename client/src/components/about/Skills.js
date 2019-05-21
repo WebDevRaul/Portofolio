@@ -17,7 +17,7 @@ class Skills extends Component {
     const { skills } = this.props.about;    
   return (
     <div className='text-center skills' id='skills'>
-      <div className='bg-skew'>
+      <div className=''>
         <div className='row no-gutters'>
           <div className='col'>
             <p className={classnames('', {'zoomIn': skills, 'opacity': !skills})}>Up to the present moment I have gained experience in the following:</p> 

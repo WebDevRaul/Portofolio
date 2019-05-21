@@ -9,8 +9,8 @@ class Title extends Component {
   render() {
     const { title, title_hide_div } = this.props.about;
     return (
-      <div className='row no-gutters' id='title'>
-        <div className='col title-background-skew'>
+      <div className='row no-gutters pt-5 mt-3 mb-5' id='title'>
+        <div className='col title-background'>
           <div className='title text-center'>
             <div className='row mb-3 mt-3 no-gutters'>
               <div className='col'>

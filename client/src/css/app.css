@@ -1,5 +1,4 @@
 :root { 
-  --bgPhoto: url('../assets/bricks-brickwal.jpg');
   --mainCollor: rgb(93, 93, 190);
   --secondaryCollor: rgba(97, 218, 251);
 }
@@ -9,9 +8,6 @@ html {
 }
 body {
   font-family: 'EB Garamond', serif;
-  background: var(--bgPhoto);
-  background-attachment: fixed;
-  background-size: cover;
 } 
 html {
   scroll-behavior: smooth;
