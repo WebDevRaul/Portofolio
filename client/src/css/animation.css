@@ -50,6 +50,18 @@
 /* //  //  //  //  //  //  //  //  //  // */
 /* //  //  //  //  //  //  //  //  //  // */
 
+.slideInLeftPlus {
+  animation: slideInLeftPlus 3s forwards;
+  transform: translateX(150%);
+  -webkit-transform: translateX(150%);
+  -moz-transform: translateX(150%);
+  -ms-transform: translateX(150%);
+  -o-transform: translateX(150%);
+}
+
+/* //  //  //  //  //  //  //  //  //  // */
+/* //  //  //  //  //  //  //  //  //  // */
+
 .slideInLeft {
   animation: slideInLeft 3s forwards;
   transform: translateX(150%);
@@ -57,6 +69,18 @@
   -moz-transform: translateX(150%);
   -ms-transform: translateX(150%);
   -o-transform: translateX(150%);
+}
+
+/* //  //  //  //  //  //  //  //  //  // */
+/* //  //  //  //  //  //  //  //  //  // */
+
+.slideInRightPlus {
+  animation: slideInLeftPlus 3s forwards;
+  transform: translateX(-200%);
+  -webkit-transform: translateX(-200%);
+  -moz-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  -o-transform: translateX(-200%);
 }
 
 /* //  //  //  //  //  //  //  //  //  // */
@@ -114,7 +138,7 @@
 /* //  //  //  //  //  //  //  //  //  // */
 
 
-@keyframes slideInLeft {
+@keyframes slideInLeftPlus {
   0% {
     opacity: 0;
   }
@@ -162,6 +186,26 @@
     -o-transform: translateX(1%);
   }
   100% { 
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+  }
+}
+
+/* //  //  //  //  //  //  //  //  //  // */
+/* //  //  //  //  //  //  //  //  //  // */
+/* //  //  //  //  //  //  //  //  //  // */
+/* //  //  //  //  //  //  //  //  //  // */
+
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+  }
+  100% { 
+    opacity: 1;
     transform: translateX(0%);
     -webkit-transform: translateX(0%);
     -moz-transform: translateX(0%);
