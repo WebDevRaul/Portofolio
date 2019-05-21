@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-// Animation
-import WOW from "wow.js";
-
 // Components
 import Title from './Title';
 import ProjectImageSlider from './ProjectImageSlider';
@@ -13,11 +10,6 @@ import '../../css/project.css';
 
 
 export default class Projects extends Component {
-
-  componentDidMount() {
-    const wow = new WOW();
-    wow.init();
-  };
   
   onClickSlider = id => {
     const el = document.getElementById(`cardItem-${id}`);
@@ -27,19 +19,12 @@ export default class Projects extends Component {
   };
   
   render() {
-    const slideRight = 'wow fadeInRight';
-    const slideLeft = 'wow fadeInLeft';
-    const fadeInUp = 'wow fadeInUp';
     return (
       <div className='projects' id='projects'>
         <div className='container'>
           <div className='row no-gutters'>
             <div className='col'>
-              <Title
-                slideLeft={slideLeft}
-                slideRight={slideRight}
-                fadeInUp={fadeInUp}
-              />
+              <Title />
             </div>
           </div>
           <div className='row no-gutters'>

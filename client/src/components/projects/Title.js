@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-export default class Title extends Component {
+// Redux
+import { connect } from 'react-redux';
+
+class Title extends Component {
   render() {
-    const { slideRight, slideLeft, fadeInUp } = this.props;
+    const { slideRight, slideLeft, fadeInUp } = this.props.project;
     return (
       <div className='project-title'>
         <div className='container mt-4'>
@@ -37,3 +41,13 @@ export default class Title extends Component {
     )
   }
 }
+
+Title.propTypes = {
+  project: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  project: state.project
+});
+
+export default connect(mapStateToProps, {})(Title);

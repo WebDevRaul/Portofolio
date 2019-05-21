@@ -39,7 +39,7 @@ class CardItem extends Component {
         onMouseLeave={this.onMouseLeave}
         >
         <img src={picture} alt=''/>
-        <div className={clasnames(' cardItemDiv', {'hide': !hover})} >
+        <div className={clasnames('cardItemDiv', {'hide': !hover})} >
           <div className='cardItemCenter'>
             <div className='row no-gutters'>
               <div className='col'>
