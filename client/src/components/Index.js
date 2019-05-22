@@ -127,7 +127,7 @@ class Index extends Component {
         <section className='about-component'>
           <About />
         </section>
-        <div className={classnames('scroll-to-top', { 'hide': !scroll_to_top })} onClick={this.onClick}>
+        <div className={classnames('scroll-to-top slideInLeft', { 'hide': !scroll_to_top })} onClick={this.onClick}>
           <i className="far fa-arrow-alt-circle-up"></i>
         </div>
         <section className='footer-component'>

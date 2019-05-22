@@ -303,4 +303,4 @@ const Redux = ({
   </svg>
 );
 
-export default { Bootstrap, Css, Github, Html, Javascript, JQuery, MongoDB, NodeJs, PostgreSQL, ReactJs, Redux }
+export default { Bootstrap, Css, Github, Html, Javascript, JQuery, MongoDB, NodeJs, PostgreSQL, ReactJs, Redux  }
