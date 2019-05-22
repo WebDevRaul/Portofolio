@@ -53,6 +53,18 @@ a {
 }
 
 @media (min-width : 420px) and (max-width : 480px) {
+    /* About */
+
+  /* Title */
+  .title-div {
+    font-size: 0.8em !important;
+    border: 8px solid black !important;
+    width: 14.5em !important;
+    height: 4.1em !important;
+  }
+  .title-text {
+    font-size: 1.7rem !important;
+  }
   /* Project */
 
   /* Title */
@@ -70,6 +82,18 @@ a {
 }
 
 @media (min-width: 481px) and (max-width: 576px) {
+  /* About */
+
+  /* Title */
+  .title-div {
+    font-size: 0.9em !important;
+    border: 9px solid black !important;
+    width: 14.5em !important;
+    height: 4.1em !important;
+  }
+  .title-text {
+    font-size: 1.9rem !important;
+  }
   /* Project */
 
    /* Title */
@@ -109,6 +133,18 @@ a {
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+  /* About */
+
+  /* Title */
+  .title-div {
+    font-size: 1em !important;
+    border: 10px solid black !important;
+    width: 14.5em !important;
+    height: 4.1em !important;
+  }
+  .title-text {
+    font-size: 2rem !important;
+  }
   /* Project */
 
    /* Title */
