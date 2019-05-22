@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 // Components
 import Navbar from '../layout/Navbar/Navbar';
@@ -17,6 +18,9 @@ import { setProjectTitle, setProjectBinary, setProject } from '../redux/actions/
 import scrollToElement from './common/ScrollToElement';
 
 class Index extends Component {
+  state = {
+    scroll_to_top: false
+  }
 
   componentDidMount() {
     window.addEventListener('scroll', this.scrollAnimation);
@@ -30,6 +34,7 @@ class Index extends Component {
     const { skills, more_skills, about_me_p1, about_me_p2, about_me_p3, title } = this.props.about;
     const { binary } = this.props.project;
     const project_title = this.props.project.title;
+    const { scroll_to_top } = this.state;
     const scrollToTop = document.documentElement.scrollTop
 
     // Find element {About}
@@ -90,9 +95,15 @@ class Index extends Component {
     }
 
     // Reset animations
-    if ((scrollToTop === 0) && (more_skills || skills || about_me_p1 || about_me_p2 || about_me_p3 || title || project_title || binary)) {
+    if ((scrollToTop === 0) && (more_skills || skills || about_me_p1 || about_me_p2 || about_me_p3 || title || project_title || binary || scroll_to_top)) {
       this.props.setAbout();
       this.props.setProject();
+      this.setState({ scroll_to_top: false });
+    }
+
+    // Scroll_to_top btn
+    if ((scrollToTop !== 0) && !scroll_to_top) {
+      this.setState({ scroll_to_top: true });
     }
     
   };
@@ -101,6 +112,7 @@ class Index extends Component {
     document.documentElement.scrollTop = 0;
   }
   render() {
+    const { scroll_to_top } = this.state;
     return (
       <div className='index'>
         <section className='navbar-component'>
@@ -115,7 +127,7 @@ class Index extends Component {
         <section className='about-component'>
           <About />
         </section>
-        <div className='scroll-to-top' onClick={this.onClick}>
+        <div className={classnames('scroll-to-top', { 'hide': !scroll_to_top })} onClick={this.onClick}>
           <i className="far fa-arrow-alt-circle-up"></i>
         </div>
         <section className='footer-component'>
