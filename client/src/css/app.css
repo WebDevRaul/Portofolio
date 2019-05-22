@@ -13,6 +13,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.scroll-to-top {
+  font-size: 2em;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  color: var(--mainCollor)
+}
+.scroll-to-top:hover {
+  cursor: pointer;
+}
+
 
 /* About */
 .hide {

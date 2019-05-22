@@ -96,6 +96,10 @@ class Index extends Component {
     }
     
   };
+
+  onClick = () => {
+    document.documentElement.scrollTop = 0;
+  }
   render() {
     return (
       <div className='index'>
@@ -111,6 +115,9 @@ class Index extends Component {
         <section className='about-component'>
           <About />
         </section>
+        <div className='scroll-to-top' onClick={this.onClick}>
+          <i className="far fa-arrow-alt-circle-up"></i>
+        </div>
         <section className='footer-component'>
           <Footer />
         </section>
