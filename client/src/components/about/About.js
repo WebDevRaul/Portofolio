@@ -13,8 +13,8 @@ import '../../css/about.css';
 export default class About extends Component {
   render() {
     return (
-      <div className='about'>
-        <div className='container p-0'>
+      <div className='about' id='about'>
+        <div className='container-fluid p-0'>
           <div className='row no-gutters'>
             <div className='col'>
               <Title />

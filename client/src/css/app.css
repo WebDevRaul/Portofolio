@@ -33,6 +33,25 @@ a {
   text-decoration: none !important;
 }
 
+@media (min-width : 320px) and (max-width : 420px) {
+  /* About */
+
+  /* Title */
+  .title-div {
+    font-size: 0.7em !important;
+    border: 7px solid black !important;
+    width: 14.5em !important;
+    height: 4.1em !important;
+  }
+  .title-text {
+    font-size: 1.5rem !important;
+  }
+  /* AboutMe */
+  .about-me-photo {
+    font-size: 0.9em;
+  }
+}
+
 @media (min-width : 420px) and (max-width : 480px) {
   /* Project */
 

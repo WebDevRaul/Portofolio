@@ -7,7 +7,7 @@ class DesktopView extends Component {
 
   onClick = id => () => {
     this.props.onClick();
-    const el = document.getElementById(id);
+    const el = document.querySelector(id);
     el.scrollIntoView();
   }
   render() {
@@ -18,14 +18,14 @@ class DesktopView extends Component {
           <li className="nav-item mr-3">
             <span 
               className='nav-link' 
-              onClick={this.onClick('home')}
+              onClick={this.onClick('#home')}
             >Home</span>
           </li>
           <li className="nav-item mr-3">
-            <span className='nav-link' onClick={this.onClick('projects')}>Projects</span>
+            <span className='nav-link' onClick={this.onClick('#projects')}>Projects</span>
           </li>
           <li className="nav-item mr-3">
-            <span className='nav-link' onClick={this.onClick('about')}>About</span>
+            <span className='nav-link' onClick={this.onClick('#about')}>About</span>
           </li>
         </ul>
       </div>
