@@ -1,4 +1,4 @@
-show Project/CardItem summary only on lg screens
+popout msg on successffull email
 
     let scrollTop = window.pageYOffset || el.getBoundingClientRect().top;
     document.documentElement.scrollTop = scrollTop;

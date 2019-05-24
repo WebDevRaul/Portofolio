@@ -3,16 +3,17 @@ import { NavLink } from 'react-router-dom';
 
 // Components
 import Form from './Form';
+import Map from './MapViewer';
 
 export default class Footer extends Component {
   render() {
     return (
       <div className='footer bg-dark text-white'>
         <div className='row no-gutters pt-3'>
-          <div className='col-sm col-md-6'>
-            map
+          <div className='col-sm-12 col-md-6'>
+            <Map />
           </div>
-          <div className='col-sm col-md-6'>
+          <div className='col-sm-12 col-md-6'>
             <Form />
           </div>
         </div>

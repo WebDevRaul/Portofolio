@@ -43,7 +43,7 @@ class Form extends Component {
     const { email, textarea } = this.state;
     const { errors } = this.props.errors;
     return (
-      <form className='footer-form'>
+      <form className='footer-form ml-2'>
         <div className="row no-gutters mb-3">
           <div className='col-10 col-sm-11 col-md-8 col-lg-6 m-auto'>
             <input 
