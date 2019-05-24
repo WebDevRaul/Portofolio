@@ -7,7 +7,7 @@ import Navbar from '../layout/Navbar/Navbar';
 import Home from './home/Home';
 import Projects from './projects/Projects';
 import About from './about/About';
-import Footer from '../layout/Footer';
+import Footer from '../layout/Footer/Footer';
 
 // Redux
 import { connect } from 'react-redux';

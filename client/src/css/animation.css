@@ -52,11 +52,11 @@
 
 .slideInLeftPlus {
   animation: slideInLeftPlus 3s forwards;
-  transform: translateX(150%);
-  -webkit-transform: translateX(150%);
-  -moz-transform: translateX(150%);
-  -ms-transform: translateX(150%);
-  -o-transform: translateX(150%);
+  transform: translateX(300%);
+  -webkit-transform: translateX(300%);
+  -moz-transform: translateX(300%);
+  -ms-transform: translateX(300%);
+  -o-transform: translateX(300%);
 }
 
 /* //  //  //  //  //  //  //  //  //  // */
