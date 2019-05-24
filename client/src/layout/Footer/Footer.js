@@ -1,10 +1,23 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
+// Components
+import Form from './Form';
+
 export default class Footer extends Component {
   render() {
     return (
       <div className='footer bg-dark text-white'>
+        <div className='row no-gutters pt-3'>
+          <div className='col-sm col-md-6'>
+            map
+          </div>
+          <div className='col-sm col-md-6'>
+            <div className='footer-form'>
+              <Form />
+            </div>
+          </div>
+        </div>
         <div className='row no-gutters'>
           <div className='col m-auto'>
             <div className='text-center'>
@@ -12,7 +25,7 @@ export default class Footer extends Component {
             </div>
           </div>
         </div>
-        <div className='row no-gutters'>
+        {/* <div className='row no-gutters'>
           <div className='col'>
             <div>
               <span className='ml-2 mr-2'>
@@ -37,7 +50,7 @@ export default class Footer extends Component {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     )
   }
