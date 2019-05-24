@@ -8,7 +8,7 @@ export const setEmail = data => dispatch => {
     .post(`${BACKEND.USER}/send-email`, data)
     .then(res => dispatch({
       type: EMAIL.EMAIL_SEND,
-      payload: data
+      payload: res.data.success
     }))
     .catch(err => dispatch({
       type: ERRORS.ERROR,

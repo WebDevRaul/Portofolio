@@ -8,26 +8,26 @@ const user = require('../../credential');
 router.post('/send-email', (req, res) => {
   const me = user.email
   let transporter = nodeMailer.createTransport({
-      host: user.email,
+      host: 'smtp.gmail.com',
       port: 465,
       secure: true,
       auth: {
-          user: user.email,
+          user: me,
           pass: user.password
       }
   });
   let mailOptions = {
       from: req.body.email, // sender address
       to: me, // list of receivers
-      text: req.body.text, // plain text body
+      subject: 'Protofolio e-mail', // Subject line
+      text: req.body.textarea // plain text body
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-          return console.log(error);
+          return console.log(error, 'error');
       }
-      console.log('Message %s sent: %s', info.messageId, info.response);
-          // res.render('index');
+      res.json({ success: 'E-mail send' })
       });
   });
 
