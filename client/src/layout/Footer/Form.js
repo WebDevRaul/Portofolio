@@ -24,7 +24,7 @@ export default class Form extends Component {
     return (
       <form className='footer-form'>
         <div className="row no-gutters mb-3">
-          <div className='col-10 col-sm-11 col-md-10 col-lg-6 m-auto'>
+          <div className='col-10 col-sm-11 col-md-8 col-lg-6 m-auto'>
             <input 
               type="email" className="form-control form-control-sm"  
               placeholder="name@example.com"
@@ -35,7 +35,7 @@ export default class Form extends Component {
           </div>
         </div>
         <div className="row no-gutters mb-3">
-          <div className='col-10 col-sm-11 col-md-10 col-lg-6 m-auto'>
+          <div className='col-10 col-sm-11 col-md-8 col-lg-6 m-auto'>
             <textarea 
               className="form-control" 
               rows="5"
@@ -46,7 +46,7 @@ export default class Form extends Component {
           </div>
         </div>
         <div className="row no-gutters mb-3">
-          <div className='col-10 col-sm-11 col-md-10 col-lg-6 m-auto'>
+          <div className='col-10 col-sm-11 col-md-8 col-lg-6 m-auto'>
           <button onClick={this.onSubmit} className='btn btn-primary float-right'>Send</button>
           </div>
         </div>
