@@ -13,9 +13,7 @@ export default class Footer extends Component {
             map
           </div>
           <div className='col-sm col-md-6'>
-            <div className='footer-form'>
-              <Form />
-            </div>
+            <Form />
           </div>
         </div>
         <div className='row no-gutters'>
