@@ -1,6 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class Form extends Component {
+// Redux
+import { connect } from 'react-redux';
+import { setEmail } from '../../redux/actions/email';
+
+class Form extends Component {
   constructor(){
     super();
     this.state = {
@@ -17,6 +22,9 @@ export default class Form extends Component {
 
   onSubmit = e => {
     e.preventDefault();
+    const { email, textarea } = this.state;
+    const data = { email, textarea };
+    this.props.setEmail(data);
     this.setState({ email: '', textarea: '' });
   };
   render() {
@@ -54,3 +62,11 @@ export default class Form extends Component {
     );
   };
 };
+
+Form.propTypes = {
+  setEmail: PropTypes.func.isRequired,
+}
+
+const mapStateToProps = state => ({});
+
+export default connect(mapStateToProps, { setEmail })(Form)
