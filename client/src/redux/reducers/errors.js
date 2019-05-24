@@ -4,7 +4,7 @@ const initialState = {
   errors: {}
 };
 
-const errors = (state=initialState, action) => {
+const setErrors = (state=initialState, action) => {
   switch(action.type) {
     case ERRORS.ERROR:
       return {
@@ -21,4 +21,4 @@ const errors = (state=initialState, action) => {
   }
 };
 
-export default errors;
+export default setErrors;

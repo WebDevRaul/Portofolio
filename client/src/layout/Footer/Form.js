@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 // Redux
 import { connect } from 'react-redux';
 import { setEmail } from '../../redux/actions/email';
+import { clearError } from '../../redux/actions/errors';
+
+// Common
+import isEmpty from '../../components/common/IsEmpty';
 
 class Form extends Component {
   constructor(){
@@ -11,6 +16,13 @@ class Form extends Component {
     this.state = {
       email: '',
       textarea: ''
+    };
+  };
+
+  componentDidUpdate(prevState, prevProps) {
+    const { errors } = this.props.errors;
+    if ((prevProps.errors !== errors) && !isEmpty(errors)) {
+      setTimeout(() => this.props.clearError(), 4000);
     };
   };
 
@@ -29,28 +41,32 @@ class Form extends Component {
   };
   render() {
     const { email, textarea } = this.state;
+    const { errors } = this.props.errors;
     return (
       <form className='footer-form'>
         <div className="row no-gutters mb-3">
           <div className='col-10 col-sm-11 col-md-8 col-lg-6 m-auto'>
             <input 
-              type="email" className="form-control form-control-sm"  
+              type="email" 
+              className={classnames('form-control form-control-sm', {'is-invalid': errors.email})}  
               placeholder="Email"
               name='email'
               value={email}
               onChange={this.onChange}
              />
+             {errors.email && <div className='invalid-feedback font-weight-bold'>{errors.email}</div>}
           </div>
         </div>
         <div className="row no-gutters mb-3">
           <div className='col-10 col-sm-11 col-md-8 col-lg-6 m-auto'>
             <textarea 
-              className="form-control" 
+              className={classnames('form-control', {'is-invalid': errors.textarea})} 
               rows="5"
               name='textarea'
               value={textarea}
               onChange={this.onChange}
             ></textarea>
+            {errors.textarea && <div className='invalid-feedback font-weight-bold'>{errors.textarea}</div>}
           </div>
         </div>
         <div className="row no-gutters mb-3">
@@ -65,8 +81,11 @@ class Form extends Component {
 
 Form.propTypes = {
   setEmail: PropTypes.func.isRequired,
+  errors: PropTypes.object.isRequired
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  errors: state.errors
+});
 
-export default connect(mapStateToProps, { setEmail })(Form)
+export default connect(mapStateToProps, { setEmail, clearError })(Form)

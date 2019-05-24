@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import errors from './get_Errors';
+import errors from './errors';
 import about from './about';
 import project from './project';
 import email from './email';
