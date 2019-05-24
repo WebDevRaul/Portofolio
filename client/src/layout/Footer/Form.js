@@ -35,7 +35,7 @@ class Form extends Component {
           <div className='col-10 col-sm-11 col-md-8 col-lg-6 m-auto'>
             <input 
               type="email" className="form-control form-control-sm"  
-              placeholder="name@example.com"
+              placeholder="Email"
               name='email'
               value={email}
               onChange={this.onChange}
