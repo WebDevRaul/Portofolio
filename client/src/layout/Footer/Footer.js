@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 
 // Components
 import Form from './Form';
 import MapViewer from './MapViewer';
+import SocialMedia from './SocialMedia';
 
 // Css
 import '../../css/footer.css';
@@ -25,28 +25,7 @@ export default class Footer extends Component {
             
           </div>
           <div className='col-12 col-sm-6'>
-            <div className='social-media'>
-              <span className='p-2'>
-                <NavLink to={'/'} target='_blank'>
-                  <i className='fab fa-facebook-f fa-1x'></i>
-                </NavLink>
-              </span>
-              <span className='p-2'>
-                <NavLink to={'/'} target='_blank'>
-                  <i className='fab fa-twitter fa-1x'></i>
-                </NavLink>
-              </span>
-              <span className='p-2'>
-                <NavLink to={'/'} target='_blank'>
-                  <i className='fab fa-instagram fa-1x'></i>
-                </NavLink>
-              </span>
-              <span className='p-2'>
-                <NavLink to={'/'} target='_blank'>
-                  <i className='fab fa-linkedin-in fa-1x'></i>
-                </NavLink>
-              </span>
-            </div>
+            <SocialMedia />
           </div>
         </div>
         <div className='row no-gutters'>
