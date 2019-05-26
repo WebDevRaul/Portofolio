@@ -1,7 +1,10 @@
 :root { 
   --mainCollor: rgb(93, 93, 190);
   --secondaryCollor: rgba(97, 218, 251);
-  /* #3088f3,#7031ac */
+  --blueTop: rgb(133, 92, 220);
+  --blueBottom: rgb(47, 20, 165);
+  --redBottom: rgb(240, 143, 149);
+  --redTop: rgb(160, 40, 138);
 }
 
 html {
