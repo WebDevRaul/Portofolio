@@ -21,7 +21,10 @@ html {
   right: 20px;
   bottom: 15px;
   z-index: 1000;
-  color: var(--blueLight);
+  color: var(--blue);
+}
+.scroll-to-top-footer {
+  color: var(--blueLight) !important;
 }
 .scroll-to-top:hover {
   cursor: pointer;

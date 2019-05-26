@@ -44,6 +44,11 @@ class Form extends Component {
     const { errors } = this.props.errors;
     return (
       <form className='footer-form ml-2 mt-3'>
+        <div className='row no-gutters'>
+          <div className='col-10 col-sm-11 col-md-8 col-lg-6 m-auto'>
+            <h5 className='mb-3 text-center'>Need a website? Let's get in touch!</h5>
+          </div>
+        </div>
         <div className="row no-gutters mb-3">
           <div className='col-10 col-sm-11 col-md-8 col-lg-6 m-auto'>
             <input 

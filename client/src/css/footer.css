@@ -12,7 +12,6 @@
   position: relative;
 }
 .social-media-div {
-  /* width: 75%; */
   margin: 0 auto;
 }
 .social-media {
@@ -21,4 +20,10 @@
   height: 75px;
   border-radius: 50px;
   background: linear-gradient(35deg,var(--blue) , #343a40 55% );
+}
+.social-media-h4 {
+  margin-left: calc(10%);
+}
+.social-media-h4-border {
+  border-bottom: 2px solid var(--blueLight)
 }

@@ -4,11 +4,14 @@ class scrollToElement {
     this.top = element.top;
     this.height = element.height;
   }
-  // Get element
+  // Get element for aninmation
   get element() {
     return this.top + document.documentElement.scrollTop + (this.height / 4);
   }
-
+  // Get true element position
+  get trueElement() {
+    return this.top + document.documentElement.scrollTop;
+  }
   // Get scroll
   get scroll() {
     return document.documentElement.scrollTop + window.innerHeight;

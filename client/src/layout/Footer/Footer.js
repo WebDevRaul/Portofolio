@@ -11,7 +11,7 @@ import '../../css/footer.css';
 export default class Footer extends Component {
   render() {
     return (
-      <div className='footer bg-dark text-white'>
+      <div className='footer bg-dark text-white' id='footer'>
         <div className='row no-gutters pt-3 pl-2 pr-2'>
           <div className='col-12 col-sm-6 m-auto'>
             <MapViewer />

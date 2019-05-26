@@ -19,7 +19,8 @@ import scrollToElement from './common/ScrollToElement';
 
 class Index extends Component {
   state = {
-    scroll_to_top: false
+    scroll_to_top: false,
+    footer: false,
   }
 
   componentDidMount() {
@@ -34,7 +35,7 @@ class Index extends Component {
     const { skills, more_skills, about_me_p1, about_me_p2, about_me_p3, title } = this.props.about;
     const { binary } = this.props.project;
     const project_title = this.props.project.title;
-    const { scroll_to_top } = this.state;
+    const { scroll_to_top, footer } = this.state;
     const scrollToTop = document.documentElement.scrollTop
 
     // Find element {About}
@@ -47,6 +48,8 @@ class Index extends Component {
     // Find element {Project}
     const projectTitleElement = document.querySelector('#project-title').getBoundingClientRect();
     const projectBinaryElement = document.querySelector('#project-binary').getBoundingClientRect();
+    // Find element {Footer}
+    const footerElement = document.querySelector('#footer').getBoundingClientRect();
 
     // Create new class {About}
     const aboutTitleClass = new scrollToElement(aboutTitleElement);
@@ -58,41 +61,47 @@ class Index extends Component {
     // Create new class {Project}
     const projectTitleClass = new scrollToElement(projectTitleElement);
     const projectBinaryClass = new scrollToElement(projectBinaryElement);
+    // Create new class {Footer}
+    const footerClass = new scrollToElement(footerElement);
 
     // Resolve title animation {About}
     if ((aboutTitleClass.element < aboutTitleClass.scroll) && (title === false)) {
       this.props.setAboutTitle(true);
       // This is to hide the div on subtitle {About}
       setTimeout(() => this.props.setAboutTitleHideDiv(true), 620);
-    }
+    };
     // Resolve about-me-p1 animation {About}
     if ((aboutMeP1Class.element < aboutMeP1Class.scroll) && (about_me_p1 === false)) {
       this.props.setAboutMeP1(true);
-    }
+    };
     // Resolve about-me-p2 animation {About}
     if ((aboutMeP2Class.element < aboutMeP2Class.scroll) && (about_me_p2 === false)) {
       this.props.setAboutMeP2(true);
-    }
+    };
     // Resolve about-me-p3 animation {About}
     if ((aboutMeP3Class.element < aboutMeP3Class.scroll) && (about_me_p3 === false)) {
       this.props.setAboutMeP3(true);
-    }
+    };
     // Resolve skills animation {About}
     if ((aboutSkillClass.element < aboutSkillClass.scroll) && (skills === false)) {
       this.props.setSkills(true);
-    }
+    };
     // Resolve more-skills animation {About}
     if ((aboutMoreSkillClass.element < aboutMoreSkillClass.scroll) && (more_skills === false)) {
       this.props.setMoreSkills(true);
-    }
+    };
     // Resolve project-title animation {Project}
     if ((projectTitleClass.element < projectTitleClass.scroll) && (project_title === false)) {
       this.props.setProjectTitle(true);
-    }
+    };
     // Resolve project-binary animation {Project}
     if ((projectBinaryClass.element < projectBinaryClass.scroll) && (binary === false)) {
       this.props.setProjectBinary(true);
-    }
+    };
+    // Resolve state {Fooer}
+    if ((footerClass.trueElement < footerClass.scroll) && (footer === false)) {
+      this.setState({ footer: true });
+    };
 
     // Reset animations
     if ((scrollToTop === 0) && (more_skills || skills || about_me_p1 || about_me_p2 || about_me_p3 || title || project_title || binary || scroll_to_top)) {
@@ -105,6 +114,11 @@ class Index extends Component {
     if ((scrollToTop !== 0) && !scroll_to_top) {
       this.setState({ scroll_to_top: true });
     }
+
+    // Reset state {Footer}
+    if ((footerClass.trueElement > footerClass.scroll) && (footer === true)) {
+      this.setState({ footer: false });
+    };
     
   };
 
@@ -112,7 +126,7 @@ class Index extends Component {
     document.documentElement.scrollTop = 0;
   }
   render() {
-    const { scroll_to_top } = this.state;
+    const { scroll_to_top, footer } = this.state;
     return (
       <div className='index'>
         <section className='navbar-component'>
@@ -127,7 +141,8 @@ class Index extends Component {
         <section className='about-component'>
           <About />
         </section>
-        <div className={classnames('scroll-to-top slideInLeft', { 'hide': !scroll_to_top })} onClick={this.onClick}>
+        <div
+          className={classnames('scroll-to-top slideInLeft', { 'hide': !scroll_to_top, 'scroll-to-top-footer': footer })} onClick={this.onClick}>
           <i className="far fa-arrow-alt-circle-up"></i>
         </div>
         <section className='footer-component'>
