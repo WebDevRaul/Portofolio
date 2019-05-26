@@ -6,24 +6,44 @@
   display: block;
   position: relative;
 }
+/* Map */
 .map-viewer {
   height: 300px;
   width: 100%;
   position: relative;
 }
+/* Form */
+.request {
+  font-size: 0.9em;
+}
+.invalid-feedback h5 {
+  font-size: 1.1em !important;
+}
+/* Social-media */
 .social-media-div {
   margin: 0 auto;
 }
 .social-media {
   font-size: 1.5em;
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: 60px;
   border-radius: 50px;
   background: linear-gradient(35deg,var(--blue) , #343a40 55% );
 }
-.social-media-h4 {
+.social-media span {
+  font-size: 0.7em;
+}
+.social-media-h5 {
   margin-left: calc(10%);
 }
-.social-media-h4-border {
+.social-media-h5-border {
   border-bottom: 2px solid var(--blueLight)
+}
+.footer a:hover {
+  color: var(--blueLight);
+}
+
+/* Copy-right */
+.copy-right {
+  font-size: 0.6em;
 }

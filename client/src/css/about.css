@@ -108,7 +108,7 @@
 /* Subtitle */
 
 .subtitle-div {
-  width: 15.5em;
+  width: 13em;
   margin: 0 auto;
   border-bottom: 4px solid var(--blue);
   position: relative;
@@ -117,7 +117,7 @@
   position: relative;
   display: inline-block;
   z-index: 20;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 600;
 }
 .space {

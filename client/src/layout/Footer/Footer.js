@@ -28,10 +28,10 @@ export default class Footer extends Component {
             <SocialMedia />
           </div>
         </div>
-        <div className='row no-gutters'>
+        <div className='row no-gutters mt-2'>
           <div className='col m-auto'>
-            <div className='text-center m-3'>
-              <span>Copyright &copy; {new Date().getFullYear()} <span className='ml-2 mr-2'>by</span> Savin Raul-Calin</span>
+            <div className='text-center mt-4 mb-3 copy-right'>
+              <span>- - Copyright &copy; {new Date().getFullYear()} <span className='ml-1 mr-1'>by</span> Savin Raul-Calin - -</span>
             </div>
           </div>
         </div>

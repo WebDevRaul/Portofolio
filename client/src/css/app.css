@@ -19,7 +19,7 @@ html {
   display: block;
   position: fixed;
   right: 20px;
-  bottom: 15px;
+  bottom: 20px;
   z-index: 1000;
   color: var(--blue);
 }
@@ -82,11 +82,18 @@ a {
   .title-text {
     font-size: 1.7rem !important;
   }
+  /* Subtitle */
+  .subtitle-div {
+    width: 14em !important;
+  }
+  .subtitle-text span {
+    font-size: 0.8em !important;
+  }
   /* Project */
 
   /* Title */
   .project-title-subtitle {
-    font-size: 0.525em !important;
+    font-size: 0.6em !important;
   }
   .project-title-main-title {
     font-size: 1.1em;
@@ -111,11 +118,18 @@ a {
   .title-text {
     font-size: 1.9rem !important;
   }
+  /* Subtitle */
+  .subtitle-div {
+    width: 15.5em !important;
+  }
+  .subtitle-text span {
+    font-size: 0.9em !important;
+  }
   /* Project */
 
    /* Title */
    .project-title-subtitle {
-    font-size: 0.6em !important;
+    font-size: 0.7em !important;
   }
   .project-title-main-title {
     font-size: 1.2em;

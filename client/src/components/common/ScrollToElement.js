@@ -10,7 +10,7 @@ class scrollToElement {
   }
   // Get true element position
   get trueElement() {
-    return this.top + document.documentElement.scrollTop;
+    return this.top + document.documentElement.scrollTop + 40;
   }
   // Get scroll
   get scroll() {

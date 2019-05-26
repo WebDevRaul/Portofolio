@@ -46,7 +46,7 @@ class Form extends Component {
       <form className='footer-form ml-2 mt-3'>
         <div className='row no-gutters'>
           <div className='col-10 col-sm-11 col-md-8 col-lg-6 m-auto'>
-            <h5 className='mb-3 text-center'>Need a website? Let's get in touch!</h5>
+            <h5 className='mb-3 text-center request'>Need a website? Let's get in touch!</h5>
           </div>
         </div>
         <div className="row no-gutters mb-3">
@@ -59,7 +59,7 @@ class Form extends Component {
               value={email}
               onChange={this.onChange}
              />
-             {errors.email && <div className='invalid-feedback font-weight-bold'>{errors.email}</div>}
+             {errors.email && <div className='invalid-feedback font-weight-bold'><h5>{errors.email}</h5></div>}
           </div>
         </div>
         <div className="row no-gutters mb-3">
@@ -71,7 +71,7 @@ class Form extends Component {
               value={textarea}
               onChange={this.onChange}
             ></textarea>
-            {errors.textarea && <div className='invalid-feedback font-weight-bold'>{errors.textarea}</div>}
+            {errors.textarea && <div className='invalid-feedback font-weight-bold'><h5>{errors.textarea}</h5></div>}
           </div>
         </div>
         <div className="row no-gutters mb-3">
