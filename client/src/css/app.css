@@ -1,10 +1,7 @@
 :root { 
-  --mainCollor: rgb(93, 93, 190);
-  --secondaryCollor: rgba(97, 218, 251);
-  --blueTop: rgb(133, 92, 220);
-  --blueBottom: rgb(47, 20, 165);
-  --redBottom: rgb(240, 143, 149);
-  --redTop: rgb(160, 40, 138);
+  --blue: rgb(67, 28, 175);
+  --blueLight: rgba(97, 218, 251);
+  --red: rgb(180, 48, 145);
 }
 
 html {
@@ -24,7 +21,7 @@ html {
   right: 20px;
   bottom: 15px;
   z-index: 1000;
-  color: var(--mainCollor);
+  color: var(--blueLight);
 }
 .scroll-to-top:hover {
   cursor: pointer;

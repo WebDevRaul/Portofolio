@@ -51,9 +51,9 @@ class Landing extends Component {
       setInterval(() => this.setState({ turn: true }),2000);
     }
     // Redirect on home when cicle i complete
-    // if (prevState.turn !== turn) {
-    //     setInterval(() => window.location.href = '/home', 5000)
-    //   }
+    if (prevState.turn !== turn) {
+        setInterval(() => window.location.href = '/home', 5000)
+      }
     };
 
     render() {

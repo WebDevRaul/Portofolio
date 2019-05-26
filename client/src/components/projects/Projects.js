@@ -21,7 +21,7 @@ export default class Projects extends Component {
   render() {
     return (
       <div className='projects' id='projects'>
-        <div className='container'>
+        <div className='container-fluid p-0'>
           <div className='row no-gutters'>
             <div className='col'>
               <Title />

@@ -1,5 +1,10 @@
 @import './app.css';
 
+.projectCard {
+  background: 
+  linear-gradient(rgba(97, 218, 251,0), var(--blueLight)10% 90%, rgba(97, 218, 251,0) 100%);
+}
+
 /* Title */
 .project-title-main-title {
   padding: 2em 1em 0em 1em;
@@ -22,8 +27,8 @@
 .project-title-div-heading {
   display: inline-block;
   padding: 12px 5px;
-  color: var(--secondaryCollor);
-  border: 5px solid var(--secondaryCollor);
+  color: var(--blueLight);
+  border: 5px solid var(--blueLight);
   border-bottom-left-radius: 25%;
   border-top-right-radius: 25%;
 }
@@ -55,7 +60,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  outline: 5px solid var(--secondaryCollor);
+  outline: 5px solid var(--blueLight);
   z-index: 10;
 }
 .project-image-slide-card-border:hover {
@@ -188,7 +193,7 @@
 
 .cardItemTitleBorder h5 span{
   padding-bottom: 3px;
-  border-bottom: 2px solid var(--secondaryCollor);
+  border-bottom: 2px solid var(--blueLight);
 }
 
 .card-item-link a{
@@ -199,7 +204,7 @@
   right: 5%;
 }
 .card-item-link a:hover{
-  color: var(--secondaryCollor) !important;
+  color: var(--blueLight) !important;
 }
 .logo-wrapper-font-size {
   font-size: 1em;
@@ -209,8 +214,8 @@
 }
 
 .active-card {
-  -webkit-box-shadow: 0px 10px 80px var(--secondaryCollor) !important;
-  box-shadow: 0px 10px 80px var(--secondaryCollor) !important;
+  -webkit-box-shadow: 0px 10px 80px var(--blueLight) !important;
+  box-shadow: 0px 10px 80px var(--blueLight) !important;
 }
 
 /* //  //  //  //  //  //  //  //  //  // */

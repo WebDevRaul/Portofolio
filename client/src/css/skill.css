@@ -15,7 +15,7 @@
   height: 6.25em;	
   border-radius: 50%;	
   background: linear-gradient(35deg, 
-  var(--secondaryCollor) 0%, 
+  var(--blueLight) 0%, 
   rgba(255, 255, 255, 0.7) 50% );
 }
 

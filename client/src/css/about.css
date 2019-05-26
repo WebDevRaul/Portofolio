@@ -37,7 +37,7 @@
   position: relative;
 }
 .title-text span {
-  color: var(--mainCollor);
+  color: var(--blue);
 }
 .title-div > :first-child {
   height: 20px;
@@ -110,7 +110,7 @@
 .subtitle-div {
   width: 15.5em;
   margin: 0 auto;
-  border-bottom: 4px solid var(--mainCollor);
+  border-bottom: 4px solid var(--blue);
   position: relative;
 }
 .subtitle-text span {
@@ -353,7 +353,7 @@
 /* About me */
 .about-me-bio > p > span {
   font-size: 2em;
-  color: var(--mainCollor);
+  color: var(--blue);
 }
 
 /* About me bio animation */

@@ -1,3 +1,5 @@
+@import './app.css';
+
 .footer {
   height: 100%;
   width: 100%;
@@ -18,7 +20,5 @@
   width: 75px;
   height: 75px;
   border-radius: 50px;
-  background: linear-gradient(35deg, 
-  white 0%, 
-  #343a40 55% );
+  background: linear-gradient(35deg,var(--blue) , #343a40 55% );
 }

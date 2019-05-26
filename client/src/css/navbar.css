@@ -1,6 +1,9 @@
+@import './app.css';
+
 /* Navbar */
 .navbar {
-  background: #fff !important;
+  background: #343a40 !important;
+  color: white;
   overflow: hidden;
   width: 100%;
   position: fixed;
@@ -11,9 +14,12 @@
 .navbar--hidden {
   top: -75px;
 }
+.nav-link {
+  color: white;
+}
 .nav-link:hover {
   cursor: pointer;
-  color: black !important;
+  color: var(--blueLight) !important;
 }
 
 /* Navbar btn */

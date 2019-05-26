@@ -14,10 +14,7 @@
   height: 45vh;
   width: 55vw;
   transform: scale(1);
-  background: 
-    linear-gradient(to top left, var(--blueTop),rgba(255, 255, 255, 0), var(--redTop)),
-    linear-gradient(to top right, var(--redBottom),rgba(255, 255, 255, 0), var(--blueBottom)),
-    rgb(133, 92, 220);
+  background: linear-gradient(to left, var(--blue), var(--red));
   z-index: -10;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
