@@ -56,9 +56,7 @@ a {
   /* Title */
   .title-div {
     font-size: 0.8em !important;
-    border: 8px solid black !important;
-    width: 14.5em !important;
-    height: 4.1em !important;
+    border: 8px solid var(--blue) !important;
   }
   .title-text {
     font-size: 1.7rem !important;
@@ -86,25 +84,23 @@ a {
   }
 }
 
-@media (min-width: 481px) and (max-width: 576px) {
+@media (min-width: 481px) and (max-width: 575px) {
   /* About */
 
   /* Title */
   .title-div {
-    font-size: 0.9em !important;
-    border: 9px solid black !important;
-    width: 14.5em !important;
-    height: 4.1em !important;
+    font-size: 0.8em !important;
+    border: 8px solid var(--blue) !important;
   }
   .title-text {
-    font-size: 1.9rem !important;
+    font-size: 1em !important;
   }
   /* Subtitle */
   .subtitle-div {
-    width: 15.5em !important;
+    width: 14em !important;
   }
   .subtitle-text span {
-    font-size: 0.9em !important;
+    font-size: 0.8em !important;
   }
   /* Project */
 
@@ -149,13 +145,11 @@ a {
 
   /* Title */
   .title-div {
-    font-size: 1em !important;
-    border: 10px solid black !important;
-    width: 14.5em !important;
-    height: 4.1em !important;
+    font-size: 0.8em !important;
+    border: 8px solid var(--blue) !important;
   }
   .title-text {
-    font-size: 2rem !important;
+    font-size: 1em !important;
   }
   /* Project */
 
@@ -206,17 +200,27 @@ a {
 }
   
 @media (min-width : 768px) and (max-width : 1024px) {
+  /* About */
+
+  /* Title */
+  .title-div {
+    font-size: 0.8em !important;
+    border: 8px solid var(--blue) !important;
+  }
+  .title-text {
+    font-size: 1em !important;
+  }
   /* Project */
 
    /* Title */
    .project-title-subtitle {
-    font-size: 0.9em !important;
+    font-size: 0.8em !important;
   }
   .project-title-div-heading {
     padding: 16px 8px !important;
   }
   .project-title-main-title {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   /* & Project-list */
@@ -252,6 +256,23 @@ a {
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+  /* About */
+
+  /* Title */
+  .title-div {
+    font-size: 0.9em !important;
+    border: 9px solid var(--blue) !important;
+  }
+  .title-text {
+    font-size: 1.1em !important;
+  }
+  /* Subtitle */
+  .subtitle-div {
+    width: 14.5em !important;
+  }
+  .subtitle-text span {
+    font-size: 0.8em !important;
+  }
   /* Project */
 
    /* Title */
@@ -262,7 +283,7 @@ a {
     padding: 20px 10px !important;
   }
   .project-title-main-title {
-    font-size: 1.4em !important;
+    font-size: 1.2em !important;
   }
   
   /* & ProjectCard */
@@ -306,17 +327,34 @@ a {
 }
 
 @media (min-width: 1281px) {
+    /* About */
+
+  /* Title */
+  .title-div {
+    font-size: 0.9em !important;
+    border: 9px solid var(--blue) !important;
+  }
+  .title-text {
+    font-size: 1.1em !important;
+  }
+  /* Subtitle */
+  .subtitle-div {
+    width: 14.5em !important;
+  }
+  .subtitle-text span {
+    font-size: 0.8em !important;
+  }
   /* Project */
 
   /* Title */
   .project-title-subtitle {
-    font-size: 1.2em !important;
+    font-size: 1em !important;
   }
   .project-title-div-heading {
     padding: 20px 10px !important;
   }
   .project-title-main-title {
-    font-size: 1.6em !important;
+    font-size: 1.2em !important;
   }
   
   /* & ProjectCard */

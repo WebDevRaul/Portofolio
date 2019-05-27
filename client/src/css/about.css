@@ -44,7 +44,7 @@
 .title-div > :first-child {
   height: 20px;
   display: block;
-  width: calc(40%);
+  width: 10em;
   background: white;
   position: absolute;
   top: 6%;

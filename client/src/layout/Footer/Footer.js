@@ -22,7 +22,7 @@ export default class Footer extends Component {
         </div>
         <div className='row no-gutters mt-3 mb-3'>
           <div className='col-12 col-sm-6'>
-            
+            logo
           </div>
           <div className='col-12 col-sm-6'>
             <SocialMedia />
