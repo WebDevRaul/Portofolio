@@ -1,0 +1,26 @@
+
+/* Responsive */
+.responsive-mac, .responsive-ipad, .responsive-phone {
+  position: relative;
+}
+.responsive-mac span, .responsive-ipad span, .responsive-phone span{
+  font-size: 1.2em;
+  position: absolute;
+  left: 50%;
+  top: 37%;
+  transform: translate(-50%,-37%);
+}
+.responsive-ipad-div {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgb(255, 255, 255) 20% 80%, rgba(255, 255, 255, 0) 80%);
+  z-index: 10;
+}
+.responsive-ipad span{
+  font-size: 0.8em;
+}
+.responsive-phone-div {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 28%, rgb(255, 255, 255) 20% 73%, rgba(255, 255, 255, 0) 73%);
+  z-index: 10;
+}
+.responsive-phone-div span{
+  font-size: 0.5em;
+}
