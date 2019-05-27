@@ -25,8 +25,9 @@
 }
 .social-media {
   font-size: 1.5em;
-  width: 60px;
-  height: 60px;
+  margin: 8px;
+  width: 55px;
+  height: 55px;
   border-radius: 50px;
   background: linear-gradient(35deg,var(--blue) , #343a40 55% );
 }
@@ -34,7 +35,7 @@
   font-size: 0.7em;
 }
 .social-media-h5 {
-  margin-left: calc(10%);
+  margin-left: calc(20%);
 }
 .social-media-h5-border {
   border-bottom: 2px solid var(--blueLight)
