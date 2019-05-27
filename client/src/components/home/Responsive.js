@@ -5,9 +5,9 @@ import Devices from '../../assets/svg/Devices';
 
 export default class Responsive extends Component {
   render() {
-    const mac = '15em';
-    const ipad = '8em';
-    const phone = '6em';
+    const mac = '13em';
+    const ipad = '7em';
+    const phone = '5em';
     return (
       <div className='responsive'>
         <div className='container'>
@@ -20,7 +20,7 @@ export default class Responsive extends Component {
             <div className='col-12 col-sm-6 d-flex'>
               <div className='m-auto'>text</div>
             </div>
-            <div className='col-12 col-sm-6 d-flex'>
+            <div className='col-12 col-sm-6 col-md-4 d-flex'>
               <div className='m-auto'>
                 <div className='responive-devices d-flex'>
                   <div className='responsive-mac'>
