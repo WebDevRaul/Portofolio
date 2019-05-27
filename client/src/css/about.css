@@ -16,9 +16,11 @@
 }
 
 .title-div {
-  border: 12px solid black;
+  font-size: 0.7em;
   width: 15.5em;
-  height: 5.1em;
+  height: 4.1em;
+  border: 7px solid var(--blue);
+  border-radius: 10px;
   display: block;
   overflow: hidden;
   white-space: nowrap;
@@ -29,7 +31,7 @@
   transform: translateY(-50%);
 }
 .title-text {
-  font-size: 2.5rem;
+  font-size: 0.9em;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -42,7 +44,7 @@
 .title-div > :first-child {
   height: 20px;
   display: block;
-  width: 11em;
+  width: calc(40%);
   background: white;
   position: absolute;
   top: 6%;
@@ -54,7 +56,7 @@
 .title-div > :nth-last-child(1) {
   height: 20px;
   display: block;
-  width: 11em;
+  width: 12em;
   background: white;
   position: absolute;
   top: 95%;
@@ -370,6 +372,7 @@
 /* Photo */
 
 .about-me-photo {
+  font-size: 0.9em;
   height: 18em;
   width: 15em;
   padding: 20px;

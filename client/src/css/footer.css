@@ -36,6 +36,7 @@
 }
 .social-media-h5 {
   margin-left: calc(20%);
+  font-size: 1em;
 }
 .social-media-h5-border {
   border-bottom: 2px solid var(--blueLight)
