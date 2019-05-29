@@ -22,7 +22,7 @@ export default class Responsive extends Component {
             </div>
             <div className='col-12 col-sm-6 col-md-4 d-flex'>
               <div className='m-auto'>
-                <div className='responive-devices d-flex'>
+                <div className='responive-devices'>
                   <div className='responsive-mac'>
                     <Devices.Mac width={mac} height={mac} />
                     <span>&#123; Responsive &#125;</span>
