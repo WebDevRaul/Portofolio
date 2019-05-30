@@ -1,5 +1,10 @@
+@import './app.css';
 
 /* Responsive */
+.home {
+  background: 
+  linear-gradient(rgba(97, 218, 251,0), var(--blueLight)10% 90%, rgba(97, 218, 251,0) 100%);
+}
 .responive-devices {
   position: relative;
   font-size: 0.95em;
@@ -16,7 +21,7 @@
   transform: translate(-50%,-37%);
 }
 .responsive-ipad-div {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgb(255, 255, 255) 20% 80%, rgba(255, 255, 255, 0) 80%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, var(--blueLight) 20% 80%, rgba(255, 255, 255, 0) 80%);
   position: absolute;
   bottom: 0%;
   left: -30%;
@@ -25,7 +30,7 @@
   font-size: 0.7em;
 }
 .responsive-phone-div {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 28%, rgb(255, 255, 255) 20% 73%, rgba(255, 255, 255, 0) 73%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 28%, var(--blueLight) 20% 73%, rgba(255, 255, 255, 0) 73%);
   position: absolute;
   bottom: 0%;
   left: 0%;
@@ -37,7 +42,7 @@
 /* List */
 .fa-li {
   left: -1.5em !important;
-  top: -0.15em !important;
+  top: 0.4em !important;
 }
 .responsive-list i {
   font-size: 0.4em;

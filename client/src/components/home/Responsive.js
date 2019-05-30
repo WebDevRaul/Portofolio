@@ -9,15 +9,15 @@ export default class Responsive extends Component {
     const ipad = '7em';
     const phone = '5em';
     return (
-      <div className='responsive pt-3'>
+      <div className='responsive pt-5 pb-5'>
         <div className='container'>
           <div className='row no-gutters'>
             <div className='col-12 col-sm-6 d-flex'>
               <div className='responsive-list m-auto'>
-                <ul className='fa-ul'>
-                  <li><span class="fa-li" ><i class="fas fa-asterisk"></i></span><h5>Webiste design</h5></li>
-                  <li><span class="fa-li" ><i class="fas fa-asterisk"></i></span><h5>Webiste support</h5></li>
-                  <li><span class="fa-li" ><i class="fas fa-asterisk"></i></span><h5>Webiste Review</h5></li>
+                <ul className='fa-ul m-0'>
+                  <li>
+                    <span class="fa-li" ><i class="fas fa-asterisk"></i></span>
+                    <h1 className='mb-0'>Website design</h1></li>
                 </ul>
               </div>
             </div>
@@ -44,11 +44,11 @@ export default class Responsive extends Component {
                   </div>
                 </div>
               </div>
-              <h5 className='text-center'><small>Responsive design that looks great on any device</small></h5>
+              <h5 className='text-center mt-3'><small>Responsive design that looks great on any device.</small></h5>
             </div>
           </div>
         </div>
       </div>
-    )
-  }
-}
+    );
+  };
+};
