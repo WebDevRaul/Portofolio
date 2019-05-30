@@ -33,3 +33,12 @@
 .responsive-phone-div span{
   font-size: 0.4em;
 }
+
+/* List */
+.fa-li {
+  left: -1.5em !important;
+  top: -0.15em !important;
+}
+.responsive-list i {
+  font-size: 0.4em;
+}

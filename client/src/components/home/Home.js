@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from "react-router-dom";
 
 // Components
 import Responsive from './Responsive';
@@ -8,10 +7,6 @@ import Responsive from './Responsive';
 import '../../css/home.css';
 
 class Home extends Component {
-
-  onClick = () => {
-    window.location.href = '/';
-  }
   render() {
     return (
       <div className='home' id='home'>
@@ -27,4 +22,4 @@ class Home extends Component {
   }
 }
 
-export default withRouter(Home);
+export default Home;
