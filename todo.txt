@@ -1,6 +1,7 @@
 popout msg on successffull email
 fix allw me to intr myself animation
 media 480
+fix @ media landscape
 
     let scrollTop = window.pageYOffset || el.getBoundingClientRect().top;
     document.documentElement.scrollTop = scrollTop;

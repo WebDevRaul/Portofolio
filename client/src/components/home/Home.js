@@ -10,13 +10,13 @@ class Home extends Component {
   render() {
     return (
       <div className='home pt-5' id='home'>
-        <div className='row no-gutters'>
+        <div className='div-center'>
+          <div className='row no-gutters'>
             <div className='col'>
-              <div className='container-fluid mt-5 mb-5'>
-                <Responsive />
-              </div>
+              <Responsive />
             </div>
           </div>
+        </div>
       </div>
     )
   }

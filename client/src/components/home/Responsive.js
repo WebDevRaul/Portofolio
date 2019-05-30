@@ -9,7 +9,7 @@ export default class Responsive extends Component {
     const ipad = '7em';
     const phone = '5em';
     return (
-      <div className='responsive pt-5 pb-5'>
+      <div className='responsive'>
         <div className='container'>
           <div className='row no-gutters'>
             <div className='col-12 col-sm-6 d-flex'>

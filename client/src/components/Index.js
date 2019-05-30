@@ -132,7 +132,7 @@ class Index extends Component {
         <section className='navbar-component'>
           <Navbar />
         </section>
-        <section className='home-components'>
+        <section className='home-component'>
           <Home />
         </section>
         <section className='project-component'>
