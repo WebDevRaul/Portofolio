@@ -4,10 +4,72 @@ import React, { Component } from 'react';
 import Devices from '../../assets/svg/Devices';
 
 export default class Responsive extends Component {
+  constructor() {
+    super();
+    this.state = {
+      txt: '',
+			word: '',
+			wordIndex: 0,
+      isDeleting: false,
+      arr: ['Design', 'Support','Review'],
+      wait: 1500
+    };
+  };
+
+  componentDidMount() {
+    this.tick();
+  };
+
+  tick = () => {
+    const { txt, fullTxt, wordIndex, isDeleting, arr, wait } = this.state;
+    
+    // Timer for func
+    let timer = 300 - Math.random() * 100;
+    // Current index of word
+    let i = wordIndex % arr.length;
+    // Current word
+    let word = arr[i];
+    
+    // Check if deleting
+    if (isDeleting) {
+      // remove
+      this.setState({ txt: word.substring(0, txt.length - 1) })
+    } 
+    else {
+      // add
+      this.setState({ txt: word.substring(0, txt.length + 1) })
+    }
+
+    // Start deleting state 
+    if (!isDeleting && txt === word) {
+      this.setState({ isDeleting: true })
+    } 
+    // Start again
+    else if (isDeleting && txt === '') {
+      this.setState({ isDeleting: false, wordIndex: wordIndex + 1 })
+    }
+
+    this.setState({ fullTxt: word });
+
+    // Set Timer faster when deleting
+    if (isDeleting) { timer /= 2; }
+    // Set Timer to wait before deleting
+    if (!isDeleting && txt === fullTxt) {
+      timer = wait;
+    } 
+    // Set Timer to normal
+    else if (isDeleting && txt === '') {
+      timer = 500;
+    }
+    // recall function
+    setTimeout(() => this.tick(), timer); 
+	};
+
   render() {
     const mac = '13em';
     const ipad = '7em';
     const phone = '5em';
+    const { txt } = this.state;
     return (
       <div className='responsive'>
         <div className='container'>
@@ -16,8 +78,13 @@ export default class Responsive extends Component {
               <div className='responsive-list m-auto'>
                 <ul className='fa-ul m-0'>
                   <li>
-                    <span class="fa-li" ><i class="fas fa-asterisk"></i></span>
-                    <h1 className='mb-0'>Website design</h1></li>
+                    <span className="fa-li" ><i className="fas fa-asterisk"></i></span>
+                    <h1 className='type-writer d-flex'>Website
+                      <span className='d-flex ml-2'>{txt}
+                        <small className='m-auto fadeInOut'>|</small>
+                      </span>
+                    </h1>
+                    </li>
                 </ul>
               </div>
             </div>
@@ -44,7 +111,9 @@ export default class Responsive extends Component {
                   </div>
                 </div>
               </div>
-              <h5 className='text-center mt-3'><small>Responsive design that looks great on any device.</small></h5>
+              <h5 className='text-center mt-3'>
+                <small><i>Responsive design that looks great on any device.</i></small>
+              </h5>
             </div>
           </div>
         </div>
