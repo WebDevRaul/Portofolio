@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 // Redux
 import { connect } from 'react-redux';
-import { setEmail } from '../../redux/actions/email';
+import { setEmail, clearEmail } from '../../redux/actions/email';
 import { clearError } from '../../redux/actions/errors';
 
 // Common
@@ -21,8 +21,12 @@ class Form extends Component {
 
   componentDidUpdate(prevState, prevProps) {
     const { errors } = this.props.errors;
+    const { email } = this.props.email;
     if ((prevProps.errors !== errors) && !isEmpty(errors)) {
       setTimeout(() => this.props.clearError(), 4000);
+    };
+    if ((prevProps.email !== email) && email) {
+      setTimeout(() => this.props.clearEmail(), 4000);
     };
   };
 
@@ -40,6 +44,7 @@ class Form extends Component {
     this.setState({ email: '', textarea: '' });
   };
   render() {
+    const email_prop = this.props.email.email;
     const { email, textarea } = this.state;
     const { errors } = this.props.errors;
     return (
@@ -59,7 +64,8 @@ class Form extends Component {
               value={email}
               onChange={this.onChange}
              />
-             {errors.email && <div className='invalid-feedback font-weight-bold'><h5>{errors.email}</h5></div>}
+             {errors.email && <div className='invalid-feedback text-center font-weight-bold'><h5>{errors.email}</h5></div>}
+             <div className={classnames('valid-feedback text-center', { 'hide': !email_prop })}><h5>E-mail send successfully.</h5></div>
           </div>
         </div>
         <div className="row no-gutters mb-3">
@@ -71,7 +77,7 @@ class Form extends Component {
               value={textarea}
               onChange={this.onChange}
             ></textarea>
-            {errors.textarea && <div className='invalid-feedback font-weight-bold'><h5>{errors.textarea}</h5></div>}
+            {errors.textarea && <div className='invalid-feedback text-center font-weight-bold'><h5>{errors.textarea}</h5></div>}
           </div>
         </div>
         <div className="row no-gutters mb-3">
@@ -86,11 +92,14 @@ class Form extends Component {
 
 Form.propTypes = {
   setEmail: PropTypes.func.isRequired,
+  clearEmail: PropTypes.func.isRequired,
+  clearError: PropTypes.func.isRequired,
   errors: PropTypes.object.isRequired
 }
 
 const mapStateToProps = state => ({
-  errors: state.errors
+  errors: state.errors,
+  email: state.email
 });
 
-export default connect(mapStateToProps, { setEmail, clearError })(Form)
+export default connect(mapStateToProps, { setEmail, clearError, clearEmail })(Form)

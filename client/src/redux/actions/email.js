@@ -15,3 +15,10 @@ export const setEmail = data => dispatch => {
       payload: err.response.data
     }));
 };
+
+// Clear Email
+export const clearEmail  = () => {
+  return { 
+    type: EMAIL.CLEAR_EMAIL
+  };
+};

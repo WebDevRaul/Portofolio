@@ -16,8 +16,9 @@
 .request {
   font-size: 0.9em;
 }
-.invalid-feedback h5 {
+.invalid-feedback h5, .valid-feedback h5 {
   font-size: 1.1em !important;
+  margin: 0;
 }
 /* Social-media */
 .social-media-div {

@@ -37,7 +37,7 @@ router.post('/send-email', (req, res) => {
       if (error) {
           return console.log(error, 'error');
       }
-      res.json({ success: 'E-mail send' })
+      res.json({ success: true })
     });
   }
 });

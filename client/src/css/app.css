@@ -50,6 +50,11 @@ a {
   text-decoration: none !important;
 }
 
+/* Footer */
+.valid-feedback {
+  display: block !important;
+}
+
 @media (min-width : 420px) and (max-width : 480px) {
     /* About */
 
