@@ -48,11 +48,11 @@ class Landing extends Component {
     }
     // Turn card
     if (prevState.level !== level) {
-      setInterval(() => this.setState({ turn: true }),2000);
+      // setInterval(() => this.setState({ turn: true }),2000);
     }
     // Redirect on home when cicle i complete
     if (prevState.turn !== turn) {
-        setInterval(() => window.location.href = '/home', 5000)
+        // setInterval(() => window.location.href = '/home', 5000)
       }
     };
 
@@ -64,7 +64,7 @@ class Landing extends Component {
       <div className={classnames('d-flex landing-full-stack', { 'hide': !hide })}>
         <div className='d-flex ml-auto'>
           <span className='scaleDown'>F</span>
-          <span className={classnames('', {'show mr-3': show, 'hide': !show})}>ull</span>
+          <span className={classnames('', {'show mr-2': show, 'hide': !show})}>ull</span>
         </div>
         <div className='d-flex mr-auto'>
           <span className='scaleDown'>S</span>
@@ -79,7 +79,7 @@ class Landing extends Component {
           <span className='slide-in-left'>Web</span>
         </div>
         <div className='d-flex mr-auto'>
-          <span className='slide-in-right ml-3'>Developer</span>
+          <span className='slide-in-right ml-2'>Developer</span>
         </div>
       </div>
     );

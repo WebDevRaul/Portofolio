@@ -11,8 +11,8 @@
   transform: translate(-50%,-50%);
 }
 .landing-loading-card {
-  height: 45vh;
-  width: 55vw;
+  height: 40vh;
+  width: 80vw;
   transform: scale(1);
   background: linear-gradient(to left, var(--blue), var(--red));
   z-index: -10;
@@ -44,13 +44,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  font-size: 3em;
+  font-size: 1.2em;
   font-family: 'Lato', sans-serif;
   z-index: 10;
 }
 .landing-full-stack {
   color: white;
-  font-size: 3.5em;
+  font-size: 1.5em;
   transition: font-size 1s;
   -webkit-transition: font-size 1s;
   -moz-transition: font-size 1s;
@@ -59,7 +59,7 @@
 }
 .landing-web-developer {
   color: white;
-  font-size: 3.5rem;
+  font-size: 1.5em;
 }
 .landing-web-developer .ml-auto > span {
   transform: translateX(-100%);
@@ -77,7 +77,7 @@
 }
 .landing-level span{
   color: white;
-  font-size: 3.5rem;
+  font-size: 1.5em;
   transform: translateY(150%);
   -webkit-transform: translateY(150%);
   -moz-transform: translateY(150%);
