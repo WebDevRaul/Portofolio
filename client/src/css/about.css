@@ -68,10 +68,10 @@
 .text-hide-div {
   height: 20px;
   display: block;
-  width: 15.5em;
-  background: white;
+  width: 17.5em;
+  background: red;
   position: absolute;
-  top: 135%;
+  top: 160%;
   bottom: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

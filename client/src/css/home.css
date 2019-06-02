@@ -52,6 +52,9 @@
   left: -1.5em !important;
   top: 0.4em !important;
 }
+.responsive-list {
+  font-size: 0.8em;
+}
 .responsive-list i {
   font-size: 0.4em;
 }

@@ -273,6 +273,9 @@ a {
   .subtitle-text span {
     font-size: 0.8em !important;
   }
+  .text-hide-div {
+    top: 150% !important;
+  }
   /* Project */
 
    /* Title */
@@ -318,7 +321,6 @@ a {
   .project-slide-wrapper {
     margin-left: 10px !important;
   }
-  
   .right, .left {
     height: 188px !important;
     width: 200px !important;
@@ -343,6 +345,9 @@ a {
   }
   .subtitle-text span {
     font-size: 0.8em !important;
+  }
+  .text-hide-div {
+    top: 150% !important;
   }
   /* Project */
 

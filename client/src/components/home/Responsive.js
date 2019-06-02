@@ -77,7 +77,7 @@ export default class Responsive extends Component {
       <div className='responsive'>
         <div className='container'>
           <div className='row no-gutters'>
-            <div className='col-12 col-sm-6 d-flex'>
+            <div className='col-12 col-sm-12 col-md-6 col-lg-5 col-xl-4 d-flex'>
               <div className='responsive-list m-auto'>
                 <ul className='fa-ul m-0'>
                   <li>
@@ -91,7 +91,7 @@ export default class Responsive extends Component {
                 </ul>
               </div>
             </div>
-            <div className='col-12 col-sm-6 col-md-6 d-block'>
+            <div className='col-12 col-sm-12 col-md-6 col-lg-7 col-xl-8 d-block'>
               <div className='d-flex'>
                 <div className='m-auto'>
                   <div className='responive-devices'>
