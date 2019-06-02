@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 
 // Devices
 import Devices from '../../assets/svg/Devices';
@@ -11,8 +12,8 @@ export default class Responsive extends Component {
 			word: '',
 			wordIndex: 0,
       isDeleting: false,
-      arr: ['Design', 'Support','Review'],
-      wait: 1500
+      arr: ['Development','Design', 'Support','Review'],
+      wait: 1000
     };
   };
 
@@ -52,7 +53,9 @@ export default class Responsive extends Component {
     this.setState({ fullTxt: word });
 
     // Set Timer faster when deleting
-    if (isDeleting) { timer /= 2; }
+    if (isDeleting) { 
+      timer /= 2; 
+    }
     // Set Timer to wait before deleting
     if (!isDeleting && txt === fullTxt) {
       timer = wait;
@@ -63,7 +66,7 @@ export default class Responsive extends Component {
     }
     // recall function
     setTimeout(() => this.tick(), timer); 
-	};
+  };
 
   render() {
     const mac = '13em';
@@ -81,7 +84,7 @@ export default class Responsive extends Component {
                     <span className="fa-li" ><i className="fas fa-asterisk"></i></span>
                     <h1 className='type-writer d-flex'>Website
                       <span className='d-flex ml-2'>{txt}
-                        <small className='m-auto fadeInOut'>|</small>
+                        <small className='m-auto'>|</small>
                       </span>
                     </h1>
                     </li>

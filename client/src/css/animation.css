@@ -98,17 +98,6 @@
 /* //  //  //  //  //  //  //  //  //  // */
 /* //  //  //  //  //  //  //  //  //  // */
 
-.fadeInOut {
-  animation: fadeInOut 1s infinite;
-  -webkit-animation: fadeInOut 1s infinite;
-  -moz-animation: fadeInOut 1s infinite;
-  -ms-animation: fadeInOut 1s infinite;
-  -o-animation: fadeInOut 1s infinite;
-}
-
-/* //  //  //  //  //  //  //  //  //  // */
-/* //  //  //  //  //  //  //  //  //  // */
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -228,12 +217,3 @@
 /* //  //  //  //  //  //  //  //  //  // */
 /* //  //  //  //  //  //  //  //  //  // */
 
-
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-  }
-  100% { 
-    opacity: 1;
-  }
-}
