@@ -1,2 +1,0 @@
-popout msg on successffull email
-fix @ media landscape

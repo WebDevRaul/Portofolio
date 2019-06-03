@@ -146,6 +146,17 @@ a {
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+  /* Landing */
+  .landing-loading-card {
+    height: 50vh !important;
+    width: 60vw !important;
+  }
+  .landing-full-stack, .landing-web-developer, .landing-level span {
+    font-size: 2em !important
+  }
+  .landing-number-div {
+    font-size: 1.5em !important;
+  }
   /* About */
 
   /* Title */
@@ -205,6 +216,14 @@ a {
 }
   
 @media (min-width : 768px) and (max-width : 1024px) {
+  /* Landing */
+  .landing-number-div {
+    font-size: 2em !important;
+  }
+  .landing-full-stack, .landing-web-developer, .landing-level span {
+    font-size: 2.51em !important
+  }
+  
   /* About */
 
   /* Title */
@@ -261,6 +280,27 @@ a {
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+    /* Landing */
+  .landing-loading-card {
+    height: 50vh !important;
+    width: 50vw !important;
+  }
+  .landing-full-stack, .landing-web-developer, .landing-level span {
+    font-size: 2.51em !important
+  }
+  .landing-number-div {
+    font-size: 2em !important;
+  }
+   /* Home */
+   .responive-devices {
+    font-size: 1.3em !important;
+  }
+  small {
+    font-size: 1.3em !important;
+  }
+  .responsive-list {
+    font-size: 1.2em !important;
+  }
   /* About */
 
   /* Title */
@@ -334,6 +374,27 @@ a {
 }
 
 @media (min-width: 1281px) {
+    /* Landing */
+  .landing-loading-card {
+    height: 50vh !important;
+    width: 50vw !important;
+  }
+  .landing-full-stack, .landing-web-developer, .landing-level span {
+    font-size: 2.51em !important
+  }
+  .landing-number-div {
+    font-size: 2em !important;
+  }
+    /* Home */
+  .responive-devices {
+    font-size: 1.3em !important;
+  }
+  small {
+    font-size: 1.3em !important;
+  }
+  .responsive-list {
+    font-size: 1.2em !important;
+  }
     /* About */
 
   /* Title */

@@ -48,11 +48,11 @@ class Landing extends Component {
     }
     // Turn card
     if (prevState.level !== level) {
-      // setInterval(() => this.setState({ turn: true }),2000);
+      setInterval(() => this.setState({ turn: true }),2000);
     }
     // Redirect on home when cicle i complete
     if (prevState.turn !== turn) {
-        // setInterval(() => window.location.href = '/home', 5000)
+        setInterval(() => window.location.href = '/home', 5000)
       }
     };
 
