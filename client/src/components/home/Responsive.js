@@ -114,7 +114,7 @@ export default class Responsive extends Component {
                   </div>
                 </div>
               </div>
-              <h5 className='text-center mt-3'>
+              <h5 className='text text-center mt-3'>
                 <small><i>Responsive design that looks great on any device.</i></small>
               </h5>
             </div>
