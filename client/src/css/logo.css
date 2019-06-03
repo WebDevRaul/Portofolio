@@ -1,0 +1,54 @@
+@import './app.css';
+.logo-navbar {
+  padding-bottom: 15px;
+}
+
+.logo {
+  position: relative;
+}
+.logo span {
+  position: absolute;
+  z-index: 30;
+}
+.logo :nth-child(1) {
+  font-family: 'Playfair Display SC', serif !important;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.logo :nth-child(2) {
+  font-family: 'Playfair Display SC', serif !important;
+  color: white;
+  top: -3%;
+  left: -20%;
+  transform: translate(20%, -3%);
+  background: #343a40;
+  padding: 2px 12px;
+}
+.logo::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--blueLight);
+  background: #343a40;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 20;
+}
+.logo::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--red);
+  background: #343a40;
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  transform: translate(10%,-10%);
+  z-index: 10;
+}

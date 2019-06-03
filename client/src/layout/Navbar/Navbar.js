@@ -151,7 +151,9 @@ class Navbar extends Component {
     const { show, openBorder, hideBorder, closeBorder, hideFirst, hideSecond, hideThird, openButton, closeButton, returnAnimation, hideButton, visible } = this.state;
     return (
       <nav className={classnames('navbar navbar-expand-lg navbar-light', {"navbar--hidden": !visible})}>
-        <Logo />
+        <div className='ml-3 mr-1 logo-navbar'>
+          <Logo />
+        </div>
         <div 
           className='btn-div navbar-toggler p-0 border-0'
           onClick={this.onButton}

@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Form from './Form';
 import MapViewer from './MapViewer';
 import SocialMedia from './SocialMedia';
+import Logo from '../Logo';
 
 // Css
 import '../../css/footer.css';
@@ -21,8 +22,10 @@ export default class Footer extends Component {
           </div>
         </div>
         <div className='row no-gutters mt-3 mb-3'>
-          <div className='col-12 col-sm-6'>
-            logo
+          <div className='col-12 col-sm-6 d-flex'>
+            <div className='m-auto'>
+              <Logo />
+            </div>
           </div>
           <div className='col-12 col-sm-6'>
             <SocialMedia />
