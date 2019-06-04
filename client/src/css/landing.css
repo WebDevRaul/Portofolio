@@ -84,6 +84,15 @@
   -ms-transform: translateY(150%);
   -o-transform: translateY(150%);
 }
+.landing-welcome {
+  color: white;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 50;
+}
 
 /* //  //  //  //  //  //  //  //  //  // */
 /* //  //  //  //  //  //  //  //  //  // */

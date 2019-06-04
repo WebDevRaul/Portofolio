@@ -51,9 +51,9 @@ class Landing extends Component {
       setInterval(() => this.setState({ turn: true }),2000);
     }
     // Redirect on home when cicle i complete
-    if (prevState.turn !== turn) {
-        setInterval(() => window.location.href = '/home', 5000)
-      }
+    // if (prevState.turn !== turn) {
+    //     setInterval(() => window.location.href = '/home', 5000)
+    //   }
     };
 
     render() {
@@ -91,9 +91,17 @@ class Landing extends Component {
         </div>
       </div>
     );
+    const welcome = (
+      <div className={classnames('landing-welcome', { '': !level })}>
+        <div className=''>
+          <p className=''>Welcome</p>
+        </div>
+      </div>
+    );
 
     return (
       <div className='landing'>
+        {welcome}
         <div className='container'>
           <div className='row no-gutters'>
             <div className='col d-flex'>

@@ -6,6 +6,7 @@ import LogoWrapper from '../../components/common/LogoWrapper';
 // Picture
 import proteinTracker from './proteinTracker.jpg';
 import liveCurrency from './liveCurrency.jpg';
+import questionMark from './questionMark.jpg';
 
 // Logos
 import Logo from '../skills/Logo';
@@ -19,8 +20,8 @@ const data = [
       'id': '0',
       'index': 0,
       'picture': proteinTracker,
-      "title": 'Protein Tracker',
-      "summary": "text summary",
+      "title": 'Macro Calculator',
+      "summary": "Keeps track of your calories, fat, protein, and carbs every meal, every day.",
       "link": 'https://test.com/',
       "linkName": 'Protein-Tracker',
       "skills": [
@@ -37,8 +38,8 @@ const data = [
       'id': '1',
       'index': 1,
       'picture': liveCurrency,
-      "title": 'Live Currency',
-      "summary": "text summary",
+      "title": 'Exchange Rate',
+      "summary": "Daily exchange rates & currency conversion calculator.",
       "link": 'https://test.com/',
       "linkName": 'Live-Currency',
       "skills": [
@@ -53,11 +54,11 @@ const data = [
     {
       'id': '2',
       'index': 2,
-      'picture': liveCurrency,
-      "title": 'Live Currency',
-      "summary": "text summary",
-      "link": 'https://test.com/',
-      "linkName": 'Live-Currency',
+      'picture': questionMark,
+      "title": 'In progress',
+      "summary": "In progress",
+      "link": '',
+      "linkName": 'No Link',
       "skills": [
         <LogoWrapper key='ReactJs' svg={<Logo.ReactJs width={em} height={em} />}/>,
         <LogoWrapper key='Javascript' svg={<Logo.Javascript width={em} height={em} />}/>,
@@ -70,11 +71,11 @@ const data = [
     {
       'id': '3',
       'index': 3,
-      'picture': proteinTracker,
-      "title": 'Protein Tracker',
-      "summary": "text summary",
-      "link": 'https://test.com/',
-      "linkName": 'Protein-Tracker',
+      'picture': questionMark,
+      "title": 'In progress',
+      "summary": "In progress",
+      "link": '',
+      "linkName": 'No Link',
       "skills": [
         <LogoWrapper key='ReactJs'  svg={<Logo.ReactJs width={em} height={em} />}/>,
         <LogoWrapper key='Javascript'  svg={<Logo.Javascript width={em} height={em} />}/>,
@@ -88,11 +89,11 @@ const data = [
     {
       'id': '4',
       'index': 4,
-      'picture': proteinTracker,
-      "title": 'Protein Tracker',
-      "summary": "text summary",
-      "link": 'https://test.com/',
-      "linkName": 'Protein-Tracker',
+      'picture': questionMark,
+      "title": 'In progress',
+      "summary": "In progress",
+      "link": '',
+      "linkName": 'No Link',
       "skills": [
         <LogoWrapper key='ReactJs'  svg={<Logo.ReactJs width={em} height={em} />}/>,
         <LogoWrapper key='Javascript'  svg={<Logo.Javascript width={em} height={em} />}/>,
