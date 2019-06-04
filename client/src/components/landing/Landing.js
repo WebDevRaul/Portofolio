@@ -15,7 +15,8 @@ class Landing extends Component {
       show: false,
       web: false,
       level: false,
-      turn: false
+      turn: false,
+      welcome_txt: false
     }
   };
 
@@ -25,7 +26,7 @@ class Landing extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    const { number, cicle, hide, show, web, level, turn } = this.state;
+    const { number, cicle, hide, show, web, level, turn, welcome_txt } = this.state;
     if ((number === 100) && (cicle === false)) {
       // Clear interval when reach 100
       clearInterval(this.interval);
@@ -50,15 +51,19 @@ class Landing extends Component {
     if (prevState.level !== level) {
       setInterval(() => this.setState({ turn: true }),2000);
     }
+    // Show Welcome
+    if (prevState.turn !== turn) {
+      setInterval(() => this.setState({ welcome_txt: true }),1000);
+    }
     // Redirect on home when cicle i complete
-    // if (prevState.turn !== turn) {
-    //     setInterval(() => window.location.href = '/home', 5000)
-    //   }
+    if (prevState.turn !== turn) {
+        setInterval(() => window.location.href = '/home', 4000)
+      }
     };
 
     render() {
   
-    const { number, cicle, hide, show, web, level, turn } = this.state;
+    const { number, cicle, hide, show, web, level, turn, welcome_txt } = this.state;
 
     const fullStack = (
       <div className={classnames('d-flex landing-full-stack', { 'hide': !hide })}>
@@ -92,10 +97,8 @@ class Landing extends Component {
       </div>
     );
     const welcome = (
-      <div className={classnames('landing-welcome', { '': !level })}>
-        <div className=''>
-          <p className=''>Welcome</p>
-        </div>
+      <div className={classnames('landing-welcome', { 'hide': !welcome_txt, 'fadeInUp': welcome_txt })}>
+        <p className='mb-0'>Welcome!</p>
       </div>
     );
 
