@@ -15,9 +15,9 @@ export default class SocialMedia extends Component {
               <div className='d-flex m-auto'>
                 <div className='social-media d-flex' >
                   <span className='d-flex m-auto'>
-                    <NavLink to={'/'} target='_blank'>
+                    <a href='https://www.facebook.com/raul.savin.3' target='_blank' rel="noopener noreferrer">
                       <i className='fab p-2 fa-facebook-f fa-1x'></i>
-                    </NavLink>
+                    </a>
                   </span>
                 </div>
                 <div className='social-media d-flex' >
