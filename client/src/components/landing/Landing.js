@@ -26,7 +26,7 @@ class Landing extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    const { number, cicle, hide, show, web, level, turn, welcome_txt } = this.state;
+    const { number, cicle, hide, show, web, level, turn } = this.state;
     if ((number === 100) && (cicle === false)) {
       // Clear interval when reach 100
       clearInterval(this.interval);
