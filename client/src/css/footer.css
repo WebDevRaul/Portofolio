@@ -36,7 +36,6 @@
   font-size: 0.7em;
 }
 .social-media-h5 {
-  margin-left: calc(20%);
   font-size: 1em;
 }
 .social-media-h5-border {
@@ -48,5 +47,6 @@
 
 /* Copy-right */
 .copy-right {
+  padding-top: 20px;
   font-size: 0.6em;
 }

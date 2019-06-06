@@ -7,7 +7,7 @@ export default class SocialMedia extends Component {
       <div className='social-media-div'>
         <div className='row no-gutters mb-1'>
           <div className='col'>
-            <h5 className='social-media-h5'>Social <span className='social-media-h5-border'>Media</span></h5>
+            <h5 className='social-media-h5 text-center'>Social <span className='social-media-h5-border'>Media</span></h5>
           </div>
         </div>
         <div className='row no-gutters'>

@@ -213,6 +213,10 @@ a {
     width: 60px !important;
     top: 22% !important;
   }
+  /* Footer */
+  .copy-right {
+    padding-top: 0px !important;
+  }
 }
   
 @media (min-width : 768px) and (max-width : 1024px) {
@@ -276,6 +280,10 @@ a {
     height: 148px !important;
     width: 120px !important;
     top: 20.3% !important;
+  }
+  /* Footer */
+  .copy-right {
+    padding-top: 0px !important;
   }
 }
 
@@ -370,6 +378,10 @@ a {
     height: 188px !important;
     width: 200px !important;
     top: 17% !important;
+  }
+  /* Footer */
+  .copy-right {
+    padding-top: 0px !important;
   }
 }
 
@@ -468,6 +480,10 @@ a {
     height: 208px !important;
     width: 200px !important;
     top: 16.3% !important;
+  }
+  /* Footer */
+  .copy-right {
+    padding-top: 0px !important;
   }
 }
 
