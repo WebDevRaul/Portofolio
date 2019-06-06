@@ -1,10 +1,10 @@
 const express = require('express')
 const router  = express.Router();
 const nodeMailer = require('nodemailer');
-const user = require('../../credential');
+const user = require('../../config/keys');
 
 // Validation
-const validateSendEmail = require('../../config/keys');
+const validateSendEmail = require('../../validation/email');
 
 
 
