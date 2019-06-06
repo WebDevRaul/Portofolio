@@ -4,7 +4,7 @@ const nodeMailer = require('nodemailer');
 const user = require('../../credential');
 
 // Validation
-const validateSendEmail = require('../../validation/email');
+const validateSendEmail = require('../../config/keys');
 
 
 
