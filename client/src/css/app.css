@@ -505,7 +505,7 @@ a {
     max-width: 50% !important;
   }
   .responsive {
-    margin-top: 2em;
+    margin-top: 3em;
   }
   .responsive > .container {
     max-width: 100% !important;
