@@ -1,8 +1,8 @@
 @import './app.css';
 
 .landing {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 .landing .container {
   position: absolute;
@@ -88,10 +88,7 @@
   color: white;
   font-size: 2em;
   transform: rotateY(180deg);
-  position: absolute;
-  top: 48%;
-  left: 45%;
-  transform: translate(-45%,-48%);
+  position: relative;
   z-index: 50;
 }
 
