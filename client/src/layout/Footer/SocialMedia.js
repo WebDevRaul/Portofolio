@@ -21,7 +21,7 @@ export default class SocialMedia extends Component {
                 </div>
                 <div className='social-media d-flex' >
                   <span className='d-flex m-auto'>
-                    <a href='https://twitter.com/texterror2' target='_blank' rel="noopener noreferrer">
+                    <a href='https://twitter.com/_raul_savin_' target='_blank' rel="noopener noreferrer">
                       <i className='fab fa-twitter fa-1x'></i>
                     </a>
                   </span>
