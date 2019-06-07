@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 
 export default class SocialMedia extends Component {
   render() {
@@ -22,23 +21,23 @@ export default class SocialMedia extends Component {
                 </div>
                 <div className='social-media d-flex' >
                   <span className='d-flex m-auto'>
-                    <NavLink to={'/'} target='_blank'>
+                    <a href='https://twitter.com/texterror2' target='_blank' rel="noopener noreferrer">
                       <i className='fab fa-twitter fa-1x'></i>
-                    </NavLink>
+                    </a>
                   </span>
                 </div>
                 <div className='social-media d-flex' >
                   <span className='d-flex m-auto'>
-                    <NavLink to={'/'} target='_blank'>
+                    <a href='https://www.instagram.com/_texterror_/' target='_blank' rel="noopener noreferrer">
                       <i className='fab fa-instagram fa-1x'></i>
-                    </NavLink>
+                    </a>
                   </span>
                 </div>
                 <div className='social-media d-flex' >
                   <span className='d-flex m-auto'>
-                    <NavLink to={'/'} target='_blank'>
+                    <a href='https://www.linkedin.com/in/raul-savin-660010188/' target='_blank' rel="noopener noreferrer">
                       <i className='fab fa-linkedin-in fa-1x'></i>
-                    </NavLink>
+                    </a>
                   </span>
                 </div>
               </div>
