@@ -2,7 +2,7 @@
 
 /* Responsive */
 .home {
-  height: 97vh;
+  height: 95vh;
   background: 
   linear-gradient(rgba(97, 218, 251,0), var(--blueLight)10% 90%, rgba(97, 218, 251,0) 100%);
 }
