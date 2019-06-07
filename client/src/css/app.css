@@ -498,14 +498,14 @@ a {
 
   /* Home */
   .home {
-    height: 99vh !important;
+    height: 95vh !important;
   }
   .home .col-sm-12 {
     flex: 0 0 50% !important;
     max-width: 50% !important;
   }
   .responsive {
-    margin-top: 1em;
+    margin-top: 2em;
   }
   .responsive > .container {
     max-width: 100% !important;

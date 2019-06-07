@@ -57,7 +57,7 @@ class Landing extends Component {
     }
     // Redirect on home when cicle i complete
     if (prevState.turn !== turn) {
-        setInterval(() => window.location.href = '/home', 4000);
+        // setInterval(() => window.location.href = '/home', 4000);
       }
     };
 
@@ -99,7 +99,7 @@ class Landing extends Component {
     const welcome = (
       <div className='m-auto'>
         <div className={classnames('landing-welcome', { 'hide': !welcome_txt, 'fadeInUp': welcome_txt })}>
-          <p className='mb-0'>Welcome!</p>
+          <p className=''>Welcome!</p>
         </div>
       </div>
     );
