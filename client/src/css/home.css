@@ -4,7 +4,7 @@
 .home {
   height: 99vh;
   background: 
-  linear-gradient(rgba(97, 218, 251,0), var(--blueLight)10% 90%, rgba(97, 218, 251,0) 100%);
+  linear-gradient(var(--blueLight), var(--blueLight)10% 90%, rgba(97, 218, 251,0) 100%);
 }
 .div-center {
   position: absolute;

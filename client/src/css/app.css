@@ -498,29 +498,29 @@ a {
 
   /* Home */
   .home {
-    height: 95vh !important;
+    height: 93vh !important;
   }
   .home .col-sm-12 {
     flex: 0 0 50% !important;
     max-width: 50% !important;
   }
   .responsive {
-    margin-top: 3.5em;
+    margin-top: 3em;
   }
   .responsive > .container {
     max-width: 100% !important;
   }
   .responive-devices {
-    font-size: 0.7em !important;
+    font-size: 0.6em !important;
   }
   small {
-    font-size: 70% !important;
+    font-size: 65% !important;
   }
   .text {
     margin-top: 0rem !important;
   }
   .responsive-list {
-    font-size: 0.7em !important;
+    font-size: 0.6em !important;
   }
 }
 
