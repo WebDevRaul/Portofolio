@@ -55,6 +55,12 @@ a {
   display: block !important;
 }
 
+@media (min-width : 320px) and (max-width : 420px) {
+  .project-image-slide, .project-image-slide-card-border, .project-slide-wrapper, .arrow-right, .arrow-left {
+    height: 140px !important;
+  }
+}
+
 @media (min-width : 420px) and (max-width : 480px) {
     /* About */
 
