@@ -30,8 +30,8 @@ class MoreSkills extends Component {
                   <div className='row no-gutters'>
                     <div className='col-sm-6'>
                       <div className='d-flex'>
-                        <span className='m-2'><Circle svg={<Logo.Bootstrap width={rem} height={rem} />} text='Github' /></span>
-                        <span className='m-2'><Circle svg={<Logo.Github width={rem} height={rem} />} text='Boostrap 4' /></span>
+                        <span className='m-2'><Circle svg={<Logo.Github width={rem} height={rem} />} text='Github' /></span>
+                        <span className='m-2'><Circle svg={<Logo.Bootstrap width={rem} height={rem} />} text='Boostrap 4' /></span>
                       </div>
                     </div>
                     <div className='col-sm-6'>

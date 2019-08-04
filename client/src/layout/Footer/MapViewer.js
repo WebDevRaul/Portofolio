@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 // Config
-import { API_GOOGLE_MAP } from '../../config/googleMap';
+import { googleMap } from '../../config/keys';
 
 class MapViewer extends Component {
   render() {
@@ -28,5 +28,5 @@ class MapViewer extends Component {
 };
 
 export default GoogleApiWrapper({
-  apiKey: API_GOOGLE_MAP.KEY
+  apiKey: googleMap
 })(MapViewer);

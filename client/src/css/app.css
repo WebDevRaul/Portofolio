@@ -75,6 +75,11 @@ a {
   }
   /* Project */
 
+  /* & ProjectImageSlider */
+  .project-image-slide, .project-image-slide-card-border, .project-slide-wrapper, .arrow-right, .arrow-left {
+    height: 140px !important;
+  }
+
   /* Title */
   .project-title-subtitle {
     font-size: 0.6em !important;

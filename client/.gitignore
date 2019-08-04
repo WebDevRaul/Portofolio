@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # Google Api
-src/config/googleMap.js
+src/config/keys_dev.js

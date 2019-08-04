@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Components
-import Landing from './components/landing/Landing';
 import Index from './components/Index';
 import NotFound from './components/common/NotFound';
 
@@ -20,8 +19,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <Switch>
-            <Route exact path='/' component={Landing} />
-            <Route exact path='/home' component={Index} />
+            <Route exact path='/' component={Index} />
             <Route component={NotFound} />
           </Switch>
         </Router>
