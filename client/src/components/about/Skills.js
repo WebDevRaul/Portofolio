@@ -55,7 +55,9 @@ class Skills extends Component {
                         </div>
                       </div>
                       <div className='col-sm-6'>
-                        <div className='d-flex'>
+                        <div className='last-update'>
+                          <Circle svg={<Logo.Sass height={rem} width={rem} />} text='Sass' />
+                          <Circle svg={<Logo.GraphQl height={rem} width={rem} />} text='GraphQl' />
                       </div>
                     </div>
                   </div>
