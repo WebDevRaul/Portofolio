@@ -7,6 +7,8 @@ import LogoWrapper from '../../components/common/LogoWrapper';
 import proteinTracker from './proteinTracker.jpg';
 import liveCurrency from './liveCurrency.jpg';
 import questionMark from './questionMark.jpg';
+import crud from './crud.jpg';
+import pagination from './pagination.jpg';
 
 // Logos
 import Logo from '../skills/Logo';
@@ -54,9 +56,9 @@ const data = [
     {
       'id': '2',
       'index': 2,
-      'picture': questionMark,
+      'picture': crud,
       "title": 'PostgreSQL - CRUD',
-      "summary": "Register-Login & Create,Read,Update & delete data",
+      "summary": "Register-Login & Create,Read,Update,Delete data",
       "link": 'https://postgresql-crud.herokuapp.com/',
       "linkName": 'Link',
       "skills": [
@@ -72,7 +74,7 @@ const data = [
     {
       'id': '3',
       'index': 3,
-      'picture': questionMark,
+      'picture': pagination,
       "title": 'Pagination',
       "summary": "A few examples of pagination",
       "link": 'https://pagination-react.herokuapp.com/',
