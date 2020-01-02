@@ -9,6 +9,7 @@ import liveCurrency from './liveCurrency.jpg';
 import postgreSQLcrud from './postgreSQLcrud.png';
 import faceRecognition from './faceRecognition.png';
 import pagination from './pagination.png';
+import monster from './monster.png';
 
 // Logos
 import Logo from '../skills/Logo';
@@ -93,6 +94,7 @@ const data = [
       "link": 'https://gatsby-pagination.netlify.com/',
       "linkName": 'Link',
       "skills": [
+        <LogoWrapper key='Gatsby'  svg={<Logo.Gatsby width={nodeJs} height={nodeJs} />}/>,
         <LogoWrapper key='ReactJs'  svg={<Logo.ReactJs width={em} height={em} />}/>,
         <LogoWrapper key='Javascript'  svg={<Logo.Javascript width={em} height={em} />}/>,
         <LogoWrapper key='Redux'  svg={<Logo.Redux width={em} height={em} />}/>,
@@ -100,6 +102,20 @@ const data = [
         <LogoWrapper key='Sass' svg={<Logo.Sass width={em} height={em} />}/>,
       ]
     },
+    {
+      'id': '5',
+      'index': 5,
+      'picture': monster,
+      "title": 'Monster',
+      "summary": "A simple monster filter.",
+      "link": 'https://monster-fun.netlify.com/',
+      "linkName": 'Link',
+      "skills": [
+        <LogoWrapper key='Gatsby'  svg={<Logo.Gatsby width={nodeJs} height={nodeJs} />}/>,
+        <LogoWrapper key='ReactJs'  svg={<Logo.ReactJs width={em} height={em} />}/>,
+        <LogoWrapper key='Css' svg={<Logo.Css width={em} height={em} />}/>,
+      ]
+    }
   ]
 
 export default data;
