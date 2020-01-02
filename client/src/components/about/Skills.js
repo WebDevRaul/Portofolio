@@ -58,7 +58,7 @@ class Skills extends Component {
                           <div className='d-flex'>
                             <Circle svg={<Logo.Sass height={rem} width={rem} />} text='Sass' />
                             <Circle svg={<Logo.GraphQl height={rem} width={rem} />} text='GraphQl' />
-                            <div className='m-auto invisible'><Circle svg={<Logo.Html width={rem} height={rem} />} text='Html 5' /></div>
+                            <Circle svg={<Logo.Gatsby height='5em' width='5em' />} text='Gatsby' />
                           </div>
                         </div>
                       </div>

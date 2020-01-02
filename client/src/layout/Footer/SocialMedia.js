@@ -21,21 +21,21 @@ export default class SocialMedia extends Component {
                 </div>
                 <div className='social-media d-flex' >
                   <span className='d-flex m-auto'>
-                    <a href='https://twitter.com/_raul_savin_' target='_blank' rel="noopener noreferrer">
+                    <a href='https://twitter.com' target='_blank' rel="noopener noreferrer">
                       <i className='fab fa-twitter fa-1x'></i>
                     </a>
                   </span>
                 </div>
                 <div className='social-media d-flex' >
                   <span className='d-flex m-auto'>
-                    <a href='https://www.instagram.com/_texterror_/' target='_blank' rel="noopener noreferrer">
+                    <a href='https://www.instagram.com' target='_blank' rel="noopener noreferrer">
                       <i className='fab fa-instagram fa-1x'></i>
                     </a>
                   </span>
                 </div>
                 <div className='social-media d-flex' >
                   <span className='d-flex m-auto'>
-                    <a href='https://www.linkedin.com/in/raul-savin-660010188/' target='_blank' rel="noopener noreferrer">
+                    <a href='https://www.linkedin.com' target='_blank' rel="noopener noreferrer">
                       <i className='fab fa-linkedin-in fa-1x'></i>
                     </a>
                   </span>
